@@ -1,0 +1,21 @@
+# Generated database — rebuild with scripts/init_db.py + seed_from_json.py
+db/*.db
+data/*.db
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Scratch
+*.tmp
+*.bak
+*.log

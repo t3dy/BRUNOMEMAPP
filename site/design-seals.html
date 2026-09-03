@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEALS — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">Artifact: THE SEAL LAB</h1>
+<p><strong>Type:</strong> artifact · <strong>Primary texts:</strong> <em>Explicatio triginta sigillorum</em> (1583), <em>Sigillus sigillorum</em> (1583) · <strong>Frames:</strong> Yates, Clucas, Mertens, Couliano</p>
+<hr>
+<h2 class="doc-h2">1. Why the seals matter to the central question</h2>
+<p>The <em>Explicatio</em> presents thirty numbered <em>sigilli</em> — structured operations — of which some are plainly mnemonic and some plainly magical, <strong>in the same list, undifferentiated by Bruno.</strong></p>
+<p>That is the hardest single piece of primary evidence for anyone maintaining that Bruno kept memory technique and magical operation apart. He does not sort them. The Seal Lab's job is to let a user encounter that fact directly rather than read about it.</p>
+<p><strong>Design consequence:</strong> do <em>not</em> pre-sort the thirty seals into "mnemonic" and "magical" columns. Present them as Bruno presents them — one sequence — and let the frames disagree about which is which. Offer a per-frame classification overlay so the user can watch Yates, Clucas, Barenstein and Mertens draw the line in different places, or decline to draw it.</p>
+<p>The disagreement <em>about where the line falls</em> is more informative than any single sorting, and it is not currently representable anywhere else in the portal.</p>
+<h2 class="doc-h2">2. The Seal of Seals</h2>
+<p><em>Sigillus sigillorum</em> describes a master operation governing the internal senses — common sense, imagination, memory — as one coordinated system.</p>
+<p>This is the closest thing in Bruno to an explicit <strong>faculty-control technique</strong>, and it is the primary-source anchor for Mertens's regulatory reading. It also raises the sharpest version of the project's recurring question: <strong>is Bruno's magic ultimately aimed at the world, or at the operator's own cognitive architecture?</strong> The Seal of Seals reads most naturally as the latter, which is why deflationary and synthetic frames can both claim it.</p>
+<p>Render it as what it is: a capstone that unifies the thirty, with each of the thirty linked to its role under it.</p>
+<h2 class="doc-h2">3. Frames</h2>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th>Frame</th><th>Reads the seals as</th></tr></thead><tbody><tr><td><strong>Yates</strong></td><td>magically operative images; seals as talismanic (T3, no output)</td></tr><tr><td><strong>Clucas</strong></td><td><em>signacula</em> — instruments ordering the soul's operations; the pairing with <em>simulacra</em> is his title</td></tr><tr><td><strong>Mertens</strong></td><td>spirit-regulating technique; <strong>primary frame</strong> for the Seal of Seals</td></tr><tr><td><strong>Couliano</strong></td><td>bond-forming operations, reflexive use only</td></tr><tr><td>Sturlese / Wang / Barenstein</td><td>○ no strong documented reading specific to the seals</td></tr></tbody></table></div>
+<p>Three empty cells — the largest block in the matrix. Worth stating on the page: <strong>the seals are comparatively under-read</strong> relative to the wheel. That is a genuine finding about the field's attention, and it makes the seals a good target for original corpus work rather than a gap to apologise for.</p>
+<h2 class="doc-h2">4. Honesty constraints — this artifact needs them most</h2>
+<p>The brief is explicit that the Seal Lab must distinguish three things, and the seals are where the temptation to blur is strongest because thirty numbered operations <em>look</em> like a complete specified system:</p>
+<ul class="doc-list"><li><strong>What Bruno explicitly specifies</strong> — <code>HISTORICALLY_ATTESTED</code></li><li><strong>What scholars reconstruct</strong> — <code>SCHOLARLY_RECONSTRUCTION</code></li><li><strong>What this application invents to make it operable</strong> — <code>SPECULATIVE_IMPLEMENTATION</code></li></ul>
+<p>Every seal renders with its level visible. Where Bruno names a seal but does not describe its operation, the lab says <em>"named, not specified"</em> and offers nothing further. <strong>An interface that quietly filled those gaps would produce a complete-looking thirty-seal system that is substantially this project's invention</strong> — the most likely serious fabrication risk in the whole portal, precisely because it would look so authoritative.</p>
+<h2 class="doc-h2">5. Data requirements</h2>
+<ul class="doc-list"><li>The thirty seals: names, and whatever Bruno actually specifies for each. <strong>Currently zero rows.</strong></li><li>The Seal of Seals operation.</li><li><code>dictionary_terms</code> already has <code>sigillum</code> and <code>signaculum</code>; needs their relation clarified from source.</li><li>Per-frame classification of each seal (which the frames may not supply — expect gaps).</li></ul>
+<h2 class="doc-h2">6. Build phases</h2>
+<ol class="doc-list"><li>The thirty as data, with attestation level per seal — content-blocked on corpus.</li><li>Sequence view, unsorted, as Bruno presents them.</li><li>Per-frame classification overlay.</li><li>Seal of Seals as capstone, linked to the thirty.</li><li>Operable reconstruction of individual seals where genuinely specified — and only those.</li></ol>
+<h2 class="doc-h2">7. Open questions</h2>
+<ul class="doc-list"><li>How much does Bruno actually specify per seal, versus name? Determines whether this artifact is operable at all or is properly a reference section. <strong>Scope this before committing to build.</strong></li><li>Relation between the Thirty Seals, the Thirty Intentions (<em>De umbris</em>), and the Thirty Statues (<em>Lampas</em>). Three thirty-unit systems across two decades — is the recurrence structural or coincidental? Nobody in the seed's scholar set is recorded as addressing it, which may be a gap in the seed rather than the field.</li><li>Is there a critical edition of the <em>Explicatio</em>?</li></ul></article>
+        <p class="provenance-note">Source: <code>docs/design/SEALS.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

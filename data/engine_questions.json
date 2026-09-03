@@ -1,0 +1,134 @@
+{
+  "_provenance": {
+    "source": "Anthony Bonner, The Art and Logic of Ramon Llull: A User's Guide",
+    "locator": "corpus lines 1866-1935; Llull ACIV (MOG I, vii, 9-10: 441-2)",
+    "method": "HAND_TRANSCRIBED from the located slice",
+    "note": "The moves below follow Bonner's report of Llull's worked example. Where the wording is compressed for play it is marked paraphrase; where Bonner quotes Llull it is marked quote.",
+    "confidence": "MEDIUM"
+  },
+
+  "attribution": {
+    "engine_is": "Llull's Art, quaternary phase",
+    "why_labelled_this_way": "Bonner mentions Bruno only twice, for the cosmological use of the combinatorics. Blum reports that Bruno's De compendiosa architectura recasts Lullian logic in Aristotelian terms; Mertens reports that what returns in Bruno is the similitudo-logic, not the letter notation. No evidence in this corpus that Bruno adopted Figure S. See docs/design/ENGINE.md section 1a.",
+    "brunos_version": "Bruno's adaptation is a logica fantastica -- a logic whose operands are images held in the spiritus phantasticus, rather than Llull's letter-variables. That is why he must first build an image vocabulary (the atria and the image alphabet)."
+  },
+
+  "questions": [
+    {
+      "slug": "predestination-free-will",
+      "title": "Predestinatio et liberum arbitrium",
+      "title_en": "Predestination and free will",
+      "prompt": "God's wisdom is perfect, and perfect wisdom foreknows all things. But if all is foreknown, what becomes of free will? Work the contradiction through the four figures.",
+      "horns": [
+        {"key": "predestination", "latin": "praedestinatio", "en": "predestination"},
+        {"key": "free_will", "latin": "liberum arbitrium", "en": "free will"}
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "name": "Figura prima",
+          "name_en": "The First Figure of X - affirmation",
+          "target_species": "E",
+          "situation": "S enters the compartment of perfect wisdom in Figure A, in order to form the compartment of perfect predestination.",
+          "quote": "when E contemplates A, the compartment of perfect predestination is formed by necessary reasons, because if E remembered and understood predestination not to exist, it could not remember or understand perfect wisdom in A.",
+          "quote_kind": "quote",
+          "moves": [
+            {
+              "label": "Enter perfect wisdom, and affirm predestination",
+              "latin": "sapientia perfecta",
+              "to_species": "E",
+              "correct": true,
+              "result": "Predestination follows necessarily from God's perfect wisdom. S is in E: remembering, understanding and loving what it affirms. But this causes a problem - N loves free will, which it now forgets and does not know.",
+              "teaches": "E is the state of informed acceptance. You remember, understand and love the thing affirmed."
+            },
+            {
+              "label": "Refuse the compartment; deny predestination",
+              "to_species": "N",
+              "correct": false,
+              "result": "You cannot deny it from here without knowledge. Denying what you have not first understood drops S into N - supposition, credulity, belief without grounds.",
+              "teaches": "N is not a fault, but it is not knowledge. Llull calls it credulity: the will inclines without the memory or intellect having anything to work on."
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Figura secunda",
+          "name_en": "The Second Figure of X - denial",
+          "target_species": "I",
+          "situation": "The contrary of the first in S. Substitute justice for wisdom in Figure A, and free will for predestination in Figure X.",
+          "quote": "The second figure of X is the contrary of the first in S, since as soon as E enters A by means of perfect justice, B remembers and C understands free will...",
+          "quote_kind": "quote",
+          "moves": [
+            {
+              "label": "Enter perfect justice, and affirm free will",
+              "latin": "iustitia perfecta",
+              "to_species": "I",
+              "correct": true,
+              "result": "The mirror image. What began all for free will now turns against predestination for want of considering it. S is in I - still remembering and understanding, but now hating what it formerly affirmed.",
+              "teaches": "I is not failure. Informed rejection is as much a goal state as informed acceptance: to remember, understand and hate what is false is exactly the aim of the Art."
+            },
+            {
+              "label": "Stay in perfect wisdom and hold predestination",
+              "to_species": "E",
+              "correct": false,
+              "result": "Nothing moves. Refusing to state the opposing case leaves you affirming one horn without ever having tested it, which the Art treats as an argument not yet made.",
+              "teaches": "The dialectic requires you to argue the contrary against yourself. An affirmation never subjected to its denial has not been demonstrated."
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Figura tertia",
+          "name_en": "The Third Figure of X - doubt",
+          "target_species": "R",
+          "situation": "S finds itself confused in the First and Second Figures, with R joined to each of E I N. It therefore forms this third figure, the figure of doubt.",
+          "quote": "the wisdom of A strongly signifies predestination and the justice of A signifies free will equally strongly. But C G cannot at one and the same time understand perfect predestination or perfect free will, and thus C G are in doubt... and all of S is perverted into R.",
+          "quote_kind": "quote",
+          "moves": [
+            {
+              "label": "Hold both at once, and let S be perverted into R",
+              "latin": "confusio",
+              "to_species": "R",
+              "correct": true,
+              "result": "All positive and negative possibilities stand open at once. When R remembers, understands and loves free will, it forgets, misunderstands and hates predestination - and the reverse. You are stuck, and you are meant to be.",
+              "teaches": "R is confusion, and it is stage three of four, not a defeat. The Art requires the argument to jam before it can resolve. A dialectic that never reaches doubt has not tested anything."
+            },
+            {
+              "label": "Pick the stronger horn and move on",
+              "to_species": "E",
+              "correct": false,
+              "result": "You have chosen rather than demonstrated. The Art does not adjudicate between the horns; a resolution reached by preferring one is the same argument you already made at stage one.",
+              "teaches": "Choosing a side is precisely what the fourth figure exists to avoid."
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "Figura quarta",
+          "name_en": "The Fourth Figure of X - resolution",
+          "target_species": "E",
+          "situation": "Place S, under the heading of E, in A, in the compartments of perfect power and perfect will, and the other compartments of A.",
+          "quote": "Now when C affirms these two compartments in A, it then affirms the compartment of predestination and free will.",
+          "quote_kind": "quote",
+          "moves": [
+            {
+              "label": "Re-enter A under perfect power and perfect will; affirm both horns",
+              "latin": "potestas et voluntas perfecta",
+              "to_species": "E",
+              "correct": true,
+              "result": "The contradiction dissolves rather than being decided. Affirmed under power and will rather than under wisdom alone, predestination and free will are both compartments of the same perfect A. S returns to E - now holding what it could not hold at stage one.",
+              "teaches": "Resolution is not victory for one horn. It is finding the compartment at which both can be affirmed together. This is why the Art is a demonstration and not a debate."
+            },
+            {
+              "label": "Re-enter under perfect wisdom alone",
+              "to_species": "R",
+              "correct": false,
+              "result": "Wisdom is the compartment that generated the problem. Entering by it again reproduces stage one, and S falls back into R.",
+              "teaches": "Escaping confusion means changing which dignity you enter by, not trying harder with the same one."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

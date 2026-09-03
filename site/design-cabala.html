@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CABALA — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">Artifact: THE CABALA ENGINE</h1>
+<p><strong>Type:</strong> artifact (comedic) · <strong>Primary text:</strong> <em>Cabala del cavallo pegaseo con l'aggiunta dell'Asino cillenico</em> (1585) · <strong>Frames:</strong> none — see §3</p>
+<hr>
+<h2 class="doc-h2">1. The design insight this artifact turns on</h2>
+<p><strong>The satire generator and the serious combinatorial engine should be the same code path.</strong></p>
+<p>Bruno's joke in the <em>Cabala</em> is not that he invented a silly method. It is that he ran <strong>his own real method</strong> — letter manipulation, etymological combination, mythological layering, numerological inflation — on deliberately absurd material, and it produced cosmic-sounding results anyway. The Ass becomes a vehicle of divine wisdom by exactly the procedure that makes anything else one.</p>
+<p>So the implementation is:</p>
+<pre class="doc-pre"><code>one combinatorial engine
+  ├── vocabulary: bruno_attested   → serious mnemonic/philosophical output
+  └── vocabulary: asinine_register → the Cabala's satire</code></pre>
+<p>Same rules. Same traversal. Different dictionary loaded. Nothing else differs.</p>
+<p>This is cheaper to build than two tools, and it <em>is the argument</em>. A user who swaps the vocabulary and watches identical machinery produce solemn philosophy and then sacred donkeys has understood Bruno's satire better than any explanatory paragraph could manage.</p>
+<h2 class="doc-h2">2. The killer feature</h2>
+<p><strong>Run one input through both vocabularies simultaneously, side by side.</strong></p>
+<p>The user supplies a term. The left column elaborates it through Bruno's attested philosophical register; the right column elaborates it through the asinine register. The procedures are visibly identical — same steps, same combination rules, highlighted in parallel.</p>
+<p>The realisation that lands: <em>the method does not know which one it is doing.</em> That is precisely Bruno's satirical thesis about learned exegesis, delivered as an interaction rather than a claim.</p>
+<p>This supersedes the seed's existing <code>cabala-vs-furori-tone-toggle</code> idea, which compared two <em>works</em>. Comparing two <em>vocabularies through one engine</em> is sharper, and it is the same build.</p>
+<h2 class="doc-h2">3. Why this artifact has no frame column</h2>
+<p>None of the seven interpretive frames has a reading of the <em>Cabala</em>'s combinatorial satire — they are all concerned with the mnemonic-magical corpus. The artifact matrix row is empty by design.</p>
+<p>Per ARCHITECTURE.md §6, <strong>empty cells are content.</strong> The page should say plainly: <em>no scholar in this corpus has developed a reading of the Cabala as a comment on Bruno's own mnemonic method. The parallel drawn here is this project's, not theirs.</em> That keeps a genuinely useful idea from being laundered into attributed scholarship — and flags a real gap someone could go fill.</p>
+<h2 class="doc-h2">4. Honesty constraints — the ones that matter here</h2>
+<p>The <em>Cabala</em> satirises Kabbalistic exegesis. A generator producing mock-Kabbalistic readings needs care that the seed's current entry does not yet specify:</p>
+<ul class="doc-list"><li><strong>The target is learned pretension and the exegetical method's capacity to prove anything — not Judaism, and not Jewish mysticism as a tradition.</strong> The framing copy must be explicit. Bruno's own satire is aimed at pretentious interpretation; a modern tool that reads as mockery of a living religious tradition would be a different and worse thing.</li><li>The asinine vocabulary should draw on <strong>Bruno's actual comic register</strong> — the Ass, Pegasus, Cyllene, his mock-etymologies — not on invented pseudo-Hebrew. The joke is Bruno's; do not extend it into territory he did not occupy.</li><li>Real Kabbalistic technique (gematria, notarikon, temurah) may be <strong>described historically</strong> where Bruno engages it, but the generator should not present itself as performing them.</li><li>A short standing note: <em>this is a satirical instrument, reconstructing a 1585 parody. It is not an account of Kabbalah.</em></li></ul>
+<p>These are constraints on framing and vocabulary, not reasons to soften the comedy. The <em>Cabala</em> is genuinely funny and its target is genuinely worth satirising.</p>
+<h2 class="doc-h2">5. The Ass Oracle</h2>
+<p>The seed's second idea, kept, with one addition: <strong>every oracular pronouncement should be able to reveal the serious doctrine it parodies.</strong> Toggle a response and see the Brunian move it inverts, with a citation.</p>
+<p>That turns a joke generator into a teaching instrument without dulling the joke — the reveal is funnier when you can see what it was aimed at.</p>
+<h2 class="doc-h2">6. Data requirements</h2>
+<ul class="doc-list"><li><code>asinine_register</code> vocabulary — Bruno's attested comic terms from the <em>Cabala</em>. <strong>Currently one <code>images</code> row</strong> (<code>the-ass-pegasean-cyllenic</code>). Needs the real set, which means the corpus.</li><li><code>bruno_attested</code> vocabulary — shared with the Image Lab; see IMAGELAB.md.</li><li>Combination rules — shared with the wheel; see WHEEL.md.</li><li>Attested passages for the oracle's reveal function.</li></ul>
+<p><strong>Dependency note:</strong> this artifact needs the same engine as WHEEL and the same vocabulary structure as IMAGELAB. Build those first and the Cabala engine is mostly configuration. Building it standalone would duplicate both.</p>
+<h2 class="doc-h2">7. Build phases</h2>
+<ol class="doc-list"><li>Vocabulary tables (<code>bruno_attested</code>, <code>asinine_register</code>) as data, not code.</li><li>Single combinatorial engine, vocabulary-parameterised.</li><li>Side-by-side dual-vocabulary view — the killer feature.</li><li>Ass Oracle with doctrine-reveal.</li><li>Cross-link to FRENZIES for the tonal-range comparison.</li></ol>
+<h2 class="doc-h2">8. Open questions</h2>
+<ul class="doc-list"><li>What <em>is</em> the attested comic vocabulary of the <em>Cabala</em>, precisely? Needs the text.</li><li>Does Bruno's satirical method actually mirror his serious one step for step, or is that this project's tidy overstatement? <strong>The whole artifact rests on this.</strong> It is a genuinely checkable claim and should be checked before the side-by-side view is built, because if the methods diverge, the parallel view teaches something false.</li><li>Is there scholarship on the <em>Cabala</em> as reflexive commentary on Bruno's own method? If it exists, the empty frame row above closes.</li></ul></article>
+        <p class="provenance-note">Source: <code>docs/design/CABALA.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

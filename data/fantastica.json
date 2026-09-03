@@ -1,0 +1,120 @@
+{
+  "_provenance": {
+    "status": "SCHOLARLY_RECONSTRUCTION",
+    "what_is_attested": [
+      "Figure S and its four species, with the dialectic (Llull, via Bonner) -- see data/figure_s.json",
+      "The 24 atria and their 24 positions (Bruno, De imaginum Bk I Pt 2 chs 3-6) -- data/atria_harvested.json",
+      "The image alphabet: letter/cluster -> Latin agent-nouns (De imaginum chs 12-13) -- data/alphabet_harvested.json",
+      "The planetary courts and their retinues, including each court's affective character (De imaginum ~3590-4935) -- data/images_harvested.json",
+      "That Bruno's version of the Art is a logica fantastica whose operands are images in the spiritus phantasticus (Mertens; Rossi, 'La logica fantastica di Giordano Bruno')",
+      "That Bruno inherited from Llull a logic through similitudines, in which principia essendi et cognoscendi are the same (Mertens)"
+    ],
+    "what_is_reconstructed": [
+      "The combination. Bruno leaves no worked example of running a Lullian dialectic on composed images, so the wiring below -- operator to memory, atrium to intellect, court to will -- is this project's construction.",
+      "The specific claim that a court's affective register moves the WILL toward love or hatred. Each court's character is attested by its retinue; using that character as inferential force in a dialectic is our extension of the similitudo principle."
+    ],
+    "why_it_is_defensible": "Similitudo-logic holds that the likeness of a thing carries real inferential weight -- principia essendi et cognoscendi are the same. If so, an image drawn from Saturn's court (whose attested retinue is the melancholic afflictions) genuinely inclines the soul differently from one drawn from Venus's (whose retinue is concord). That is the doctrine applied, not a mechanic invented. But Bruno does not say it in these words, and the label stays SCHOLARLY_RECONSTRUCTION.",
+    "confidence": "LOW"
+  },
+
+  "how_composition_works": "Each of the three powers of the soul is supplied by one of Bruno's three attested systems. Choose one of each to compose an image; the triple you produce determines which species of Figure S you land in.",
+
+  "power_sources": [
+    {
+      "power": "memory",
+      "supplied_by": "the image alphabet",
+      "rule": "An operator drawn from the letter-key of your term gives the memory a handle to hold it by. Compose without one and the memory has nothing to grip: K, forgetting.",
+      "yields": {"with": "B / F (remembering)", "without": "K (forgetting)"}
+    },
+    {
+      "power": "intellect",
+      "supplied_by": "the atria",
+      "rule": "Placing the image at an apt address means you have understood where in the order of things it belongs. Placing it arbitrarily means you are storing without knowing: L, not knowing.",
+      "yields": {"apt": "C / G (understanding)", "arbitrary": "L (not knowing)"}
+    },
+    {
+      "power": "will",
+      "supplied_by": "the planetary courts",
+      "rule": "The court's affective register inclines the will. Saturn's retinue is the melancholic afflictions; Venus's is concord. Draw from one and the will is moved toward hatred, from the other toward love.",
+      "yields": {"love": "D (loving)", "hate": "H (hating)", "mutable": "M / Q (undecided)"}
+    }
+  ],
+
+  "court_valences": [
+    {"court": "Saturn",       "valence": "hate",    "register": "melancholic affliction",
+     "attested_retinue": "old Antiquity, Decrepitude, Weariness, Lassitude, Slowness, Exhaustion, Decay, Disease; and the named images Grief, Care, Fear, Doubt, Hunger, Envy, Death, Poverty"},
+    {"court": "Mars",         "valence": "hate",    "register": "wrath and violence",
+     "attested_retinue": "the image of Wrath and its attendants"},
+    {"court": "Pluto",        "valence": "hate",    "register": "the underworld",
+     "attested_retinue": "principal image only in the transcribed range"},
+    {"court": "Venus",        "valence": "love",    "register": "concord",
+     "attested_retinue": "Sweet Unanimity, peaceful Agreement, gentle Will, Union of Hearts, Joy of the Breast, concordant Conformity"},
+    {"court": "Tellus",       "valence": "love",    "register": "generation",
+     "attested_retinue": "Conception, Gestation, Fertility, Generation, Birth, Nursing, Feeding, Cherishing"},
+    {"court": "Jove",         "valence": "love",    "register": "rule and majesty",
+     "attested_retinue": "the chariots on Jove's right and left, Jove's throne"},
+    {"court": "Mercury",      "valence": "clarify", "register": "disclosure and speech",
+     "attested_retinue": "Edition, Prolation, Nudation, Detection, Vulgation, Signification, Manifestation, Dissemination, Revelation",
+     "special": "Mercury does not incline the will. It sharpens the intellect: an image from this court counts as apt placement even in an ill-chosen atrium, because disclosure supplies its own order."},
+    {"court": "Sun / Apollo", "valence": "clarify", "register": "illumination",
+     "attested_retinue": "principal images of the Sun and Apollo, Aesculapius and Chiron, Circe, Orpheus",
+     "special": "As Mercury."},
+    {"court": "Luna",         "valence": "mutable", "register": "phase and change",
+     "attested_retinue": "nocturnal Silence, starry Crown, silvery Gleam, murky Mutability; separate retinues for the waxing and for the waning and changing Luna",
+     "special": "Luna's retinue is split by phase, so the will it produces is undecided. An image drawn from Luna cannot settle an argument -- it can only suspend it."}
+  ],
+
+  "resolution_rules": [
+    {"memory": true,  "intellect": true,  "will": "love",    "species": "E",
+     "note": "Remembering, understanding and loving: informed acceptance."},
+    {"memory": true,  "intellect": true,  "will": "hate",    "species": "I",
+     "note": "Remembering, understanding and hating: informed rejection, equally a goal."},
+    {"memory": false, "intellect": null,  "species": "N",
+     "note": "Without an operator the memory has no handle. Whatever the will inclines to is credulity."},
+    {"memory": null,  "intellect": false, "species": "N",
+     "note": "Placed without aptness, the intellect does not know what it holds. Supposition, not knowledge."},
+    {"memory": true,  "intellect": true,  "will": "mutable", "species": "R",
+     "note": "Remembered and understood, but the will cannot settle. All possibilities open at once: confusion."}
+  ],
+
+  "question": {
+    "slug": "predestination-free-will-fantastica",
+    "title": "Praedestinatio et liberum arbitrium",
+    "title_en": "The same question, composed in images",
+    "prompt": "You worked this contradiction with Llull's letters. Now work it as Bruno would have to: with images. Compose one for each figure, drawing memory from the alphabet, intellect from the atria, and will from the courts.",
+    "stages": [
+      {
+        "stage": 1, "name": "Figura prima", "name_en": "affirmation",
+        "term": "Praedestinatio", "letter_key": "P",
+        "target_species": "E",
+        "brief": "Affirm predestination. You need an image that is held, aptly placed, and loved.",
+        "apt_atria": ["altar", "horoscope", "gate"],
+        "apt_reason": "The altar for what is ordained, the horoscope for what is foreseen, the gate for what is passed through of necessity."
+      },
+      {
+        "stage": 2, "name": "Figura secunda", "name_en": "denial",
+        "term": "Liberum arbitrium", "letter_key": "L",
+        "target_species": "I",
+        "brief": "Now argue the contrary. You need an image held and understood, but whose court turns the will against what you just affirmed.",
+        "apt_atria": ["prison", "sword", "colt"],
+        "apt_reason": "The prison for constraint refused, the sword for the cut of decision, the colt for what is unbroken."
+      },
+      {
+        "stage": 3, "name": "Figura tertia", "name_en": "doubt",
+        "term": "Utrumque", "letter_key": "T",
+        "target_species": "R",
+        "brief": "Hold both. You need an image that is remembered and understood but whose will cannot settle.",
+        "apt_atria": ["mirror", "fountain", "nest"],
+        "apt_reason": "The mirror for a thing that shows both faces, the fountain for what will not stay still, the nest for what is not yet fledged."
+      },
+      {
+        "stage": 4, "name": "Figura quarta", "name_en": "resolution",
+        "term": "Potestas et voluntas", "letter_key": "P",
+        "target_species": "E",
+        "brief": "Resolve. Enter by a different dignity than the one that made the problem, and compose an image the will can love while the intellect holds both horns.",
+        "apt_atria": ["table", "basilica", "lantern"],
+        "apt_reason": "The table for what is set out entire, the basilica for what holds a whole assembly, the lantern for what shows without consuming."
+      }
+    ]
+  }
+}

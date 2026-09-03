@@ -1,0 +1,91 @@
+{
+  "_provenance": {
+    "source": "Anthony Bonner, The Art and Logic of Ramon Llull: A User's Guide",
+    "locator": "lines 1579-1680 of the corpus plain text; Bonner's chart of Figure S, quaternary phase",
+    "llull_sources_cited_by_bonner": "ACIV (MOG I, vii, 2: 434); AD (SW I, 322-3); Ars universalis (MOG I, viii, 3: 485)",
+    "method": "HAND_TRANSCRIBED",
+    "method_note": "The chart is a 4x3 grid flattened into a mangled ASCII column in the extracted text and cannot be parsed reliably. Transcribed by hand from the located slice rather than machine-extracted. Verify against Bonner's printed chart before treating as authoritative.",
+    "confidence": "MEDIUM"
+  },
+
+  "what_this_is": "Figure S: the state of the practitioner's rational soul. Not the static powers of memory, intellect and will, but their ACTS and combinations of acts -- Bonner: 'a figure that begins by being dynamic and combinatory.' Four species (E I N R), each a triple of one act per power.",
+
+  "aim_of_the_art": "Bonner, on the first two compartments: the aim of the Art is to get the user -- 'or rather the S of the user' -- to remember, understand and love (E) God, the virtues and the truth, while remembering, understanding and hating (I) the vices and falsehood. The remaining states are unreliable belief (N) or confusion (R). The machine's output is a change in the operator.",
+
+  "powers": [
+    {"power": "memory",    "latin": "memoria"},
+    {"power": "intellect", "latin": "intellectus"},
+    {"power": "will",      "latin": "voluntas"}
+  ],
+
+  "individuals": [
+    {"letter": "B", "power": "memory",    "act": "remembering",        "species": "E"},
+    {"letter": "C", "power": "intellect", "act": "understanding",      "species": "E"},
+    {"letter": "D", "power": "will",      "act": "loving",             "species": "E"},
+
+    {"letter": "F", "power": "memory",    "act": "remembering",        "species": "I"},
+    {"letter": "G", "power": "intellect", "act": "understanding",      "species": "I"},
+    {"letter": "H", "power": "will",      "act": "hating",             "species": "I"},
+
+    {"letter": "K", "power": "memory",    "act": "forgetting",         "species": "N"},
+    {"letter": "L", "power": "intellect", "act": "not knowing",        "species": "N"},
+    {"letter": "M", "power": "will",      "act": "loving or hating",   "species": "N",
+     "note": "Bonner flags M's double meaning as one of three surprising features of the figure. In N the will has no preconception, so M is indeterminate rather than absent."},
+
+    {"letter": "O", "power": "memory",    "act": "remembering or forgetting", "species": "R", "composite_of": ["B", "F", "K"]},
+    {"letter": "P", "power": "intellect", "act": "understanding or not knowing", "species": "R", "composite_of": ["C", "G", "L"]},
+    {"letter": "Q", "power": "will",      "act": "loving or hating",   "species": "R", "composite_of": ["D", "H", "M"]}
+  ],
+
+  "species": [
+    {
+      "letter": "E", "individuals": ["B", "C", "D"],
+      "label": "informed acceptance",
+      "gloss": "remembering, understanding and loving the object",
+      "role": "With I, the vehicle for questions, arguments, solutions and necessary propositions.",
+      "is_goal_state": true,
+      "note": "Bonner: 'E always and continuously apprehends objects by means of B C D.'"
+    },
+    {
+      "letter": "I", "individuals": ["F", "G", "H"],
+      "label": "informed rejection",
+      "gloss": "remembering, understanding and hating the object",
+      "role": "With E, the vehicle for questions, arguments, solutions and necessary propositions.",
+      "is_goal_state": true,
+      "note": "Correct toward vice and falsehood. Rejection with full knowledge is a success state, not a failure."
+    },
+    {
+      "letter": "N", "individuals": ["K", "L", "M"],
+      "label": "supposition / belief / credulity",
+      "gloss": "not remembering, not knowing, with the will undecided",
+      "role": "The vehicle for suppositions, faith and belief.",
+      "is_goal_state": false,
+      "note": "Bonner: Llull's Latin is closer to 'credulity'; it applies equally to Muslims or Jews. Belief held without knowledge -- not a fault, but not knowledge."
+    },
+    {
+      "letter": "R", "individuals": ["O", "P", "Q"],
+      "label": "confusion",
+      "gloss": "all positive and negative possibilities open at once",
+      "role": "The vehicle for doubts.",
+      "is_stuck_state": true,
+      "note": "Bonner: 'a state of intellectual or spiritual confusion.' In the worked example, when the argument jams, 'all of S is perverted into R.' Reachable, and the four-stage dialectic exists to get out of it."
+    }
+  ],
+
+  "dialectic": {
+    "note": "From Bonner's worked example: Llull resolving the contradiction between predestination and free will as four successive 'figures of X'. Named in the Ars Universalis as affirmation, denial, doubt, and resolution (determinativa).",
+    "locator": "corpus lines 1866-1935; ACIV MOG I, vii, 9-10: 441-2",
+    "stages": [
+      {"stage": 1, "name": "affirmation",  "soul_state": "E",
+       "what_happens": "S enters a compartment of the dignities and affirms one horn of the contradiction. Here: perfect wisdom entails perfect predestination."},
+      {"stage": 2, "name": "denial",       "soul_state": "I",
+       "what_happens": "The mirror image. Substituting justice for wisdom, and free will for predestination, the argument turns against what it just affirmed."},
+      {"stage": 3, "name": "doubt",        "soul_state": "R",
+       "what_happens": "Holding both, the intellect cannot affirm or deny either. 'All of S is perverted into R.' This is the stuck state, and it is supposed to happen."},
+      {"stage": 4, "name": "resolution",   "soul_state": "E",
+       "what_happens": "S re-enters the dignities under further compartments (perfect power, perfect will) and affirms both horns at a higher level, dissolving the contradiction rather than choosing a side."}
+    ]
+  },
+
+  "design_note": "This is a complete, formally specified state machine taken from the source, not a reconstruction. Four states, twelve tracked individuals, a goal pair (E/I), an uninformed state (N), a stuck state (R), and an attested four-stage procedure for escaping it."
+}

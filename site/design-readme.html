@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">Design Proposals</h1>
+<p>Proposal set for BRUNOMEMAPP's interactive layer. <strong>Nothing here is implemented.</strong> These are design documents to argue with, not a build log.</p>
+<p><strong>Read <a href="design-architecture.html">ARCHITECTURE.md</a> first</strong> — every other document inherits its vocabulary (frames as triples, testability tiers, the provenance ladder, the artifact×frame matrix).</p>
+<h2 class="doc-h2">Frames — how an operation is read</h2>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th>Doc</th><th>Stance</th><th>Testability</th></tr></thead><tbody><tr><td><a href="design-yates.html">YATES.md</a></td><td>wheel as inner talisman; Hermetic-magical</td><td>T3</td></tr><tr><td><a href="design-sturlese.html">STURLESE.md</a></td><td>corrected wheel as combinatorial encoder</td><td><strong>T1</strong></td></tr><tr><td><a href="design-clucas.html">CLUCAS.md</a></td><td>logic + ethics + magic; ordering the soul</td><td>T2 (+partial T1)</td></tr><tr><td><a href="design-wang.html">WANG.md</a></td><td>iconic practice; image becomes schema</td><td><strong>T1 partial</strong></td></tr><tr><td><a href="design-mertens.html">MERTENS.md</a></td><td>spirit-regulation; memory and magic as one</td><td>T1 partial</td></tr><tr><td><a href="design-barenstein.html">BARENSTEIN.md</a></td><td><em>memoria regulata</em>; non-esoteric</td><td><strong>T1</strong></td></tr><tr><td><a href="design-couliano.html">COULIANO.md</a></td><td><em>vinculum</em>; psychological binding</td><td>T3 (deliberately unbuilt)</td></tr></tbody></table></div>
+<h2 class="doc-h2">Artifacts — what you operate</h2>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th>Doc</th><th>Primary text</th><th>Frames</th></tr></thead><tbody><tr><td><a href="design-wheel.html">WHEEL.md</a></td><td><em>De umbris idearum</em></td><td>6 of 7</td></tr><tr><td><a href="design-imagelab.html">IMAGELAB.md</a></td><td><em>De imaginum</em></td><td>5</td></tr><tr><td><a href="design-seals.html">SEALS.md</a></td><td><em>Explicatio</em> / <em>Sigillus sigillorum</em></td><td>4</td></tr><tr><td><a href="design-cabala.html">CABALA.md</a></td><td><em>Cabala del cavallo pegaseo</em></td><td>none — by design</td></tr><tr><td><a href="design-frenzies.html">FRENZIES.md</a></td><td><em>De gli eroici furori</em></td><td>5</td></tr><tr><td><a href="design-vincula.html">VINCULA.md</a></td><td><em>De vinculis in genere</em></td><td>3</td></tr></tbody></table></div>
+<h2 class="doc-h2">The three ideas that carry the set</h2>
+<ol class="doc-list"><li><strong>A frame is (mechanism, output, success-criterion).</strong> Only Yates has a different mechanism; every post-1991 frame shares one wheel and disagrees about what success means. That is why Sturlese's correction settled the philology and left the interpretation untouched — and the software can show it.</li><li><strong>One contested claim is empirically decidable in a browser.</strong> The mnemonic claim is measurable; the metaphysical ones are not. Keeping those in separate visual registers is the whole epistemology, rendered.</li><li><strong>Provenance must be mechanically enforced.</strong> All 78 current content rows are <code>SEED_DATA</code> — model general knowledge — and some carry <code>confidence: HIGH</code>. A build-time lint should make that combination impossible.</li></ol>
+<h2 class="doc-h2">Status</h2>
+<p>All scholarly characterisations in these documents are <code>LLM_GENERAL_KNOWLEDGE</code>, written from model background knowledge rather than a page-cited reading of the corpus. Each document ends with a <strong>To verify in corpus</strong> section. The highest-priority item across the whole set: <strong>the actual ring positions of both wheel reconstructions</strong>, which six frames depend on.</p></article>
+        <p class="provenance-note">Source: <code>docs/design/README.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

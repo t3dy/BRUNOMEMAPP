@@ -1,0 +1,2610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica Fantastica — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">The Art run on images, as Bruno's version requires</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html" class="active">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <h1 class="section-title">Logica Fantastica</h1>
+        <p class="section-intro">Llull's Art computes with letters. Bruno's computes with
+        <em>images</em>, held in the <em>spiritus phantasticus</em> — which is why he had to build an
+        image vocabulary before he could reason with it. Here the same dialectic runs on images
+        composed from Bruno's own three systems.</p>
+
+        <div class="attribution-banner recon">
+            <span class="label">Scholarly reconstruction</span>
+            <p>Similitudo-logic holds that the likeness of a thing carries real inferential weight -- principia essendi et cognoscendi are the same. If so, an image drawn from Saturn&#x27;s court (whose attested retinue is the melancholic afflictions) genuinely inclines the soul differently from one drawn from Venus&#x27;s (whose retinue is concord). That is the doctrine applied, not a mechanic invented. But Bruno does not say it in these words, and the label stays SCHOLARLY_RECONSTRUCTION.</p>
+            <div class="recon-cols">
+                <div><h4>Attested</h4><ul class="recon-list"><li>Figure S and its four species, with the dialectic (Llull, via Bonner) -- see data/figure_s.json</li><li>The 24 atria and their 24 positions (Bruno, De imaginum Bk I Pt 2 chs 3-6) -- data/atria_harvested.json</li><li>The image alphabet: letter/cluster -&gt; Latin agent-nouns (De imaginum chs 12-13) -- data/alphabet_harvested.json</li><li>The planetary courts and their retinues, including each court&#x27;s affective character (De imaginum ~3590-4935) -- data/images_harvested.json</li><li>That Bruno&#x27;s version of the Art is a logica fantastica whose operands are images in the spiritus phantasticus (Mertens; Rossi, &#x27;La logica fantastica di Giordano Bruno&#x27;)</li><li>That Bruno inherited from Llull a logic through similitudines, in which principia essendi et cognoscendi are the same (Mertens)</li></ul></div>
+                <div><h4>Reconstructed by this project</h4><ul class="recon-list"><li>The combination. Bruno leaves no worked example of running a Lullian dialectic on composed images, so the wiring below -- operator to memory, atrium to intellect, court to will -- is this project&#x27;s construction.</li><li>The specific claim that a court&#x27;s affective register moves the WILL toward love or hatred. Each court&#x27;s character is attested by its retinue; using that character as inferential force in a dialectic is our extension of the similitudo principle.</li></ul></div>
+            </div>
+        </div>
+
+        <h3 class="alpha-sub">One power, one system</h3>
+        <p>Each of the three powers of the soul is supplied by one of Bruno&#x27;s three attested systems. Choose one of each to compose an image; the triple you produce determines which species of Figure S you land in.</p>
+        <div class="power-grid"><div class="power-card"><h4>memory</h4><div class="power-source">from the image alphabet</div><p>An operator drawn from the letter-key of your term gives the memory a handle to hold it by. Compose without one and the memory has nothing to grip: K, forgetting.</p></div><div class="power-card"><h4>intellect</h4><div class="power-source">from the atria</div><p>Placing the image at an apt address means you have understood where in the order of things it belongs. Placing it arbitrarily means you are storing without knowing: L, not knowing.</p></div><div class="power-card"><h4>will</h4><div class="power-source">from the planetary courts</div><p>The court&#x27;s affective register inclines the will. Saturn&#x27;s retinue is the melancholic afflictions; Venus&#x27;s is concord. Draw from one and the will is moved toward hatred, from the other toward love.</p></div></div>
+
+        <div class="engine-layout">
+            <div class="engine-figure">
+                <h3>Figura S</h3>
+                <div id="fantastica-figure"></div>
+                <p class="caveat-line">The readout reports the state of the <em>figure</em>, never of the reader.</p>
+            </div>
+            <div class="engine-work">
+                <h3>Praedestinatio et liberum arbitrium <span class="stage-en">The same question, composed in images</span></h3>
+                <p class="stage-prompt">You worked this contradiction with Llull&#x27;s letters. Now work it as Bruno would have to: with images. Compose one for each figure, drawing memory from the alphabet, intellect from the atria, and will from the courts.</p>
+                <div id="fantastica-stage"></div>
+                <div id="fantastica-outcome"></div>
+            </div>
+        </div>
+
+        <p class="provenance-note">
+            <strong>Status: <code>SCHOLARLY_RECONSTRUCTION</code>, confidence
+            <code>LOW</code>.</strong>
+            Every component is drawn from the corpus; the wiring between them is not.
+            Compare <a href="engine.html">the Art Engine</a>, which is Llull's attested version.
+        </p>
+
+        <script type="application/json" id="fantastica-data">{
+  "_provenance": {
+    "status": "SCHOLARLY_RECONSTRUCTION",
+    "what_is_attested": [
+      "Figure S and its four species, with the dialectic (Llull, via Bonner) -- see data/figure_s.json",
+      "The 24 atria and their 24 positions (Bruno, De imaginum Bk I Pt 2 chs 3-6) -- data/atria_harvested.json",
+      "The image alphabet: letter/cluster -> Latin agent-nouns (De imaginum chs 12-13) -- data/alphabet_harvested.json",
+      "The planetary courts and their retinues, including each court's affective character (De imaginum ~3590-4935) -- data/images_harvested.json",
+      "That Bruno's version of the Art is a logica fantastica whose operands are images in the spiritus phantasticus (Mertens; Rossi, 'La logica fantastica di Giordano Bruno')",
+      "That Bruno inherited from Llull a logic through similitudines, in which principia essendi et cognoscendi are the same (Mertens)"
+    ],
+    "what_is_reconstructed": [
+      "The combination. Bruno leaves no worked example of running a Lullian dialectic on composed images, so the wiring below -- operator to memory, atrium to intellect, court to will -- is this project's construction.",
+      "The specific claim that a court's affective register moves the WILL toward love or hatred. Each court's character is attested by its retinue; using that character as inferential force in a dialectic is our extension of the similitudo principle."
+    ],
+    "why_it_is_defensible": "Similitudo-logic holds that the likeness of a thing carries real inferential weight -- principia essendi et cognoscendi are the same. If so, an image drawn from Saturn's court (whose attested retinue is the melancholic afflictions) genuinely inclines the soul differently from one drawn from Venus's (whose retinue is concord). That is the doctrine applied, not a mechanic invented. But Bruno does not say it in these words, and the label stays SCHOLARLY_RECONSTRUCTION.",
+    "confidence": "LOW"
+  },
+
+  "how_composition_works": "Each of the three powers of the soul is supplied by one of Bruno's three attested systems. Choose one of each to compose an image; the triple you produce determines which species of Figure S you land in.",
+
+  "power_sources": [
+    {
+      "power": "memory",
+      "supplied_by": "the image alphabet",
+      "rule": "An operator drawn from the letter-key of your term gives the memory a handle to hold it by. Compose without one and the memory has nothing to grip: K, forgetting.",
+      "yields": {"with": "B / F (remembering)", "without": "K (forgetting)"}
+    },
+    {
+      "power": "intellect",
+      "supplied_by": "the atria",
+      "rule": "Placing the image at an apt address means you have understood where in the order of things it belongs. Placing it arbitrarily means you are storing without knowing: L, not knowing.",
+      "yields": {"apt": "C / G (understanding)", "arbitrary": "L (not knowing)"}
+    },
+    {
+      "power": "will",
+      "supplied_by": "the planetary courts",
+      "rule": "The court's affective register inclines the will. Saturn's retinue is the melancholic afflictions; Venus's is concord. Draw from one and the will is moved toward hatred, from the other toward love.",
+      "yields": {"love": "D (loving)", "hate": "H (hating)", "mutable": "M / Q (undecided)"}
+    }
+  ],
+
+  "court_valences": [
+    {"court": "Saturn",       "valence": "hate",    "register": "melancholic affliction",
+     "attested_retinue": "old Antiquity, Decrepitude, Weariness, Lassitude, Slowness, Exhaustion, Decay, Disease; and the named images Grief, Care, Fear, Doubt, Hunger, Envy, Death, Poverty"},
+    {"court": "Mars",         "valence": "hate",    "register": "wrath and violence",
+     "attested_retinue": "the image of Wrath and its attendants"},
+    {"court": "Pluto",        "valence": "hate",    "register": "the underworld",
+     "attested_retinue": "principal image only in the transcribed range"},
+    {"court": "Venus",        "valence": "love",    "register": "concord",
+     "attested_retinue": "Sweet Unanimity, peaceful Agreement, gentle Will, Union of Hearts, Joy of the Breast, concordant Conformity"},
+    {"court": "Tellus",       "valence": "love",    "register": "generation",
+     "attested_retinue": "Conception, Gestation, Fertility, Generation, Birth, Nursing, Feeding, Cherishing"},
+    {"court": "Jove",         "valence": "love",    "register": "rule and majesty",
+     "attested_retinue": "the chariots on Jove's right and left, Jove's throne"},
+    {"court": "Mercury",      "valence": "clarify", "register": "disclosure and speech",
+     "attested_retinue": "Edition, Prolation, Nudation, Detection, Vulgation, Signification, Manifestation, Dissemination, Revelation",
+     "special": "Mercury does not incline the will. It sharpens the intellect: an image from this court counts as apt placement even in an ill-chosen atrium, because disclosure supplies its own order."},
+    {"court": "Sun / Apollo", "valence": "clarify", "register": "illumination",
+     "attested_retinue": "principal images of the Sun and Apollo, Aesculapius and Chiron, Circe, Orpheus",
+     "special": "As Mercury."},
+    {"court": "Luna",         "valence": "mutable", "register": "phase and change",
+     "attested_retinue": "nocturnal Silence, starry Crown, silvery Gleam, murky Mutability; separate retinues for the waxing and for the waning and changing Luna",
+     "special": "Luna's retinue is split by phase, so the will it produces is undecided. An image drawn from Luna cannot settle an argument -- it can only suspend it."}
+  ],
+
+  "resolution_rules": [
+    {"memory": true,  "intellect": true,  "will": "love",    "species": "E",
+     "note": "Remembering, understanding and loving: informed acceptance."},
+    {"memory": true,  "intellect": true,  "will": "hate",    "species": "I",
+     "note": "Remembering, understanding and hating: informed rejection, equally a goal."},
+    {"memory": false, "intellect": null,  "species": "N",
+     "note": "Without an operator the memory has no handle. Whatever the will inclines to is credulity."},
+    {"memory": null,  "intellect": false, "species": "N",
+     "note": "Placed without aptness, the intellect does not know what it holds. Supposition, not knowledge."},
+    {"memory": true,  "intellect": true,  "will": "mutable", "species": "R",
+     "note": "Remembered and understood, but the will cannot settle. All possibilities open at once: confusion."}
+  ],
+
+  "question": {
+    "slug": "predestination-free-will-fantastica",
+    "title": "Praedestinatio et liberum arbitrium",
+    "title_en": "The same question, composed in images",
+    "prompt": "You worked this contradiction with Llull's letters. Now work it as Bruno would have to: with images. Compose one for each figure, drawing memory from the alphabet, intellect from the atria, and will from the courts.",
+    "stages": [
+      {
+        "stage": 1, "name": "Figura prima", "name_en": "affirmation",
+        "term": "Praedestinatio", "letter_key": "P",
+        "target_species": "E",
+        "brief": "Affirm predestination. You need an image that is held, aptly placed, and loved.",
+        "apt_atria": ["altar", "horoscope", "gate"],
+        "apt_reason": "The altar for what is ordained, the horoscope for what is foreseen, the gate for what is passed through of necessity."
+      },
+      {
+        "stage": 2, "name": "Figura secunda", "name_en": "denial",
+        "term": "Liberum arbitrium", "letter_key": "L",
+        "target_species": "I",
+        "brief": "Now argue the contrary. You need an image held and understood, but whose court turns the will against what you just affirmed.",
+        "apt_atria": ["prison", "sword", "colt"],
+        "apt_reason": "The prison for constraint refused, the sword for the cut of decision, the colt for what is unbroken."
+      },
+      {
+        "stage": 3, "name": "Figura tertia", "name_en": "doubt",
+        "term": "Utrumque", "letter_key": "T",
+        "target_species": "R",
+        "brief": "Hold both. You need an image that is remembered and understood but whose will cannot settle.",
+        "apt_atria": ["mirror", "fountain", "nest"],
+        "apt_reason": "The mirror for a thing that shows both faces, the fountain for what will not stay still, the nest for what is not yet fledged."
+      },
+      {
+        "stage": 4, "name": "Figura quarta", "name_en": "resolution",
+        "term": "Potestas et voluntas", "letter_key": "P",
+        "target_species": "E",
+        "brief": "Resolve. Enter by a different dignity than the one that made the problem, and compose an image the will can love while the intellect holds both horns.",
+        "apt_atria": ["table", "basilica", "lantern"],
+        "apt_reason": "The table for what is set out entire, the basilica for what holds a whole assembly, the lantern for what shows without consuming."
+      }
+    ]
+  }
+}
+</script><script type="application/json" id="figure-s-data">{
+  "_provenance": {
+    "source": "Anthony Bonner, The Art and Logic of Ramon Llull: A User's Guide",
+    "locator": "lines 1579-1680 of the corpus plain text; Bonner's chart of Figure S, quaternary phase",
+    "llull_sources_cited_by_bonner": "ACIV (MOG I, vii, 2: 434); AD (SW I, 322-3); Ars universalis (MOG I, viii, 3: 485)",
+    "method": "HAND_TRANSCRIBED",
+    "method_note": "The chart is a 4x3 grid flattened into a mangled ASCII column in the extracted text and cannot be parsed reliably. Transcribed by hand from the located slice rather than machine-extracted. Verify against Bonner's printed chart before treating as authoritative.",
+    "confidence": "MEDIUM"
+  },
+
+  "what_this_is": "Figure S: the state of the practitioner's rational soul. Not the static powers of memory, intellect and will, but their ACTS and combinations of acts -- Bonner: 'a figure that begins by being dynamic and combinatory.' Four species (E I N R), each a triple of one act per power.",
+
+  "aim_of_the_art": "Bonner, on the first two compartments: the aim of the Art is to get the user -- 'or rather the S of the user' -- to remember, understand and love (E) God, the virtues and the truth, while remembering, understanding and hating (I) the vices and falsehood. The remaining states are unreliable belief (N) or confusion (R). The machine's output is a change in the operator.",
+
+  "powers": [
+    {"power": "memory",    "latin": "memoria"},
+    {"power": "intellect", "latin": "intellectus"},
+    {"power": "will",      "latin": "voluntas"}
+  ],
+
+  "individuals": [
+    {"letter": "B", "power": "memory",    "act": "remembering",        "species": "E"},
+    {"letter": "C", "power": "intellect", "act": "understanding",      "species": "E"},
+    {"letter": "D", "power": "will",      "act": "loving",             "species": "E"},
+
+    {"letter": "F", "power": "memory",    "act": "remembering",        "species": "I"},
+    {"letter": "G", "power": "intellect", "act": "understanding",      "species": "I"},
+    {"letter": "H", "power": "will",      "act": "hating",             "species": "I"},
+
+    {"letter": "K", "power": "memory",    "act": "forgetting",         "species": "N"},
+    {"letter": "L", "power": "intellect", "act": "not knowing",        "species": "N"},
+    {"letter": "M", "power": "will",      "act": "loving or hating",   "species": "N",
+     "note": "Bonner flags M's double meaning as one of three surprising features of the figure. In N the will has no preconception, so M is indeterminate rather than absent."},
+
+    {"letter": "O", "power": "memory",    "act": "remembering or forgetting", "species": "R", "composite_of": ["B", "F", "K"]},
+    {"letter": "P", "power": "intellect", "act": "understanding or not knowing", "species": "R", "composite_of": ["C", "G", "L"]},
+    {"letter": "Q", "power": "will",      "act": "loving or hating",   "species": "R", "composite_of": ["D", "H", "M"]}
+  ],
+
+  "species": [
+    {
+      "letter": "E", "individuals": ["B", "C", "D"],
+      "label": "informed acceptance",
+      "gloss": "remembering, understanding and loving the object",
+      "role": "With I, the vehicle for questions, arguments, solutions and necessary propositions.",
+      "is_goal_state": true,
+      "note": "Bonner: 'E always and continuously apprehends objects by means of B C D.'"
+    },
+    {
+      "letter": "I", "individuals": ["F", "G", "H"],
+      "label": "informed rejection",
+      "gloss": "remembering, understanding and hating the object",
+      "role": "With E, the vehicle for questions, arguments, solutions and necessary propositions.",
+      "is_goal_state": true,
+      "note": "Correct toward vice and falsehood. Rejection with full knowledge is a success state, not a failure."
+    },
+    {
+      "letter": "N", "individuals": ["K", "L", "M"],
+      "label": "supposition / belief / credulity",
+      "gloss": "not remembering, not knowing, with the will undecided",
+      "role": "The vehicle for suppositions, faith and belief.",
+      "is_goal_state": false,
+      "note": "Bonner: Llull's Latin is closer to 'credulity'; it applies equally to Muslims or Jews. Belief held without knowledge -- not a fault, but not knowledge."
+    },
+    {
+      "letter": "R", "individuals": ["O", "P", "Q"],
+      "label": "confusion",
+      "gloss": "all positive and negative possibilities open at once",
+      "role": "The vehicle for doubts.",
+      "is_stuck_state": true,
+      "note": "Bonner: 'a state of intellectual or spiritual confusion.' In the worked example, when the argument jams, 'all of S is perverted into R.' Reachable, and the four-stage dialectic exists to get out of it."
+    }
+  ],
+
+  "dialectic": {
+    "note": "From Bonner's worked example: Llull resolving the contradiction between predestination and free will as four successive 'figures of X'. Named in the Ars Universalis as affirmation, denial, doubt, and resolution (determinativa).",
+    "locator": "corpus lines 1866-1935; ACIV MOG I, vii, 9-10: 441-2",
+    "stages": [
+      {"stage": 1, "name": "affirmation",  "soul_state": "E",
+       "what_happens": "S enters a compartment of the dignities and affirms one horn of the contradiction. Here: perfect wisdom entails perfect predestination."},
+      {"stage": 2, "name": "denial",       "soul_state": "I",
+       "what_happens": "The mirror image. Substituting justice for wisdom, and free will for predestination, the argument turns against what it just affirmed."},
+      {"stage": 3, "name": "doubt",        "soul_state": "R",
+       "what_happens": "Holding both, the intellect cannot affirm or deny either. 'All of S is perverted into R.' This is the stuck state, and it is supposed to happen."},
+      {"stage": 4, "name": "resolution",   "soul_state": "E",
+       "what_happens": "S re-enters the dignities under further compartments (perfect power, perfect will) and affirms both horns at a higher level, dissolving the contradiction rather than choosing a side."}
+    ]
+  },
+
+  "design_note": "This is a complete, formally specified state machine taken from the source, not a reconstruction. Four states, twelve tracked individuals, a goal pair (E/I), an uninformed state (N), a stuck state (R), and an attested four-stage procedure for escaping it."
+}
+</script><script type="application/json" id="alphabet-data">{
+  "source": {
+    "work": "On the Composition of Images, Signs and Ideas (De imaginum, 1591)",
+    "translator": "Dick Higgins",
+    "locus": "Book I, Part 2, chapters 12-13",
+    "lines": {
+      "simple": [
+        2311,
+        2326
+      ],
+      "cluster": [
+        2333,
+        2340
+      ]
+    },
+    "file": "Giordano Bruno Dick Higgins On the Composition of Images Signs and Ideas Willis Locker Owens Publishing.txt"
+  },
+  "how_it_works": "Each initial letter or consonant cluster carries a small set of Latin agent-nouns -- \"operators\", people defined by what they do. To encode a word, take its opening letter or cluster and use one of that key's operators as the image. Chapter 13 adds that each operator \"receives the six differences which are sought in the six double triangles of the minor chambers\", so a single operator can be inflected six ways.",
+  "cross_reference_note": "Asterisked cells are cross-references, not images: \"*Ble as Ple\" means the syllable Ble borrows the image assigned to Ple. Bruno economises by sharing images between phonetically close clusters.",
+  "caveat": "A handful of cells are damaged or abbreviated in the source text and are flagged ocr_suspect (e.g. \"Go\", \"Licto\", \"Frondes spar.\"). Glosses are given only where reasonably certain; the rest are left unglossed rather than guessed.",
+  "simple_keys": [
+    {
+      "key": "B",
+      "line": 2311,
+      "entries": [
+        {
+          "form": "Baptizans",
+          "kind": "OPERATOR",
+          "gloss": "one baptizing"
+        },
+        {
+          "form": "Bellator",
+          "kind": "OPERATOR",
+          "gloss": "warrior"
+        },
+        {
+          "form": "Bibliopola",
+          "kind": "OPERATOR",
+          "gloss": "bookseller"
+        },
+        {
+          "form": "Boarius",
+          "kind": "OPERATOR",
+          "gloss": "cattle-dealer"
+        },
+        {
+          "form": "Buccinator",
+          "kind": "OPERATOR",
+          "gloss": "trumpeter"
+        }
+      ]
+    },
+    {
+      "key": "C",
+      "line": 2312,
+      "entries": [
+        {
+          "form": "Caupona",
+          "kind": "OPERATOR",
+          "gloss": "innkeeper"
+        },
+        {
+          "form": "Cerdo",
+          "kind": "OPERATOR",
+          "gloss": "cobbler / artisan"
+        },
+        {
+          "form": "Circulator",
+          "kind": "OPERATOR",
+          "gloss": "street-performer"
+        },
+        {
+          "form": "Colonus",
+          "kind": "OPERATOR",
+          "gloss": "farmer"
+        },
+        {
+          "form": "Custos",
+          "kind": "OPERATOR",
+          "gloss": "guard"
+        }
+      ]
+    },
+    {
+      "key": "D",
+      "line": 2313,
+      "entries": [
+        {
+          "form": "Danista",
+          "kind": "OPERATOR",
+          "gloss": "money-lender"
+        },
+        {
+          "form": "Delirus",
+          "kind": "OPERATOR",
+          "gloss": "madman"
+        },
+        {
+          "form": "Digladiat",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Domitor",
+          "kind": "OPERATOR",
+          "gloss": "tamer"
+        },
+        {
+          "form": "Dux",
+          "kind": "OPERATOR",
+          "gloss": "leader"
+        }
+      ]
+    },
+    {
+      "key": "F",
+      "line": 2314,
+      "entries": [
+        {
+          "form": "Famulator",
+          "kind": "OPERATOR",
+          "gloss": "servant"
+        },
+        {
+          "form": "Festivus",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Figulus",
+          "kind": "OPERATOR",
+          "gloss": "potter"
+        },
+        {
+          "form": "Fossor",
+          "kind": "OPERATOR",
+          "gloss": "digger"
+        },
+        {
+          "form": "Fur",
+          "kind": "OPERATOR",
+          "gloss": "thief"
+        }
+      ]
+    },
+    {
+      "key": "G",
+      "line": 2315,
+      "entries": [
+        {
+          "form": "Gaudens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Geometra",
+          "kind": "OPERATOR",
+          "gloss": "geometer"
+        },
+        {
+          "form": "Gyrans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Go",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Gulosus",
+          "kind": "OPERATOR",
+          "gloss": "glutton"
+        }
+      ]
+    },
+    {
+      "key": "H",
+      "line": 2316,
+      "entries": [
+        {
+          "form": "Hauriens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Herbarius",
+          "kind": "OPERATOR",
+          "gloss": "herbalist"
+        },
+        {
+          "form": "Histrio",
+          "kind": "OPERATOR",
+          "gloss": "actor"
+        },
+        {
+          "form": "Hospes",
+          "kind": "OPERATOR",
+          "gloss": "host / guest"
+        },
+        {
+          "form": "Humiliator",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "I",
+      "line": 2317,
+      "entries": [
+        {
+          "form": "Iaculator",
+          "kind": "OPERATOR",
+          "gloss": "javelin-thrower"
+        },
+        {
+          "form": "Ieiunans",
+          "kind": "OPERATOR",
+          "gloss": "one fasting"
+        },
+        {
+          "form": "Incantans",
+          "kind": "OPERATOR",
+          "gloss": "one enchanting"
+        },
+        {
+          "form": "Iocans",
+          "kind": "OPERATOR",
+          "gloss": "jester"
+        },
+        {
+          "form": "Iustitians",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "L",
+      "line": 2318,
+      "entries": [
+        {
+          "form": "Lacerans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Lector",
+          "kind": "OPERATOR",
+          "gloss": "reader"
+        },
+        {
+          "form": "Licto",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Locator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Luxuriosus",
+          "kind": "OPERATOR",
+          "gloss": "voluptuary"
+        }
+      ]
+    },
+    {
+      "key": "M",
+      "line": 2319,
+      "entries": [
+        {
+          "form": "Maculans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Medicus",
+          "kind": "OPERATOR",
+          "gloss": "physician"
+        },
+        {
+          "form": "Miles",
+          "kind": "OPERATOR",
+          "gloss": "soldier"
+        },
+        {
+          "form": "Motor",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Musicus",
+          "kind": "OPERATOR",
+          "gloss": "musician"
+        }
+      ]
+    },
+    {
+      "key": "N",
+      "line": 2320,
+      "entries": [
+        {
+          "form": "Nauta",
+          "kind": "OPERATOR",
+          "gloss": "sailor"
+        },
+        {
+          "form": "Nectens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Nidificans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Nodans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Nutrix",
+          "kind": "OPERATOR",
+          "gloss": "nurse"
+        }
+      ]
+    },
+    {
+      "key": "P",
+      "line": 2321,
+      "entries": [
+        {
+          "form": "Pastor",
+          "kind": "OPERATOR",
+          "gloss": "shepherd"
+        },
+        {
+          "form": "Percutiens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Pictor",
+          "kind": "OPERATOR",
+          "gloss": "painter"
+        },
+        {
+          "form": "Ponderans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Puerpera",
+          "kind": "OPERATOR",
+          "gloss": "woman in childbirth"
+        }
+      ]
+    },
+    {
+      "key": "Q",
+      "line": 2322,
+      "entries": [
+        {
+          "form": "Quadratus",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Quassitor",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Quiescens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Quodlibet",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Quumulatus",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        }
+      ]
+    },
+    {
+      "key": "R",
+      "line": 2323,
+      "entries": [
+        {
+          "form": "Raptor",
+          "kind": "OPERATOR",
+          "gloss": "ravisher"
+        },
+        {
+          "form": "Rector",
+          "kind": "OPERATOR",
+          "gloss": "ruler"
+        },
+        {
+          "form": "Rigator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Rotator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Rusticus",
+          "kind": "OPERATOR",
+          "gloss": "peasant"
+        }
+      ]
+    },
+    {
+      "key": "S",
+      "line": 2324,
+      "entries": [
+        {
+          "form": "Saltator",
+          "kind": "OPERATOR",
+          "gloss": "dancer"
+        },
+        {
+          "form": "Sepultor",
+          "kind": "OPERATOR",
+          "gloss": "gravedigger"
+        },
+        {
+          "form": "Sigillator",
+          "kind": "OPERATOR",
+          "gloss": "sealer"
+        },
+        {
+          "form": "Sonans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Superbiens",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "T",
+      "line": 2325,
+      "entries": [
+        {
+          "form": "Tangens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Temperans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Tinctor",
+          "kind": "OPERATOR",
+          "gloss": "dyer"
+        },
+        {
+          "form": "Tonsor",
+          "kind": "OPERATOR",
+          "gloss": "barber"
+        },
+        {
+          "form": "Turbator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Vacuans",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "V",
+      "line": 2326,
+      "entries": [
+        {
+          "form": "Venator",
+          "kind": "OPERATOR",
+          "gloss": "hunter"
+        },
+        {
+          "form": "Vitrarius",
+          "kind": "OPERATOR",
+          "gloss": "glassmaker"
+        },
+        {
+          "form": "Voluptuarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Vulneratus",
+          "kind": "OPERATOR"
+        }
+      ]
+    }
+  ],
+  "cluster_keys": [
+    {
+      "key": "Bl",
+      "line": 2333,
+      "entries": [
+        {
+          "form": "Blactearius",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Ble",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Ple",
+          "note": "For Ble, use the image assigned to Ple."
+        },
+        {
+          "form": "Bh",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Ph",
+          "note": "For Bh, use the image assigned to Ph."
+        },
+        {
+          "form": "Blo",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Plo",
+          "note": "For Blo, use the image assigned to Plo."
+        },
+        {
+          "form": "Blu",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Plu",
+          "note": "For Blu, use the image assigned to Plu."
+        },
+        {
+          "form": "Bra",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Pra",
+          "note": "For Bra, use the image assigned to Pra."
+        },
+        {
+          "form": "Bre",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Pre",
+          "note": "For Bre, use the image assigned to Pre."
+        },
+        {
+          "form": "Bro",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Pro",
+          "note": "For Bro, use the image assigned to Pro."
+        },
+        {
+          "form": "Brutum",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "Cl",
+      "line": 2334,
+      "entries": [
+        {
+          "form": "Claviger",
+          "kind": "OPERATOR",
+          "gloss": "key-bearer"
+        },
+        {
+          "form": "Clericus",
+          "kind": "OPERATOR",
+          "gloss": "cleric"
+        },
+        {
+          "form": "Clitellarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Clostrarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Cludens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Crapulo",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Cremans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Cribrans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Crocitans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Crucians",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "Fl",
+      "line": 2335,
+      "entries": [
+        {
+          "form": "Flagellans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Flectens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Fligens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Florans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Fluctuans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Frangellans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Frenans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Fricans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Frondes spar.",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Fructuarius",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "Gl",
+      "line": 2336,
+      "entries": [
+        {
+          "form": "Gladiator",
+          "kind": "OPERATOR",
+          "gloss": "gladiator"
+        },
+        {
+          "form": "Gle",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Cle",
+          "note": "For Gle, use the image assigned to Cle."
+        },
+        {
+          "form": "Gli",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Cli",
+          "note": "For Gli, use the image assigned to Cli."
+        },
+        {
+          "form": "Glomer",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Glu",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Clu",
+          "note": "For Glu, use the image assigned to Clu."
+        },
+        {
+          "form": "Grassator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Gregarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Gri",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Cri",
+          "note": "For Gri, use the image assigned to Cri."
+        },
+        {
+          "form": "Gro",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Cro",
+          "note": "For Gro, use the image assigned to Cro."
+        },
+        {
+          "form": "Gru",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Cru",
+          "note": "For Gru, use the image assigned to Cru."
+        }
+      ]
+    },
+    {
+      "key": "Pl",
+      "line": 2337,
+      "entries": [
+        {
+          "form": "Placans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Plectens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Plicans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Plostrarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Pluens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Practicans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Precans",
+          "kind": "OPERATOR",
+          "gloss": "one praying"
+        },
+        {
+          "form": "Privans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Propola",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Prudens",
+          "kind": "OPERATOR",
+          "gloss": "prudent one"
+        }
+      ]
+    },
+    {
+      "key": "Sc",
+      "line": 2338,
+      "entries": [
+        {
+          "form": "Scalpens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Scenicus",
+          "kind": "OPERATOR",
+          "gloss": "stage-player"
+        },
+        {
+          "form": "Scindens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Scortator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Scutifer",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Statuarius",
+          "kind": "OPERATOR",
+          "gloss": "sculptor"
+        },
+        {
+          "form": "Stercorarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Stillator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Stomachatus",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Studiosus",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Strangulans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Strenuus",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Strigillans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Strophiarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Struens",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "Tr",
+      "line": 2340,
+      "entries": [
+        {
+          "form": "Trapezitans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Trepidans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Triturans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Trophoearius",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Trutinans",
+          "kind": "OPERATOR"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "simple_keys": 16,
+    "cluster_keys": 7,
+    "operators": 136,
+    "cross_references": 13,
+    "ocr_suspect": 8
+  }
+}</script><script type="application/json" id="atria-data">{
+  "source": {
+    "work": "On the Composition of Images, Signs and Ideas (De imaginum, 1591)",
+    "translator": "Dick Higgins",
+    "locus": "Book I, Part 2, chapters 3-6",
+    "file": "Giordano Bruno Dick Higgins On the Composition of Images Signs and Ideas Willis Locker Owens Publishing.txt"
+  },
+  "atrium_form": {
+    "shape": "quadrangular",
+    "centre": "the earth and the eye",
+    "corners": [
+      "east",
+      "west",
+      "south",
+      "north"
+    ],
+    "mid_sides": [
+      "east",
+      "west",
+      "south",
+      "north"
+    ],
+    "points": 8,
+    "collaterals_per_point": [
+      "right",
+      "left"
+    ],
+    "positions": 24,
+    "note": "8 points x (self + right + left) = 24 positions per atrium."
+  },
+  "canonical_24": [
+    "altar",
+    "basilica",
+    "prison",
+    "house",
+    "colt",
+    "fountain",
+    "sword",
+    "horoscope",
+    "fire",
+    "yoke",
+    "lantern",
+    "table",
+    "nest",
+    "sheepfold",
+    "food",
+    "four horse chariot",
+    "net",
+    "mirror",
+    "hot springs",
+    "carriage",
+    "gate",
+    "Pythagorean fork",
+    "gift",
+    "key of jealousy"
+  ],
+  "plate_structure": "Higgins heads only the 12 odd-numbered atria, but each plate transcribes TWO: the headed one and the following even-numbered one, unheaded. All 24 are therefore present. Centres are ALL-CAPS cells and reproduce the ch.4 canonical list exactly, in order -- an independent cross-check on both.",
+  "caveat": "Position MAPPING is attested only for the Altar, where ch.6 gives position->item in prose. For atria 2-24 the inventory is attested but the cell order is a 2D plate flattened into text, so the mapping is RECONSTRUCTED and may not be geometrically faithful.",
+  "transcribed": [
+    {
+      "number": 1,
+      "name": "altar",
+      "centre": "ALTAR",
+      "centre_attested": true,
+      "source_line": 1373,
+      "plate": "I (headed)",
+      "positions": [
+        "Bath",
+        "Water",
+        "Anchor",
+        "Breastplate",
+        "Plow",
+        "Chariot",
+        "Amphora",
+        "Chain",
+        "Stable",
+        "Desk",
+        "Fruit",
+        "Skiff",
+        "Smoke",
+        "Throne",
+        "Prison",
+        "Oven",
+        "Tree",
+        "Jar",
+        "Sword",
+        "Globe",
+        "Stool",
+        "Fire",
+        "Banquet",
+        "Pool"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "ATTESTED"
+    },
+    {
+      "number": 2,
+      "name": "basilica",
+      "centre": "BASILICA",
+      "centre_attested": true,
+      "source_line": 1373,
+      "plate": "I (unheaded, second on plate)",
+      "positions": [
+        "Pool",
+        "Hot springs",
+        "Desert",
+        "Relics",
+        "Stool",
+        "Mirage",
+        "Offering",
+        "Treasures",
+        "Delight",
+        "Furies",
+        "Horn",
+        "Bottles",
+        "Badge",
+        "Hoe",
+        "Basin",
+        "Inferno",
+        "Camel form",
+        "Lantern",
+        "Dragon",
+        "Quiver",
+        "Ghost",
+        "Yoke",
+        "Box",
+        "Bier"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 3,
+      "name": "prison",
+      "centre": "PRISON",
+      "centre_attested": true,
+      "source_line": 1425,
+      "plate": "III (headed)",
+      "positions": [
+        "Bridge",
+        "Parrot",
+        "Noose",
+        "Cloud",
+        "Psaltery",
+        "Handcuffs",
+        "Maniple",
+        "Axe",
+        "Stake",
+        "Dung",
+        "Bracelet",
+        "Snow",
+        "Quartal",
+        "Bearskin",
+        "Pair of Compasses",
+        "Ghosts",
+        "Dirt",
+        "Old man",
+        "Basket",
+        "Frogs",
+        "Specter",
+        "Winnowing Fan",
+        "Old woman",
+        "Mud"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 4,
+      "name": "house",
+      "centre": "HOUSE",
+      "centre_attested": true,
+      "source_line": 1425,
+      "plate": "III (unheaded, second on plate)",
+      "positions": [
+        "Coal",
+        "Key",
+        "Dog",
+        "Ash",
+        "Icon",
+        "Canister",
+        "Bellows",
+        "Lute",
+        "Idol",
+        "Hair",
+        "Sword",
+        "Screech Owl",
+        "Spur",
+        "Cypress",
+        "Dog",
+        "Clock",
+        "Hook",
+        "Cat",
+        "Lagoon",
+        "Cat",
+        "Tile",
+        "Nail",
+        "Shrine",
+        "Platter"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 5,
+      "name": "colt",
+      "centre": "COLT",
+      "centre_attested": true,
+      "source_line": 1477,
+      "plate": "V (headed)",
+      "positions": [
+        "Fillet",
+        "Flies",
+        "Paniard",
+        "Rod",
+        "Linen",
+        "Javelin",
+        "Ulcer",
+        "Lance",
+        "Thorns",
+        "Law1",
+        "Fork",
+        "Net",
+        "Book",
+        "Seine",
+        "Stone",
+        "Butter",
+        "Garland",
+        "Dart",
+        "Thyrse2",
+        "Square",
+        "Axe",
+        "Reins",
+        "Club",
+        "Nettle"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 6,
+      "name": "fountain",
+      "centre": "FOUNTAIN",
+      "centre_attested": true,
+      "source_line": 1477,
+      "plate": "V (unheaded, second on plate)",
+      "positions": [
+        "Stag",
+        "Wagon",
+        "Lime",
+        "Horn",
+        "Stone",
+        "Water",
+        "Sickle",
+        "Cross",
+        "Palm",
+        "Hay",
+        "Lard",
+        "Gourd",
+        "Lamp",
+        "Cat",
+        "Bolt",
+        "Bowels",
+        "Millstone",
+        "Trumpet",
+        "Mar. Ca.3",
+        "Water Pot",
+        "Burial Urn",
+        "Sedan Chair",
+        "Oar",
+        "Must"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 7,
+      "name": "sword",
+      "centre": "SWORD",
+      "centre_attested": true,
+      "source_line": 1529,
+      "plate": "VII (headed)",
+      "positions": [
+        "Papyrus",
+        "Trireme",
+        "Sack",
+        "Balance Scale",
+        "Chamber Pot",
+        "Broom",
+        "Hammer",
+        "Urn",
+        "Womb",
+        "Mud",
+        "Oyster",
+        "Knot",
+        "Mitre",
+        "Lead",
+        "Flask",
+        "Linen",
+        "Title",
+        "Vine",
+        "Burden",
+        "Blood",
+        "Pruning Hook",
+        "Pyre",
+        "Door",
+        "Comma"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 8,
+      "name": "horoscope",
+      "centre": "HOROSCOPE",
+      "centre_attested": true,
+      "source_line": 1529,
+      "plate": "VII (unheaded, second on plate)",
+      "positions": [
+        "Wheel",
+        "Seat",
+        "Mountain",
+        "Rake",
+        "Demon",
+        "Divinity",
+        "Tongs",
+        "Mirror",
+        "Radius",
+        "Tumult",
+        "Moon",
+        "Wind",
+        "Flask",
+        "Bottle",
+        "Wagon",
+        "Circle",
+        "Well",
+        "Forest",
+        "Rein",
+        "Spade",
+        "Sulphur",
+        "Sword",
+        "Dust",
+        "Magnet"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 9,
+      "name": "fire",
+      "centre": "FIRE",
+      "centre_attested": true,
+      "source_line": 1581,
+      "plate": "IX (headed)",
+      "positions": [
+        "Cup",
+        "Mystery",
+        "Icon",
+        "Mixture",
+        "Woman",
+        "Comb",
+        "Birth",
+        "Couch",
+        "Reins",
+        "Death",
+        "Straw",
+        "Cell",
+        "Rushes",
+        "Heap",
+        "Wool",
+        "Forma",
+        "Rivulet",
+        "One Fallen",
+        "Coin4",
+        "Flint",
+        "Ditch",
+        "Copper Kettle",
+        "Pillar",
+        "Seall"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 10,
+      "name": "yoke",
+      "centre": "YOKE",
+      "centre_attested": true,
+      "source_line": 1581,
+      "plate": "IX (unheaded, second on plate)",
+      "positions": [
+        "Geyser",
+        "Gnome",
+        "Way",
+        "Pullet",
+        "Heap",
+        "Rain",
+        "Little Ball",
+        "Signet-ring",
+        "Hole",
+        "Eclipse",
+        "Wheat",
+        "Goose",
+        "Whirlpool",
+        "Goblet",
+        "Tumulus",
+        "Crock",
+        "Cup Shape",
+        "Candelabrum",
+        "Throne",
+        "Kindling",
+        "Halter",
+        "Branch",
+        "Feast",
+        "Lyre"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 11,
+      "name": "lantern",
+      "centre": "LANTERN",
+      "centre_attested": true,
+      "source_line": 1633,
+      "plate": "XI (headed)",
+      "positions": [
+        "Glass",
+        "Nymph",
+        "Feather",
+        "Coins",
+        "Discus",
+        "Gallows",
+        "Goldleaf",
+        "Quiver",
+        "Frying Pan",
+        "Foot Stool",
+        "Ivy",
+        "Fish",
+        "Torch",
+        "Laurel",
+        "Tuba",
+        "Hedge",
+        "Keel",
+        "Fulcrum",
+        "Bum",
+        "Nest",
+        "Bird",
+        "Haruspication5",
+        "Hedgehog",
+        "Griddle"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 12,
+      "name": "table",
+      "centre": "TABLE",
+      "centre_attested": true,
+      "source_line": 1633,
+      "plate": "XI (unheaded, second on plate)",
+      "positions": [
+        "Vegetables",
+        "Shrine",
+        "Straw Bed",
+        "Statue",
+        "Hunting",
+        "Oats",
+        "Rock",
+        "Girl",
+        "Beans",
+        "Wax",
+        "Fleece",
+        "Orb",
+        "Innards",
+        "Door Bolt",
+        "Bundle",
+        "Vow",
+        "Sand",
+        "Clay Pot",
+        "Bear",
+        "Desecration",
+        "Furnace",
+        "Honeycomb",
+        "Gimlet",
+        "Onions"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 13,
+      "name": "nest",
+      "centre": "NEST",
+      "centre_attested": true,
+      "source_line": 1685,
+      "plate": "XIII (headed)",
+      "positions": [
+        "Grinding Mortar",
+        "Sheath",
+        "Winter Wheat",
+        "Hammer",
+        "Whip",
+        "Rivulet",
+        "Rabbit",
+        "Token",
+        "Brick",
+        "Fountain",
+        "Manger",
+        "Stole",
+        "Tiara",
+        "Breast Band",
+        "Grove",
+        "Moon",
+        "Thread",
+        "Door",
+        "Vine Tendril",
+        "Pumice",
+        "Nuts",
+        "Key",
+        "Eye",
+        "Anvil"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 14,
+      "name": "sheepfold",
+      "centre": "SHEEPFOLD",
+      "centre_attested": true,
+      "source_line": 1685,
+      "plate": "XIII (unheaded, second on plate)",
+      "positions": [
+        "Pastorale",
+        "Chorus",
+        "Fennel Stalk",
+        "Mitre",
+        "Balance Scale",
+        "Dart",
+        "Hood",
+        "Bramble",
+        "Target",
+        "Den",
+        "Pine",
+        "Harpoon",
+        "Omen",
+        "Cane",
+        "Wallet",
+        "Priest",
+        "Poison",
+        "Wolf",
+        "Guts",
+        "Straw Mat",
+        "Pit",
+        "Ballista6",
+        "Rooster",
+        "Grape Peel"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 15,
+      "name": "food",
+      "centre": "FOOD",
+      "centre_attested": true,
+      "source_line": 1737,
+      "plate": "XV (headed)",
+      "positions": [
+        "Fat",
+        "Coop",
+        "Spoil",
+        "Swamp",
+        "Acorns",
+        "Spoon",
+        "Trough7",
+        "Strawberries",
+        "Trunk",
+        "Hut",
+        "Wood Beam",
+        "Star",
+        "Trident",
+        "Rite",
+        "Tin",
+        "Triangle",
+        "Apple",
+        "Winnowing Fan",
+        "Sponge",
+        "Turtle",
+        "Drum",
+        "Money",
+        "Wheatfield",
+        "Tripod"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 16,
+      "name": "four horse chariot",
+      "centre": "FOUR HORSE CHARIOT",
+      "centre_attested": true,
+      "source_line": 1737,
+      "plate": "XV (unheaded, second on plate)",
+      "positions": [
+        "Riches",
+        "Willow Tree",
+        "Womb",
+        "Archetype",
+        "Girl",
+        "Broom",
+        "Rust",
+        "Turnip",
+        "Veil",
+        "Punishment",
+        "Poppy",
+        "Tumulus",
+        "Lyre",
+        "Spoil",
+        "Stage",
+        "Purple",
+        "Food",
+        "Ape",
+        "Covering",
+        "Flower",
+        "Vial",
+        "Horse",
+        "Mallows",
+        "Magic"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 17,
+      "name": "net",
+      "centre": "NET",
+      "centre_attested": true,
+      "source_line": 1789,
+      "plate": "XVII (headed)",
+      "positions": [
+        "Wooden Foot",
+        "Piece of land",
+        "Vine Shoot",
+        "Crescent shield",
+        "Targeon",
+        "Lead",
+        "Grape Arbor",
+        "Platter",
+        "Winnowing Fan",
+        "Progeny",
+        "Chisel",
+        "Mortgage",
+        "Sickle",
+        "Ball",
+        "Violet",
+        "Light",
+        "Noose",
+        "Golden Head",
+        "Breather's Wheel9",
+        "Reflection",
+        "River Bank",
+        "Ball8",
+        "Seedling",
+        "Weaver's Shuttle"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 18,
+      "name": "mirror",
+      "centre": "MIRROR",
+      "centre_attested": true,
+      "source_line": 1789,
+      "plate": "XVII (unheaded, second on plate)",
+      "positions": [
+        "Serpent",
+        "Emerald",
+        "Garland",
+        "Sorceror11",
+        "Seed",
+        "Breadbasket",
+        "Chirping Bird",
+        "Scroll",
+        "Lion's Head",
+        "Helmet",
+        "Pillar",
+        "Ploughshare",
+        "Roman Shield",
+        "Yoke",
+        "Glue",
+        "Orcus10",
+        "Spire",
+        "Hand",
+        "Orbit",
+        "Sieve",
+        "Pig's Head",
+        "Small Wine Ladle",
+        "Hamper",
+        "Page"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 19,
+      "name": "hot springs",
+      "centre": "HOT SPRINGS",
+      "centre_attested": true,
+      "source_line": 1841,
+      "plate": "XIX (headed)",
+      "positions": [
+        "Penates12",
+        "Smoke",
+        "Conch",
+        "Obsonium13",
+        "Bellows",
+        "Linen",
+        "Vulture",
+        "Muslin",
+        "Pyre",
+        "Nest",
+        "Temple",
+        "Grass",
+        "Path",
+        "Serpent",
+        "Skiff",
+        "Pyramid",
+        "Spade",
+        "Sorceress",
+        "Fork",
+        "Ash",
+        "Ointments",
+        "Potter's Wheel",
+        "Sulphur",
+        "Hot Coals"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 20,
+      "name": "carriage",
+      "centre": "CARRIAGE",
+      "centre_attested": true,
+      "source_line": 1841,
+      "plate": "XIX (unheaded, second on plate)",
+      "positions": [
+        "Spoil",
+        "Olive Press",
+        "Basket",
+        "Wine Jar14",
+        "Woven Twig Box",
+        "Wine Skins",
+        "Fruit Basket",
+        "Small cask",
+        "Breadbasket",
+        "Whirlwind",
+        "Owl",
+        "Iron Hoop",
+        "Lily",
+        "Strings15",
+        "Purse",
+        "Tapestry",
+        "Pearl",
+        "Reed Basket",
+        "Saddlebag",
+        "Handkerchief",
+        "Jug",
+        "Rope",
+        "Fetter",
+        "Fruit Basket"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 21,
+      "name": "gate",
+      "centre": "GATE",
+      "centre_attested": true,
+      "source_line": 1893,
+      "plate": "XXI (headed)",
+      "positions": [
+        "Scoria16",
+        "Goad",
+        "Oracle",
+        "Hinge",
+        "Garden",
+        "Doll",
+        "Crowbar",
+        "Brick",
+        "Distiller",
+        "Ram",
+        "Key",
+        "Crowbar",
+        "Door Bar",
+        "Wooden Beam",
+        "Chain",
+        "Shield",
+        "Label",
+        "Egg",
+        "Ditch",
+        "Insignia",
+        "Rubric",
+        "Bulrush",
+        "Mask",
+        "Dripper"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 22,
+      "name": "Pythagorean fork",
+      "centre": "PYTHAGORAS' FORK",
+      "centre_attested": true,
+      "source_line": 1893,
+      "plate": "XXI (unheaded, second on plate)",
+      "positions": [
+        "Ladder",
+        "Table",
+        "Lichen",
+        "Feathers",
+        "Reflection",
+        "End Table",
+        "Cone",
+        "Tripod",
+        "Flageolet",
+        "Matter",
+        "Bellows",
+        "Pebbles",
+        "Puffer",
+        "Spear",
+        "Flask",
+        "Crow",
+        "Room",
+        "Duck",
+        "Canal",
+        "Cross",
+        "Catapult",
+        "Stork",
+        "Pedestal",
+        "Cauldron"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 23,
+      "name": "gift",
+      "centre": "GIFT",
+      "centre_attested": false,
+      "source_line": 1945,
+      "plate": "XXIII (headed)",
+      "positions": [
+        "Broadsword20",
+        "Nuts",
+        "Bowl",
+        "Chestnuts",
+        "Stall",
+        "Snail",
+        "Honey",
+        "Punch Bowl",
+        "Bucket",
+        "Laurel",
+        "Flower",
+        "Golden Apple",
+        "Fig",
+        "Tree",
+        "Farthing21",
+        "Cement",
+        "Cookpot",
+        "Griddle",
+        "Scepter",
+        "Pebbles",
+        "Stovehandles22",
+        "Bramble",
+        "Thornbush",
+        "Jaws"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    },
+    {
+      "number": 24,
+      "name": "key of jealousy",
+      "centre": "KEY OF JEALOUSY",
+      "centre_attested": true,
+      "source_line": 1945,
+      "plate": "XXIII (unheaded, second on plate)",
+      "positions": [
+        "Jaws",
+        "Oil lamp",
+        "Waterfall",
+        "Whip",
+        "Girdle",
+        "Walking Bird",
+        "Goods",
+        "Seal",
+        "Forge",
+        "Leathecap",
+        "Castle",
+        "Pole",
+        "Molten Metal",
+        "Trowel",
+        "Reed",
+        "Ditch",
+        "Scarecrow",
+        "Dove shape",
+        "Plumb Bob",
+        "Javelin",
+        "Breeze",
+        "Forked Yoke24",
+        "Osiers",
+        "Current"
+      ],
+      "position_count": 24,
+      "inventory_attestation": "ATTESTED",
+      "position_mapping_attestation": "RECONSTRUCTED"
+    }
+  ],
+  "not_transcribed": [],
+  "counts": {
+    "transcribed": 24,
+    "not_transcribed": 0
+  }
+}</script><script type="application/json" id="courts-data">{
+  "source": {
+    "work": "On the Composition of Images, Signs and Ideas (De imaginum, 1591)",
+    "translator": "Dick Higgins",
+    "range": "lines 3590-4935",
+    "file": "Giordano Bruno Dick Higgins On the Composition of Images Signs and Ideas Willis Locker Owens Publishing.txt"
+  },
+  "structure_note": "Organised as planetary courts: each deity has a principal image (often charioted) plus a named retinue of personified attendants. Saturn's retinue is the melancholic afflictions; Luna's is split by phase (waxing / waning and changing).",
+  "courts": [
+    {
+      "planet": "Jove",
+      "opens_at_line": 3595,
+      "principal_images": [
+        {
+          "heading": "THE CHARIOT ON JOVE'S RIGHT",
+          "line": 3595,
+          "excerpt": "Seventh, Jove is positioned with a chariot on his right with the following around him: governing Life, uncorrupted Innocence, erect Integrity, frank Purity, honest Probity, stainless Sanctity, kind Humility, benign Mercy, charming Amenity, humane Clemency, easy Companionship, gentle Placability,"
+        }
+      ],
+      "attendant_groups": []
+    },
+    {
+      "planet": "Saturn",
+      "opens_at_line": 3630,
+      "principal_images": [
+        {
+          "heading": "Images of Saturn",
+          "line": 3630,
+          "excerpt": "First he rises up, winged and helmeted, his helmet covered by a black veil. Around it a serpent wraps his tail that he catches in his mouth.2 He is dark skinned, his beard hangs down, long tufts of hair jut from his eyebrows, he is wrinkled, has flashing eyes, is wild, to look at him makes one shudder. Lame, he carries a"
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "SATURN'S ATTENDANTS",
+          "line": 3646,
+          "attendants": [
+            {
+              "name": "Grief",
+              "line": 3663,
+              "excerpt": "A shadow Ijudge to be the image of Grief will pass by, with veiled face, whence tear drops appear to rain down in tight streams upon the ground. Next to her stand Consternation, Sorrow of the Heart, Mourning, Distress, Bitterness, Complaint, wounding Murder, evil Decision, lamentable Mishap."
+            },
+            {
+              "name": "Care",
+              "line": 3673,
+              "excerpt": "From this arises a specter long of ear and eye, with strained brow, pointed head, wrinkled face, capriciously sad, turning itself hither and thither, as Anxiety and Worry strike. This is (Ishould think) persistent Care, who goads our innards,"
+            },
+            {
+              "name": "Fear",
+              "line": 3707,
+              "excerpt": "Next comes a shade that has swift wings upon its feet, a woman's face, just about blind, astonished, tongueless. Contracting herself into a bow,7 she swiftly spins about hither and yon. From her mouth a cold cloud exhales covering the body of this unhappy woman, who drips with chill sweat, disturbed as if"
+            },
+            {
+              "name": "Doubt",
+              "line": 3759,
+              "excerpt": "In the same order the image of a man with his right arm and leg bound to one wheel, his left leg and arm to a second wheel. He hangs in mid-air, tortured as he tips now to one side and then more to the other."
+            },
+            {
+              "name": "Hunger",
+              "line": 3829,
+              "excerpt": "After Death14 there follows the image of Hunger who is alluring, naked, thin, weak, shuddering on shaking limbs, dyed in deadly pallor, loathing herself, whose joints Cyclopic rabies slowly eats away. For companions, next to her there stand Savagery, Madness, Insanity, Ire, Cruelty, Fury, Ignorance,"
+            },
+            {
+              "name": "Envy",
+              "line": 3863,
+              "excerpt": "Hunger is followed slowly by Envy, the sad first-born daughter of Acheron. She walks with sidelong step and, looking back with grim eye, stirs up storms with her nostrils, eyes and mouth (which can be felt at quite a distance). These storms not only rip homes and cities apart, they even overturn mountains with"
+            },
+            {
+              "name": "Ocius",
+              "line": 3870,
+              "excerpt": "He is conveyed to view wearing four-colored expressions on one head: I. the face of a decrepit old man, II. that of an old woman, III. that of a dead person, and IV. that of a hidden person, wrapped in a veil. He keeps his hands in his lap, fingers intertwined. He is an unkempt, wasted, filthy, nerveless monster, whose"
+            },
+            {
+              "name": "Death",
+              "line": 3878,
+              "excerpt": "A winged and ugly deity, she would depart brandishing a sickle that mows down all far and wide; in their very swift seizing her wings darken the sun's light as they turn away from the horizon down below. All things precede and accompany her according to the proverb,21 along with Old Age and Disease generally."
+            },
+            {
+              "name": "Orcus",
+              "line": 3892,
+              "excerpt": "Next there follows one most confused and monstrous in image, Orcus of all forms, of no form, who is, however, sad and dreadful over all his surface. He is preceded by a three-headed gatekeeper and guardian, Cerberus fearful for his triple barking, all of whose hair is snakes, eyes inextinguishable flames. He is"
+            },
+            {
+              "name": "Poverty And Those Images In Exile's Doors",
+              "line": 3906,
+              "excerpt": "THOSE IMAGES IN EXILE'S DOORS All by herself, as if part of no court, sad, nude, thirsty, hungry, subject to all the aforementioned plagues and calamities, scarcely daring to show herself by reason of her person's indrawn, withdrawn, contracted"
+            }
+          ],
+          "inline_attendants": [
+            "old Antiquity",
+            "defective Decrepitude",
+            "Weariness",
+            "Lassitude",
+            "Slowness",
+            "Exhaustion",
+            "Extenuation",
+            "Maceration",
+            "Decay",
+            "Disease",
+            "Wasting Away",
+            "Infirmity",
+            "Consumption",
+            "Fragility",
+            "Attrition",
+            "Enervation",
+            "Weakness",
+            "heavy Burden",
+            "inert Weight",
+            "bent Inclination",
+            "trembling Palsy",
+            "Pressure",
+            "Putrefication",
+            "Stench",
+            "Meagreness",
+            "Squalor",
+            "Indecency",
+            "Infamy",
+            "Poverty",
+            "Hatefulness",
+            "Sorrow",
+            "Vomiting",
+            "Stuttering",
+            "Crabbiness",
+            "Morosity",
+            "Severity",
+            "Impatience",
+            "Invalidism",
+            "Foolishness",
+            "Rigidity"
+          ],
+          "excerpt": "In the first order, next to Saturn, there stand Old Age full of years, old Antiquity, defective Decrepitude, Weariness, Lassitude, Slowness, Exhaustion, Extenuation, Maceration, Decay, Disease, Wasting Away, Infirmity, Consumption, Fragility, Attrition, Enervation, Weakness, heavy Burden, inert Weight, bent Inclination, trembling Palsy, Pressure, Putrefication, Stench, Meagreness, Squalor, Indecen"
+        }
+      ]
+    },
+    {
+      "planet": "Mars",
+      "opens_at_line": 3935,
+      "principal_images": [
+        {
+          "heading": "The image of Mars",
+          "line": 3935,
+          "excerpt": "A man strong in appearance rises up, with a choleric and brazen complexion, horrible to look at, shrewd, stern, gleaming-eyed, fire in his eyes and grinning like a gaping-jawed lion, ears like a dog's or wolf's, the great-hearted glory of his forehead ringed by hair that stands straight up, whence short,"
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "Mars (ungrouped)",
+          "line": 3987,
+          "attendants": [
+            {
+              "name": "Wrath",
+              "line": 3987,
+              "excerpt": "Erinys16 marches forth with her horn that is crescent moonshaped and bent twistingly back, which utters a harsh complaint terrifically along its rigid length, as well as malign Audacity, tragic Disharmony, unpleasant Prodigy, tyrannic Monstrousness, Wildness, Insanity, avenging Fury, snake-bearing Cruelty"
+            }
+          ],
+          "excerpt": ""
+        }
+      ]
+    },
+    {
+      "planet": "Mercury",
+      "opens_at_line": 4051,
+      "principal_images": [
+        {
+          "heading": "The image of Mercury",
+          "line": 4051,
+          "excerpt": "Next comes the visible form of the busiest of all the gods, the herald, the messenger, the judge. His images are:1 First, he is an infant to whom a goat gives milk, while he lies on the purslane."
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "ATTENDANTS OF MERCURY THE SPEAKER",
+          "line": 4068,
+          "attendants": [],
+          "inline_attendants": [
+            "Edition",
+            "Prolation",
+            "Nudation",
+            "Detection",
+            "Vulgation",
+            "Signification",
+            "Opening",
+            "Patefaction",
+            "Manifestation",
+            "Dissemination",
+            "Reclusion",
+            "Revelation",
+            "Promulgation",
+            "Readiness",
+            "Seizing of Silence",
+            "Theater Scene",
+            "Forum",
+            "Fame",
+            "Infamy",
+            "Indication",
+            "Ostentation",
+            "Monstration",
+            "Edictation",
+            "Allocution",
+            "Eloquence",
+            "Commemoration",
+            "Certioration",
+            "5 Predication",
+            "Attraction to Words",
+            "Complexion",
+            "Prestriction",
+            "Comprehension",
+            "Contraction",
+            "Proposition",
+            "Oration",
+            "Proration",
+            "Epilogation",
+            "Conclusion",
+            "Debate",
+            "Disputation"
+          ],
+          "excerpt": "Beside him in the first rank stand Edition, Prolation, Nudation, Detection, Vulgation, Signification, Opening, Patefaction, Manifestation, Dissemination, Reclusion, Revelation, Promulgation, Readiness, Seizing of Silence, Theater Scene, Forum, Fame, Infamy, Indication, Ostentation, Monstration, Edictation, Allocution, Eloquence, Commemoration, Certioration,5 Predication, Attraction to Words, Compl"
+        }
+      ]
+    },
+    {
+      "planet": "Sun / Apollo",
+      "opens_at_line": 4369,
+      "principal_images": [
+        {
+          "heading": "Image of the Sun or Apollo",
+          "line": 4369,
+          "excerpt": "First he appears as a shepherd most handsome in staff and pouch,1 a young man shining with a radiant face. On the evening of the day he was born Mercury is said to have stolen his cattle. For first he was a herdsman, and previously he had pastured his cattle at Admetus' house.2 While Apollo was"
+        },
+        {
+          "heading": "Image of the Sun",
+          "line": 4522,
+          "excerpt": "The Sun's image (who is called the eye of the world, lamp, watchful custodian father, sower and servant) is one eye that looks in all directions, looking and permitting us to look everywhere as if we were one head, one globe, a complete eye; a lofty, physical image of God that with one simple act sees past, present"
+        }
+      ],
+      "attendant_groups": []
+    },
+    {
+      "planet": "Luna",
+      "opens_at_line": 4585,
+      "principal_images": [
+        {
+          "heading": "Images of the Moon",
+          "line": 4585,
+          "excerpt": "Next ensues the moon's first image, a very lovely maiden sitting on a chariot, which is made of ebony covered for the most part with laminate silver, and is drawn by a black bullock and a white heifer. Sometimes she wears white clothing, at other times black, and at still other moments clothing composed"
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "ATTENDANTS OF LUNA",
+          "line": 4605,
+          "attendants": [],
+          "inline_attendants": [
+            "nocturnal Silence",
+            "starry Crown",
+            "silvery Gleam",
+            "rosy Calm",
+            "tawny Pallor",
+            "bronze Tawniness",
+            "pinkening Mist",
+            "divided Half-Shapefulness",
+            "shadowy Joy",
+            "murky Mutability",
+            "golden yellow Brightness",
+            "bright Gold yellowness",
+            "roaming Swiftness of Flight",
+            "ranging Speed",
+            "aging Start",
+            "renewing Eldage",
+            "restless Inconstancy",
+            "shifting Instability",
+            "extreme Ruin",
+            "final Term",
+            "Hinge",
+            "Closing of age",
+            "weary Era",
+            "Barring of Light",
+            "furthest Line",
+            "Removal",
+            "Ruin",
+            "Destruction",
+            "those mentioned above in Saturn's court",
+            "especially in Death's hand",
+            "Goalstone",
+            "Terminus",
+            "Coronis",
+            "7 End post",
+            "Turning point",
+            "Sublation",
+            "Abolition",
+            "Antiquation",
+            "Abdication",
+            "Extinction"
+          ],
+          "excerpt": "Next to her stand nocturnal Silence, starry Crown, silvery Gleam, rosy Calm, tawny Pallor, bronze Tawniness, pinkening Mist, divided Half-Shapefulness, shadowy Joy, murky Mutability, golden yellow Brightness, bright Gold yellowness, roaming Swiftness of Flight, ranging Speed, aging Start, renewing Eldage, restless Inconstancy, and shifting Instability. Then there are End with its species, extreme "
+        },
+        {
+          "group": "ATTENDANTS OF THE WAXING LUNA",
+          "line": 4632,
+          "attendants": [],
+          "inline_attendants": [
+            "Growth",
+            "Amplification",
+            "Swelling",
+            "Maturing",
+            "Expanding",
+            "Reaching out",
+            "Rising up",
+            "Flowing forth",
+            "Production",
+            "Saturation",
+            "Filling full",
+            "Filling out",
+            "Plurality",
+            "Excess",
+            "Apollo's possessions",
+            "12 Sea",
+            "Main",
+            "Chaos",
+            "Abyss",
+            "Orcus",
+            "Superiority",
+            "Distinctiveness",
+            "peak Choiceness",
+            "Intemperance",
+            "Enormity",
+            "Vastness",
+            "Hugeness",
+            "Voluminousness",
+            "Greatness",
+            "Exhaustion in greater measure",
+            "savage Giant swollen in mass",
+            "Accumulating",
+            "Piling high",
+            "Adding"
+          ],
+          "excerpt": "Along with size and increase around Luna stand Growth, Amplification, Swelling, Maturing, Expanding, Reaching out, Rising up, Flowing forth, Production, Saturation, Filling full, Filling out, Plurality, Excess, along with those who have been recounted among Sol's and Apollo's possessions,12 Sea, Main, Chaos, Abyss, Orcus, the Deep, with Excellence, Superiority, Distinctiveness, peak Choiceness, In"
+        },
+        {
+          "group": "ATTENDANTS OF THE WANING AND CHANGING LUNA",
+          "line": 4644,
+          "attendants": [],
+          "inline_attendants": [
+            "As the archetype of Luna waning",
+            "Lack of refinement",
+            "Culturelessness",
+            "Fallacy",
+            "reckless Stolidity",
+            "inert Uncertainty",
+            "uncowed Misery",
+            "unlearned Malignity",
+            "profane Dementia",
+            "coarse Mobility",
+            "headlong Ambiguity",
+            "astonished Fearlessness",
+            "gnawing Iniquity",
+            "iniquitous Biliousness",
+            "weak Clamorousness",
+            "helpless Futility",
+            "unstable Loquacity",
+            "manifold Boldness",
+            "empty Levity",
+            "sluggish Confusion",
+            "untamed Inconstancy",
+            "barking Imprudence",
+            "heavy Rugosity",
+            "cracked Rawness",
+            "bristling Austerity",
+            "unkempt Tastelessness",
+            "unadvised Herd",
+            "stolid Crowd",
+            "wicked Infidelity",
+            "lowest Beast",
+            "many headed Creature without a Name",
+            "World of Trivia"
+          ],
+          "excerpt": "As the archetype of Luna waning and changing there is that which in turn is designated for the shifting moon as Vulgus.13 Around it dwell Ignobility, Lack of refinement, Culturelessness, Fallacy, reckless Stolidity, inert Uncertainty, uncowed Misery, unlearned Malignity, profane Dementia, coarse Mobility, headlong Ambiguity, astonished Fearlessness, gnawing Iniquity, iniquitous Biliousness, weak C"
+        }
+      ]
+    },
+    {
+      "planet": "Venus",
+      "opens_at_line": 4683,
+      "principal_images": [
+        {
+          "heading": "Images of Venus",
+          "line": 4683,
+          "excerpt": "Let us include the delight which is seized from the contemplation of the seven courts by viewing the goddess's image. Venus's first image is a girl emerging from the sea's foam,2 who, as she nears dry land, wipes off the sea's wetness with her tiny hands."
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "ATTENDANTS OF VENUS",
+          "line": 4719,
+          "attendants": [
+            {
+              "name": "Cupid",
+              "line": 4820,
+              "excerpt": "Here, as well, appears Cupid's image, an omniform and multiform something, in which whatever you imagine in the shadowy light you see, whatever you are thinking about occurs, and it happens in the same place, just as from an egg on Zephyr's wings there issues forth a boy of miraculous beauty to God"
+            }
+          ],
+          "inline_attendants": [
+            "Sweet Unanimity",
+            "peaceful Agreement",
+            "gentle Will",
+            "Union of Hearts",
+            "Joy of the Breast",
+            "Increase of the Small",
+            "concordant Conformity",
+            "pleasant Watering",
+            "enfolded Conjoining",
+            "fertile Gentleness",
+            "fruitbearing Cultivation",
+            "flourishing Return",
+            "rosy Picture",
+            "expiring Fragrance",
+            "delicious Joy",
+            "golden Persuasion",
+            "lazy Happiness",
+            "sacred Friendship",
+            "soft Sincerity",
+            "harmless Geniality",
+            "Nurture of Things",
+            "Muscle of Arts",
+            "Calming of"
+          ],
+          "excerpt": "Those who assist her: I. Sweet Unanimity, peaceful Agreement, gentle Will, Union of Hearts, Joy of the Breast, Increase of the Small, and concordant Conformity. Likewise, in the image of a garden, pleasant Watering, enfolded Conjoining, fertile Gentleness, fruitbearing Cultivation, flourishing Return, rosy Picture, breathing, expiring Fragrance, delicious Joy, golden Persuasion, lazy Happiness, sa"
+        }
+      ]
+    },
+    {
+      "planet": "Tellus",
+      "opens_at_line": 4874,
+      "principal_images": [
+        {
+          "heading": "Images of Tellus",
+          "line": 4874,
+          "excerpt": "First there presents itself a huge monster with eyes on every side— that is why it is naked— sending off flares of cerulean blue light that is almost hyacinthine in its clarity, with eyebrows flaming like gold which rings its eyes like a gyre, the eyes sparkling marvellously in mid orb. Since it is of such hugeness,"
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "ATTENDANTS OF TELLUS",
+          "line": 4897,
+          "attendants": [
+            {
+              "name": "Oceanus",
+              "line": 4905,
+              "excerpt": "Next to her stand many gods, the first of whom is Oceanus, the great godhead, whose head is that of a bull, while the rest of his members are manlike, although cerulean colored. His chariot is completely sprinkled with pearls and roofed all around. Two whales draw it, blowing out salt waves in a great mass"
+            }
+          ],
+          "inline_attendants": [
+            "Nature's crafter is Tellus",
+            "Conception",
+            "Gestation",
+            "Fertility",
+            "Generation",
+            "Birth",
+            "Nursing",
+            "Feeding",
+            "Cherishing",
+            "all-providing Power",
+            "all- establishing Supply",
+            "Jove's second crown",
+            "Childbirth",
+            "Midwifery",
+            "Initiation",
+            "Observance",
+            "Renewal",
+            "Restoration",
+            "Elemental Formation",
+            "Domination",
+            "Movement",
+            "Animation",
+            "Inspiration",
+            "8 Longevity",
+            "solid Fecundity",
+            "Long Hair in meadow",
+            "fertile Birth",
+            "wide ranging Destruction",
+            "starborn Majesty",
+            "crystalline Brilliance"
+          ],
+          "excerpt": "Nature stands next to Tellus,6 and Nature's crafter is Tellus. With her are Motherhood, Conception, Gestation, Fertility, Generation, Birth, Nursing, Feeding, Cherishing, all-providing Power, all- establishing Supply, with antecedents,7 bystanders; and Jove's second crown, which is around Mercury's eye and in the Sun's possession; Childbirth, Midwifery, Nursing, Initiation, Observance, Renewal, Re"
+        }
+      ]
+    },
+    {
+      "planet": "Pluto",
+      "opens_at_line": 4920,
+      "principal_images": [
+        {
+          "heading": "THE IMAGE OF PLUTO",
+          "line": 4920,
+          "excerpt": "Next comes Pluto, who rules a third of this world, a black divinity and a terrifying one, whose iron chariot two of the blackest winged horses convey. He himself brandishes in his right hand an iron mattock of huge length,16 with a barb right in the middle between its two prongs, while in his left he holds two"
+        }
+      ],
+      "attendant_groups": []
+    }
+  ],
+  "counts": {
+    "courts": 9,
+    "principal_images": 10,
+    "attendant_groups": 8,
+    "named_attendants": 13,
+    "inline_attendants": 239
+  }
+}</script>
+        <script src="fantastica.js"></script>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

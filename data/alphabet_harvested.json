@@ -1,0 +1,854 @@
+{
+  "source": {
+    "work": "On the Composition of Images, Signs and Ideas (De imaginum, 1591)",
+    "translator": "Dick Higgins",
+    "locus": "Book I, Part 2, chapters 12-13",
+    "lines": {
+      "simple": [
+        2311,
+        2326
+      ],
+      "cluster": [
+        2333,
+        2340
+      ]
+    },
+    "file": "Giordano Bruno Dick Higgins On the Composition of Images Signs and Ideas Willis Locker Owens Publishing.txt"
+  },
+  "how_it_works": "Each initial letter or consonant cluster carries a small set of Latin agent-nouns -- \"operators\", people defined by what they do. To encode a word, take its opening letter or cluster and use one of that key's operators as the image. Chapter 13 adds that each operator \"receives the six differences which are sought in the six double triangles of the minor chambers\", so a single operator can be inflected six ways.",
+  "cross_reference_note": "Asterisked cells are cross-references, not images: \"*Ble as Ple\" means the syllable Ble borrows the image assigned to Ple. Bruno economises by sharing images between phonetically close clusters.",
+  "caveat": "A handful of cells are damaged or abbreviated in the source text and are flagged ocr_suspect (e.g. \"Go\", \"Licto\", \"Frondes spar.\"). Glosses are given only where reasonably certain; the rest are left unglossed rather than guessed.",
+  "simple_keys": [
+    {
+      "key": "B",
+      "line": 2311,
+      "entries": [
+        {
+          "form": "Baptizans",
+          "kind": "OPERATOR",
+          "gloss": "one baptizing"
+        },
+        {
+          "form": "Bellator",
+          "kind": "OPERATOR",
+          "gloss": "warrior"
+        },
+        {
+          "form": "Bibliopola",
+          "kind": "OPERATOR",
+          "gloss": "bookseller"
+        },
+        {
+          "form": "Boarius",
+          "kind": "OPERATOR",
+          "gloss": "cattle-dealer"
+        },
+        {
+          "form": "Buccinator",
+          "kind": "OPERATOR",
+          "gloss": "trumpeter"
+        }
+      ]
+    },
+    {
+      "key": "C",
+      "line": 2312,
+      "entries": [
+        {
+          "form": "Caupona",
+          "kind": "OPERATOR",
+          "gloss": "innkeeper"
+        },
+        {
+          "form": "Cerdo",
+          "kind": "OPERATOR",
+          "gloss": "cobbler / artisan"
+        },
+        {
+          "form": "Circulator",
+          "kind": "OPERATOR",
+          "gloss": "street-performer"
+        },
+        {
+          "form": "Colonus",
+          "kind": "OPERATOR",
+          "gloss": "farmer"
+        },
+        {
+          "form": "Custos",
+          "kind": "OPERATOR",
+          "gloss": "guard"
+        }
+      ]
+    },
+    {
+      "key": "D",
+      "line": 2313,
+      "entries": [
+        {
+          "form": "Danista",
+          "kind": "OPERATOR",
+          "gloss": "money-lender"
+        },
+        {
+          "form": "Delirus",
+          "kind": "OPERATOR",
+          "gloss": "madman"
+        },
+        {
+          "form": "Digladiat",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Domitor",
+          "kind": "OPERATOR",
+          "gloss": "tamer"
+        },
+        {
+          "form": "Dux",
+          "kind": "OPERATOR",
+          "gloss": "leader"
+        }
+      ]
+    },
+    {
+      "key": "F",
+      "line": 2314,
+      "entries": [
+        {
+          "form": "Famulator",
+          "kind": "OPERATOR",
+          "gloss": "servant"
+        },
+        {
+          "form": "Festivus",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Figulus",
+          "kind": "OPERATOR",
+          "gloss": "potter"
+        },
+        {
+          "form": "Fossor",
+          "kind": "OPERATOR",
+          "gloss": "digger"
+        },
+        {
+          "form": "Fur",
+          "kind": "OPERATOR",
+          "gloss": "thief"
+        }
+      ]
+    },
+    {
+      "key": "G",
+      "line": 2315,
+      "entries": [
+        {
+          "form": "Gaudens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Geometra",
+          "kind": "OPERATOR",
+          "gloss": "geometer"
+        },
+        {
+          "form": "Gyrans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Go",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Gulosus",
+          "kind": "OPERATOR",
+          "gloss": "glutton"
+        }
+      ]
+    },
+    {
+      "key": "H",
+      "line": 2316,
+      "entries": [
+        {
+          "form": "Hauriens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Herbarius",
+          "kind": "OPERATOR",
+          "gloss": "herbalist"
+        },
+        {
+          "form": "Histrio",
+          "kind": "OPERATOR",
+          "gloss": "actor"
+        },
+        {
+          "form": "Hospes",
+          "kind": "OPERATOR",
+          "gloss": "host / guest"
+        },
+        {
+          "form": "Humiliator",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "I",
+      "line": 2317,
+      "entries": [
+        {
+          "form": "Iaculator",
+          "kind": "OPERATOR",
+          "gloss": "javelin-thrower"
+        },
+        {
+          "form": "Ieiunans",
+          "kind": "OPERATOR",
+          "gloss": "one fasting"
+        },
+        {
+          "form": "Incantans",
+          "kind": "OPERATOR",
+          "gloss": "one enchanting"
+        },
+        {
+          "form": "Iocans",
+          "kind": "OPERATOR",
+          "gloss": "jester"
+        },
+        {
+          "form": "Iustitians",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "L",
+      "line": 2318,
+      "entries": [
+        {
+          "form": "Lacerans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Lector",
+          "kind": "OPERATOR",
+          "gloss": "reader"
+        },
+        {
+          "form": "Licto",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Locator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Luxuriosus",
+          "kind": "OPERATOR",
+          "gloss": "voluptuary"
+        }
+      ]
+    },
+    {
+      "key": "M",
+      "line": 2319,
+      "entries": [
+        {
+          "form": "Maculans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Medicus",
+          "kind": "OPERATOR",
+          "gloss": "physician"
+        },
+        {
+          "form": "Miles",
+          "kind": "OPERATOR",
+          "gloss": "soldier"
+        },
+        {
+          "form": "Motor",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Musicus",
+          "kind": "OPERATOR",
+          "gloss": "musician"
+        }
+      ]
+    },
+    {
+      "key": "N",
+      "line": 2320,
+      "entries": [
+        {
+          "form": "Nauta",
+          "kind": "OPERATOR",
+          "gloss": "sailor"
+        },
+        {
+          "form": "Nectens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Nidificans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Nodans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Nutrix",
+          "kind": "OPERATOR",
+          "gloss": "nurse"
+        }
+      ]
+    },
+    {
+      "key": "P",
+      "line": 2321,
+      "entries": [
+        {
+          "form": "Pastor",
+          "kind": "OPERATOR",
+          "gloss": "shepherd"
+        },
+        {
+          "form": "Percutiens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Pictor",
+          "kind": "OPERATOR",
+          "gloss": "painter"
+        },
+        {
+          "form": "Ponderans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Puerpera",
+          "kind": "OPERATOR",
+          "gloss": "woman in childbirth"
+        }
+      ]
+    },
+    {
+      "key": "Q",
+      "line": 2322,
+      "entries": [
+        {
+          "form": "Quadratus",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Quassitor",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Quiescens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Quodlibet",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Quumulatus",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        }
+      ]
+    },
+    {
+      "key": "R",
+      "line": 2323,
+      "entries": [
+        {
+          "form": "Raptor",
+          "kind": "OPERATOR",
+          "gloss": "ravisher"
+        },
+        {
+          "form": "Rector",
+          "kind": "OPERATOR",
+          "gloss": "ruler"
+        },
+        {
+          "form": "Rigator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Rotator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Rusticus",
+          "kind": "OPERATOR",
+          "gloss": "peasant"
+        }
+      ]
+    },
+    {
+      "key": "S",
+      "line": 2324,
+      "entries": [
+        {
+          "form": "Saltator",
+          "kind": "OPERATOR",
+          "gloss": "dancer"
+        },
+        {
+          "form": "Sepultor",
+          "kind": "OPERATOR",
+          "gloss": "gravedigger"
+        },
+        {
+          "form": "Sigillator",
+          "kind": "OPERATOR",
+          "gloss": "sealer"
+        },
+        {
+          "form": "Sonans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Superbiens",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "T",
+      "line": 2325,
+      "entries": [
+        {
+          "form": "Tangens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Temperans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Tinctor",
+          "kind": "OPERATOR",
+          "gloss": "dyer"
+        },
+        {
+          "form": "Tonsor",
+          "kind": "OPERATOR",
+          "gloss": "barber"
+        },
+        {
+          "form": "Turbator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Vacuans",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "V",
+      "line": 2326,
+      "entries": [
+        {
+          "form": "Venator",
+          "kind": "OPERATOR",
+          "gloss": "hunter"
+        },
+        {
+          "form": "Vitrarius",
+          "kind": "OPERATOR",
+          "gloss": "glassmaker"
+        },
+        {
+          "form": "Voluptuarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Vulneratus",
+          "kind": "OPERATOR"
+        }
+      ]
+    }
+  ],
+  "cluster_keys": [
+    {
+      "key": "Bl",
+      "line": 2333,
+      "entries": [
+        {
+          "form": "Blactearius",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Ble",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Ple",
+          "note": "For Ble, use the image assigned to Ple."
+        },
+        {
+          "form": "Bh",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Ph",
+          "note": "For Bh, use the image assigned to Ph."
+        },
+        {
+          "form": "Blo",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Plo",
+          "note": "For Blo, use the image assigned to Plo."
+        },
+        {
+          "form": "Blu",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Plu",
+          "note": "For Blu, use the image assigned to Plu."
+        },
+        {
+          "form": "Bra",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Pra",
+          "note": "For Bra, use the image assigned to Pra."
+        },
+        {
+          "form": "Bre",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Pre",
+          "note": "For Bre, use the image assigned to Pre."
+        },
+        {
+          "form": "Bro",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Pro",
+          "note": "For Bro, use the image assigned to Pro."
+        },
+        {
+          "form": "Brutum",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "Cl",
+      "line": 2334,
+      "entries": [
+        {
+          "form": "Claviger",
+          "kind": "OPERATOR",
+          "gloss": "key-bearer"
+        },
+        {
+          "form": "Clericus",
+          "kind": "OPERATOR",
+          "gloss": "cleric"
+        },
+        {
+          "form": "Clitellarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Clostrarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Cludens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Crapulo",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Cremans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Cribrans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Crocitans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Crucians",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "Fl",
+      "line": 2335,
+      "entries": [
+        {
+          "form": "Flagellans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Flectens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Fligens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Florans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Fluctuans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Frangellans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Frenans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Fricans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Frondes spar.",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Fructuarius",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "Gl",
+      "line": 2336,
+      "entries": [
+        {
+          "form": "Gladiator",
+          "kind": "OPERATOR",
+          "gloss": "gladiator"
+        },
+        {
+          "form": "Gle",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Cle",
+          "note": "For Gle, use the image assigned to Cle."
+        },
+        {
+          "form": "Gli",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Cli",
+          "note": "For Gli, use the image assigned to Cli."
+        },
+        {
+          "form": "Glomer",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Glu",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Clu",
+          "note": "For Glu, use the image assigned to Clu."
+        },
+        {
+          "form": "Grassator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Gregarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Gri",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Cri",
+          "note": "For Gri, use the image assigned to Cri."
+        },
+        {
+          "form": "Gro",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Cro",
+          "note": "For Gro, use the image assigned to Cro."
+        },
+        {
+          "form": "Gru",
+          "kind": "CROSS_REFERENCE",
+          "use_image_of": "Cru",
+          "note": "For Gru, use the image assigned to Cru."
+        }
+      ]
+    },
+    {
+      "key": "Pl",
+      "line": 2337,
+      "entries": [
+        {
+          "form": "Placans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Plectens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Plicans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Plostrarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Pluens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Practicans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Precans",
+          "kind": "OPERATOR",
+          "gloss": "one praying"
+        },
+        {
+          "form": "Privans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Propola",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Prudens",
+          "kind": "OPERATOR",
+          "gloss": "prudent one"
+        }
+      ]
+    },
+    {
+      "key": "Sc",
+      "line": 2338,
+      "entries": [
+        {
+          "form": "Scalpens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Scenicus",
+          "kind": "OPERATOR",
+          "gloss": "stage-player"
+        },
+        {
+          "form": "Scindens",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Scortator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Scutifer",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Statuarius",
+          "kind": "OPERATOR",
+          "gloss": "sculptor"
+        },
+        {
+          "form": "Stercorarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Stillator",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Stomachatus",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Studiosus",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Strangulans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Strenuus",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Strigillans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Strophiarius",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Struens",
+          "kind": "OPERATOR"
+        }
+      ]
+    },
+    {
+      "key": "Tr",
+      "line": 2340,
+      "entries": [
+        {
+          "form": "Trapezitans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Trepidans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Triturans",
+          "kind": "OPERATOR"
+        },
+        {
+          "form": "Trophoearius",
+          "kind": "OPERATOR",
+          "ocr_suspect": true
+        },
+        {
+          "form": "Trutinans",
+          "kind": "OPERATOR"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "simple_keys": 16,
+    "cluster_keys": 7,
+    "operators": 136,
+    "cross_references": 13,
+    "ocr_suspect": 8
+  }
+}

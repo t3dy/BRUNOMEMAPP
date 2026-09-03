@@ -1,0 +1,507 @@
+{
+  "source": {
+    "work": "On the Composition of Images, Signs and Ideas (De imaginum, 1591)",
+    "translator": "Dick Higgins",
+    "range": "lines 3590-4935",
+    "file": "Giordano Bruno Dick Higgins On the Composition of Images Signs and Ideas Willis Locker Owens Publishing.txt"
+  },
+  "structure_note": "Organised as planetary courts: each deity has a principal image (often charioted) plus a named retinue of personified attendants. Saturn's retinue is the melancholic afflictions; Luna's is split by phase (waxing / waning and changing).",
+  "courts": [
+    {
+      "planet": "Jove",
+      "opens_at_line": 3595,
+      "principal_images": [
+        {
+          "heading": "THE CHARIOT ON JOVE'S RIGHT",
+          "line": 3595,
+          "excerpt": "Seventh, Jove is positioned with a chariot on his right with the following around him: governing Life, uncorrupted Innocence, erect Integrity, frank Purity, honest Probity, stainless Sanctity, kind Humility, benign Mercy, charming Amenity, humane Clemency, easy Companionship, gentle Placability,"
+        }
+      ],
+      "attendant_groups": []
+    },
+    {
+      "planet": "Saturn",
+      "opens_at_line": 3630,
+      "principal_images": [
+        {
+          "heading": "Images of Saturn",
+          "line": 3630,
+          "excerpt": "First he rises up, winged and helmeted, his helmet covered by a black veil. Around it a serpent wraps his tail that he catches in his mouth.2 He is dark skinned, his beard hangs down, long tufts of hair jut from his eyebrows, he is wrinkled, has flashing eyes, is wild, to look at him makes one shudder. Lame, he carries a"
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "SATURN'S ATTENDANTS",
+          "line": 3646,
+          "attendants": [
+            {
+              "name": "Grief",
+              "line": 3663,
+              "excerpt": "A shadow Ijudge to be the image of Grief will pass by, with veiled face, whence tear drops appear to rain down in tight streams upon the ground. Next to her stand Consternation, Sorrow of the Heart, Mourning, Distress, Bitterness, Complaint, wounding Murder, evil Decision, lamentable Mishap."
+            },
+            {
+              "name": "Care",
+              "line": 3673,
+              "excerpt": "From this arises a specter long of ear and eye, with strained brow, pointed head, wrinkled face, capriciously sad, turning itself hither and thither, as Anxiety and Worry strike. This is (Ishould think) persistent Care, who goads our innards,"
+            },
+            {
+              "name": "Fear",
+              "line": 3707,
+              "excerpt": "Next comes a shade that has swift wings upon its feet, a woman's face, just about blind, astonished, tongueless. Contracting herself into a bow,7 she swiftly spins about hither and yon. From her mouth a cold cloud exhales covering the body of this unhappy woman, who drips with chill sweat, disturbed as if"
+            },
+            {
+              "name": "Doubt",
+              "line": 3759,
+              "excerpt": "In the same order the image of a man with his right arm and leg bound to one wheel, his left leg and arm to a second wheel. He hangs in mid-air, tortured as he tips now to one side and then more to the other."
+            },
+            {
+              "name": "Hunger",
+              "line": 3829,
+              "excerpt": "After Death14 there follows the image of Hunger who is alluring, naked, thin, weak, shuddering on shaking limbs, dyed in deadly pallor, loathing herself, whose joints Cyclopic rabies slowly eats away. For companions, next to her there stand Savagery, Madness, Insanity, Ire, Cruelty, Fury, Ignorance,"
+            },
+            {
+              "name": "Envy",
+              "line": 3863,
+              "excerpt": "Hunger is followed slowly by Envy, the sad first-born daughter of Acheron. She walks with sidelong step and, looking back with grim eye, stirs up storms with her nostrils, eyes and mouth (which can be felt at quite a distance). These storms not only rip homes and cities apart, they even overturn mountains with"
+            },
+            {
+              "name": "Ocius",
+              "line": 3870,
+              "excerpt": "He is conveyed to view wearing four-colored expressions on one head: I. the face of a decrepit old man, II. that of an old woman, III. that of a dead person, and IV. that of a hidden person, wrapped in a veil. He keeps his hands in his lap, fingers intertwined. He is an unkempt, wasted, filthy, nerveless monster, whose"
+            },
+            {
+              "name": "Death",
+              "line": 3878,
+              "excerpt": "A winged and ugly deity, she would depart brandishing a sickle that mows down all far and wide; in their very swift seizing her wings darken the sun's light as they turn away from the horizon down below. All things precede and accompany her according to the proverb,21 along with Old Age and Disease generally."
+            },
+            {
+              "name": "Orcus",
+              "line": 3892,
+              "excerpt": "Next there follows one most confused and monstrous in image, Orcus of all forms, of no form, who is, however, sad and dreadful over all his surface. He is preceded by a three-headed gatekeeper and guardian, Cerberus fearful for his triple barking, all of whose hair is snakes, eyes inextinguishable flames. He is"
+            },
+            {
+              "name": "Poverty And Those Images In Exile's Doors",
+              "line": 3906,
+              "excerpt": "THOSE IMAGES IN EXILE'S DOORS All by herself, as if part of no court, sad, nude, thirsty, hungry, subject to all the aforementioned plagues and calamities, scarcely daring to show herself by reason of her person's indrawn, withdrawn, contracted"
+            }
+          ],
+          "inline_attendants": [
+            "old Antiquity",
+            "defective Decrepitude",
+            "Weariness",
+            "Lassitude",
+            "Slowness",
+            "Exhaustion",
+            "Extenuation",
+            "Maceration",
+            "Decay",
+            "Disease",
+            "Wasting Away",
+            "Infirmity",
+            "Consumption",
+            "Fragility",
+            "Attrition",
+            "Enervation",
+            "Weakness",
+            "heavy Burden",
+            "inert Weight",
+            "bent Inclination",
+            "trembling Palsy",
+            "Pressure",
+            "Putrefication",
+            "Stench",
+            "Meagreness",
+            "Squalor",
+            "Indecency",
+            "Infamy",
+            "Poverty",
+            "Hatefulness",
+            "Sorrow",
+            "Vomiting",
+            "Stuttering",
+            "Crabbiness",
+            "Morosity",
+            "Severity",
+            "Impatience",
+            "Invalidism",
+            "Foolishness",
+            "Rigidity"
+          ],
+          "excerpt": "In the first order, next to Saturn, there stand Old Age full of years, old Antiquity, defective Decrepitude, Weariness, Lassitude, Slowness, Exhaustion, Extenuation, Maceration, Decay, Disease, Wasting Away, Infirmity, Consumption, Fragility, Attrition, Enervation, Weakness, heavy Burden, inert Weight, bent Inclination, trembling Palsy, Pressure, Putrefication, Stench, Meagreness, Squalor, Indecen"
+        }
+      ]
+    },
+    {
+      "planet": "Mars",
+      "opens_at_line": 3935,
+      "principal_images": [
+        {
+          "heading": "The image of Mars",
+          "line": 3935,
+          "excerpt": "A man strong in appearance rises up, with a choleric and brazen complexion, horrible to look at, shrewd, stern, gleaming-eyed, fire in his eyes and grinning like a gaping-jawed lion, ears like a dog's or wolf's, the great-hearted glory of his forehead ringed by hair that stands straight up, whence short,"
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "Mars (ungrouped)",
+          "line": 3987,
+          "attendants": [
+            {
+              "name": "Wrath",
+              "line": 3987,
+              "excerpt": "Erinys16 marches forth with her horn that is crescent moonshaped and bent twistingly back, which utters a harsh complaint terrifically along its rigid length, as well as malign Audacity, tragic Disharmony, unpleasant Prodigy, tyrannic Monstrousness, Wildness, Insanity, avenging Fury, snake-bearing Cruelty"
+            }
+          ],
+          "excerpt": ""
+        }
+      ]
+    },
+    {
+      "planet": "Mercury",
+      "opens_at_line": 4051,
+      "principal_images": [
+        {
+          "heading": "The image of Mercury",
+          "line": 4051,
+          "excerpt": "Next comes the visible form of the busiest of all the gods, the herald, the messenger, the judge. His images are:1 First, he is an infant to whom a goat gives milk, while he lies on the purslane."
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "ATTENDANTS OF MERCURY THE SPEAKER",
+          "line": 4068,
+          "attendants": [],
+          "inline_attendants": [
+            "Edition",
+            "Prolation",
+            "Nudation",
+            "Detection",
+            "Vulgation",
+            "Signification",
+            "Opening",
+            "Patefaction",
+            "Manifestation",
+            "Dissemination",
+            "Reclusion",
+            "Revelation",
+            "Promulgation",
+            "Readiness",
+            "Seizing of Silence",
+            "Theater Scene",
+            "Forum",
+            "Fame",
+            "Infamy",
+            "Indication",
+            "Ostentation",
+            "Monstration",
+            "Edictation",
+            "Allocution",
+            "Eloquence",
+            "Commemoration",
+            "Certioration",
+            "5 Predication",
+            "Attraction to Words",
+            "Complexion",
+            "Prestriction",
+            "Comprehension",
+            "Contraction",
+            "Proposition",
+            "Oration",
+            "Proration",
+            "Epilogation",
+            "Conclusion",
+            "Debate",
+            "Disputation"
+          ],
+          "excerpt": "Beside him in the first rank stand Edition, Prolation, Nudation, Detection, Vulgation, Signification, Opening, Patefaction, Manifestation, Dissemination, Reclusion, Revelation, Promulgation, Readiness, Seizing of Silence, Theater Scene, Forum, Fame, Infamy, Indication, Ostentation, Monstration, Edictation, Allocution, Eloquence, Commemoration, Certioration,5 Predication, Attraction to Words, Compl"
+        }
+      ]
+    },
+    {
+      "planet": "Sun / Apollo",
+      "opens_at_line": 4369,
+      "principal_images": [
+        {
+          "heading": "Image of the Sun or Apollo",
+          "line": 4369,
+          "excerpt": "First he appears as a shepherd most handsome in staff and pouch,1 a young man shining with a radiant face. On the evening of the day he was born Mercury is said to have stolen his cattle. For first he was a herdsman, and previously he had pastured his cattle at Admetus' house.2 While Apollo was"
+        },
+        {
+          "heading": "Image of the Sun",
+          "line": 4522,
+          "excerpt": "The Sun's image (who is called the eye of the world, lamp, watchful custodian father, sower and servant) is one eye that looks in all directions, looking and permitting us to look everywhere as if we were one head, one globe, a complete eye; a lofty, physical image of God that with one simple act sees past, present"
+        }
+      ],
+      "attendant_groups": []
+    },
+    {
+      "planet": "Luna",
+      "opens_at_line": 4585,
+      "principal_images": [
+        {
+          "heading": "Images of the Moon",
+          "line": 4585,
+          "excerpt": "Next ensues the moon's first image, a very lovely maiden sitting on a chariot, which is made of ebony covered for the most part with laminate silver, and is drawn by a black bullock and a white heifer. Sometimes she wears white clothing, at other times black, and at still other moments clothing composed"
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "ATTENDANTS OF LUNA",
+          "line": 4605,
+          "attendants": [],
+          "inline_attendants": [
+            "nocturnal Silence",
+            "starry Crown",
+            "silvery Gleam",
+            "rosy Calm",
+            "tawny Pallor",
+            "bronze Tawniness",
+            "pinkening Mist",
+            "divided Half-Shapefulness",
+            "shadowy Joy",
+            "murky Mutability",
+            "golden yellow Brightness",
+            "bright Gold yellowness",
+            "roaming Swiftness of Flight",
+            "ranging Speed",
+            "aging Start",
+            "renewing Eldage",
+            "restless Inconstancy",
+            "shifting Instability",
+            "extreme Ruin",
+            "final Term",
+            "Hinge",
+            "Closing of age",
+            "weary Era",
+            "Barring of Light",
+            "furthest Line",
+            "Removal",
+            "Ruin",
+            "Destruction",
+            "those mentioned above in Saturn's court",
+            "especially in Death's hand",
+            "Goalstone",
+            "Terminus",
+            "Coronis",
+            "7 End post",
+            "Turning point",
+            "Sublation",
+            "Abolition",
+            "Antiquation",
+            "Abdication",
+            "Extinction"
+          ],
+          "excerpt": "Next to her stand nocturnal Silence, starry Crown, silvery Gleam, rosy Calm, tawny Pallor, bronze Tawniness, pinkening Mist, divided Half-Shapefulness, shadowy Joy, murky Mutability, golden yellow Brightness, bright Gold yellowness, roaming Swiftness of Flight, ranging Speed, aging Start, renewing Eldage, restless Inconstancy, and shifting Instability. Then there are End with its species, extreme "
+        },
+        {
+          "group": "ATTENDANTS OF THE WAXING LUNA",
+          "line": 4632,
+          "attendants": [],
+          "inline_attendants": [
+            "Growth",
+            "Amplification",
+            "Swelling",
+            "Maturing",
+            "Expanding",
+            "Reaching out",
+            "Rising up",
+            "Flowing forth",
+            "Production",
+            "Saturation",
+            "Filling full",
+            "Filling out",
+            "Plurality",
+            "Excess",
+            "Apollo's possessions",
+            "12 Sea",
+            "Main",
+            "Chaos",
+            "Abyss",
+            "Orcus",
+            "Superiority",
+            "Distinctiveness",
+            "peak Choiceness",
+            "Intemperance",
+            "Enormity",
+            "Vastness",
+            "Hugeness",
+            "Voluminousness",
+            "Greatness",
+            "Exhaustion in greater measure",
+            "savage Giant swollen in mass",
+            "Accumulating",
+            "Piling high",
+            "Adding"
+          ],
+          "excerpt": "Along with size and increase around Luna stand Growth, Amplification, Swelling, Maturing, Expanding, Reaching out, Rising up, Flowing forth, Production, Saturation, Filling full, Filling out, Plurality, Excess, along with those who have been recounted among Sol's and Apollo's possessions,12 Sea, Main, Chaos, Abyss, Orcus, the Deep, with Excellence, Superiority, Distinctiveness, peak Choiceness, In"
+        },
+        {
+          "group": "ATTENDANTS OF THE WANING AND CHANGING LUNA",
+          "line": 4644,
+          "attendants": [],
+          "inline_attendants": [
+            "As the archetype of Luna waning",
+            "Lack of refinement",
+            "Culturelessness",
+            "Fallacy",
+            "reckless Stolidity",
+            "inert Uncertainty",
+            "uncowed Misery",
+            "unlearned Malignity",
+            "profane Dementia",
+            "coarse Mobility",
+            "headlong Ambiguity",
+            "astonished Fearlessness",
+            "gnawing Iniquity",
+            "iniquitous Biliousness",
+            "weak Clamorousness",
+            "helpless Futility",
+            "unstable Loquacity",
+            "manifold Boldness",
+            "empty Levity",
+            "sluggish Confusion",
+            "untamed Inconstancy",
+            "barking Imprudence",
+            "heavy Rugosity",
+            "cracked Rawness",
+            "bristling Austerity",
+            "unkempt Tastelessness",
+            "unadvised Herd",
+            "stolid Crowd",
+            "wicked Infidelity",
+            "lowest Beast",
+            "many headed Creature without a Name",
+            "World of Trivia"
+          ],
+          "excerpt": "As the archetype of Luna waning and changing there is that which in turn is designated for the shifting moon as Vulgus.13 Around it dwell Ignobility, Lack of refinement, Culturelessness, Fallacy, reckless Stolidity, inert Uncertainty, uncowed Misery, unlearned Malignity, profane Dementia, coarse Mobility, headlong Ambiguity, astonished Fearlessness, gnawing Iniquity, iniquitous Biliousness, weak C"
+        }
+      ]
+    },
+    {
+      "planet": "Venus",
+      "opens_at_line": 4683,
+      "principal_images": [
+        {
+          "heading": "Images of Venus",
+          "line": 4683,
+          "excerpt": "Let us include the delight which is seized from the contemplation of the seven courts by viewing the goddess's image. Venus's first image is a girl emerging from the sea's foam,2 who, as she nears dry land, wipes off the sea's wetness with her tiny hands."
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "ATTENDANTS OF VENUS",
+          "line": 4719,
+          "attendants": [
+            {
+              "name": "Cupid",
+              "line": 4820,
+              "excerpt": "Here, as well, appears Cupid's image, an omniform and multiform something, in which whatever you imagine in the shadowy light you see, whatever you are thinking about occurs, and it happens in the same place, just as from an egg on Zephyr's wings there issues forth a boy of miraculous beauty to God"
+            }
+          ],
+          "inline_attendants": [
+            "Sweet Unanimity",
+            "peaceful Agreement",
+            "gentle Will",
+            "Union of Hearts",
+            "Joy of the Breast",
+            "Increase of the Small",
+            "concordant Conformity",
+            "pleasant Watering",
+            "enfolded Conjoining",
+            "fertile Gentleness",
+            "fruitbearing Cultivation",
+            "flourishing Return",
+            "rosy Picture",
+            "expiring Fragrance",
+            "delicious Joy",
+            "golden Persuasion",
+            "lazy Happiness",
+            "sacred Friendship",
+            "soft Sincerity",
+            "harmless Geniality",
+            "Nurture of Things",
+            "Muscle of Arts",
+            "Calming of"
+          ],
+          "excerpt": "Those who assist her: I. Sweet Unanimity, peaceful Agreement, gentle Will, Union of Hearts, Joy of the Breast, Increase of the Small, and concordant Conformity. Likewise, in the image of a garden, pleasant Watering, enfolded Conjoining, fertile Gentleness, fruitbearing Cultivation, flourishing Return, rosy Picture, breathing, expiring Fragrance, delicious Joy, golden Persuasion, lazy Happiness, sa"
+        }
+      ]
+    },
+    {
+      "planet": "Tellus",
+      "opens_at_line": 4874,
+      "principal_images": [
+        {
+          "heading": "Images of Tellus",
+          "line": 4874,
+          "excerpt": "First there presents itself a huge monster with eyes on every side— that is why it is naked— sending off flares of cerulean blue light that is almost hyacinthine in its clarity, with eyebrows flaming like gold which rings its eyes like a gyre, the eyes sparkling marvellously in mid orb. Since it is of such hugeness,"
+        }
+      ],
+      "attendant_groups": [
+        {
+          "group": "ATTENDANTS OF TELLUS",
+          "line": 4897,
+          "attendants": [
+            {
+              "name": "Oceanus",
+              "line": 4905,
+              "excerpt": "Next to her stand many gods, the first of whom is Oceanus, the great godhead, whose head is that of a bull, while the rest of his members are manlike, although cerulean colored. His chariot is completely sprinkled with pearls and roofed all around. Two whales draw it, blowing out salt waves in a great mass"
+            }
+          ],
+          "inline_attendants": [
+            "Nature's crafter is Tellus",
+            "Conception",
+            "Gestation",
+            "Fertility",
+            "Generation",
+            "Birth",
+            "Nursing",
+            "Feeding",
+            "Cherishing",
+            "all-providing Power",
+            "all- establishing Supply",
+            "Jove's second crown",
+            "Childbirth",
+            "Midwifery",
+            "Initiation",
+            "Observance",
+            "Renewal",
+            "Restoration",
+            "Elemental Formation",
+            "Domination",
+            "Movement",
+            "Animation",
+            "Inspiration",
+            "8 Longevity",
+            "solid Fecundity",
+            "Long Hair in meadow",
+            "fertile Birth",
+            "wide ranging Destruction",
+            "starborn Majesty",
+            "crystalline Brilliance"
+          ],
+          "excerpt": "Nature stands next to Tellus,6 and Nature's crafter is Tellus. With her are Motherhood, Conception, Gestation, Fertility, Generation, Birth, Nursing, Feeding, Cherishing, all-providing Power, all- establishing Supply, with antecedents,7 bystanders; and Jove's second crown, which is around Mercury's eye and in the Sun's possession; Childbirth, Midwifery, Nursing, Initiation, Observance, Renewal, Re"
+        }
+      ]
+    },
+    {
+      "planet": "Pluto",
+      "opens_at_line": 4920,
+      "principal_images": [
+        {
+          "heading": "THE IMAGE OF PLUTO",
+          "line": 4920,
+          "excerpt": "Next comes Pluto, who rules a third of this world, a black divinity and a terrifying one, whose iron chariot two of the blackest winged horses convey. He himself brandishes in his right hand an iron mattock of huge length,16 with a barb right in the middle between its two prongs, while in his left he holds two"
+        }
+      ],
+      "attendant_groups": []
+    }
+  ],
+  "counts": {
+    "courts": 9,
+    "principal_images": 10,
+    "attendant_groups": 8,
+    "named_attendants": 13,
+    "inline_attendants": 239
+  }
+}

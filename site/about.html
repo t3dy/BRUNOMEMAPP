@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">A research laboratory for Giordano Bruno&rsquo;s memory, magic, and images</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html" class="active">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <h1 class="section-title">About</h1>
+        <div class="entity-detail">
+            <p>BRUNOMEMAPP is a digital-humanities laboratory for studying and experimenting with Giordano Bruno&rsquo;s
+            memory, imagination, magic, and philosophy. Bruno&rsquo;s primary texts and the scholarly interpretations of
+            those texts become structured data that can generate interactive experimental tools — while keeping
+            historical evidence, scholarly interpretation, reconstruction, and playful experimentation clearly distinct.</p>
+            <h3>Architecture</h3>
+            <p>SQLite source of truth (<code>db/bruno.db</code>), populated from a hand/LLM-curated seed
+            (<code>bruno_seed.json</code>), rendered to this static site by Python scripts. No frameworks, no build step.
+            Raw source-document extraction lives separately in <code>corpus/</code> and is not rendered to the site —
+            it exists to ground and check the seed content. Pattern cribbed from WitcherPortal / AtalantaClaudiens.</p>
+            <h3>Provenance discipline</h3>
+            <p>Every entity carries <code>source_method</code>, <code>review_status</code>, and <code>confidence</code>.
+            Works, images, and biographical events additionally carry a required, explicit statement of how they connect
+            to memory/magic specifically — nothing is included just because it&rsquo;s &ldquo;about Bruno.&rdquo;</p>
+        </div>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

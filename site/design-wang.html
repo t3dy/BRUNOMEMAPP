@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WANG — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">Frame: WANG</h1>
+<p><strong>Type:</strong> interpretive frame · <strong>Attributed to:</strong> Zheng Wang ("The Role of Iconic Practice in Bruno's Gnoseology," 2022) · <strong>Artifacts:</strong> Wheel, Image Lab, Frenzies</p>
+<blockquote class="doc-quote"><strong>Provenance warning.</strong> <code>LLM_GENERAL_KNOWLEDGE</code>. See ARCHITECTURE.md §4.</blockquote>
+<hr>
+<h2 class="doc-h2">Stance in one line</h2>
+<p>Bruno's image-making belongs to his theory of knowledge: <em>phantasia</em> is not a defective middleman between sense and intellect, and mnemonic practice turns shadows into iconic forms that carry the knower upward.</p>
+<h2 class="doc-h2">The triple</h2>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Mechanism</strong></td><td>Inherits Sturlese's corrected wheel unchanged.</td></tr><tr><td><strong>Output</strong></td><td>An iconic form / mental schema — something the operator eventually thinks <em>with</em> rather than <em>about</em>.</td></tr><tr><td><strong>Success criterion</strong></td><td>The operator can hold the relation <strong>after the image is removed</strong>.</td></tr><tr><td><strong>Testability</strong></td><td><strong>T1 (partial) — the most surprising result in the project.</strong></td></tr></tbody></table></div>
+<h2 class="doc-h2">The drop-the-scaffold test</h2>
+<p>This frame sounds like the most abstract of the seven and turns out to be among the most concretely testable, which is worth surfacing to the user as a finding in its own right.</p>
+<p>Wang's claim is that the image is an instrument of knowing, not a container. The brief's own Plotinian endpoint states it sharply: <em>"You no longer need the image. You can see the relation directly."</em> If that is right, it predicts something checkable:</p>
+<ol class="doc-list"><li>User encodes relational material via the wheel, with images.</li><li>Trials continue until performance is stable.</li><li><strong>The image scaffold is withdrawn.</strong></li><li>Re-test the relation without it.</li><li>Measure persistence, and time-to-independence across items.</li></ol>
+<p>A pure-hook model predicts collapse when the hook is removed. Wang's model predicts persistence. <strong>That is a real discriminating prediction, running in a browser.</strong></p>
+<p>Caveats to state in the UI: this tests whether the <em>reconstructed</em> practice produces scaffold-independent knowledge in <em>this</em> user. It does not establish what Bruno intended, and Wang's own point is that Bruno never gave a transparent account of how the images mediate. Do not let a good result get reported as vindication of a historical thesis.</p>
+<h2 class="doc-h2">Wang's honest complication — keep it</h2>
+<p>Wang stresses that Bruno never fully explains how his occult images mediate between worlds; the woodcuts have to be read as practical realisations of a larger speculative system whose code has not been cracked. <strong>This is a feature of the frame, not a gap to fill.</strong> The portal should carry it forward as a standing caution against any interface that implies the system is solved. Where the reconstruction has to guess, the guess gets labelled <code>SPECULATIVE_IMPLEMENTATION</code>.</p>
+<h2 class="doc-h2">Interactive behaviour</h2>
+<ul class="doc-list"><li>Corrected wheel geometry; switcher notes the mechanism is unchanged from Sturlese and Clucas.</li><li>Images render with an explicit <strong>schema view</strong>: the image, and separately the relational structure it encodes, toggleable.</li><li>The scaffold-withdrawal harness (above) as a first-class mode, with per-item independence tracking.</li><li>A visible "not fully theorised by Bruno" marker wherever the reconstruction is inferring mediation mechanics.</li></ul>
+<h2 class="doc-h2">Primary texts</h2>
+<ul class="doc-list"><li><em>De imaginum, signorum et idearum compositione</em> (1591) — the central text for this frame</li><li><em>De umbris idearum</em> — the shadows-into-iconic-forms move</li><li>Wang (2022)</li></ul>
+<h2 class="doc-h2">Disputes</h2>
+<ul class="doc-list"><li><code>esoteric-vs-nonesoteric-interpretation</code> — Wang sits with the synthetic tendency (with Clucas and Mertens) rather than at either pole</li><li>Bears on <code>plotinus-vs-aristotle-psychological-source</code> via the status of <em>phantasia</em></li></ul>
+<h2 class="doc-h2">Build notes</h2>
+<ul class="doc-list"><li>Reuse Sturlese's recall harness; scaffold-withdrawal is a parameter on it, not a separate build. This is why STURLESE ships first.</li><li>Needs <code>concept_relations</code> (see CLUCAS.md) to have relations worth testing independence <em>of</em>.</li></ul>
+<h2 class="doc-h2">To verify in corpus</h2>
+<ul class="doc-list"><li><strong>Does Wang commit to the strong claim</strong> (image becomes dispensable) or only the weak one (image mediates)? The whole test rests on the strong reading; if Wang only holds the weak one, the test is this project's extrapolation and must be labelled as such rather than attributed to him.</li><li>Wang's actual account of <em>phantasia</em>'s positive cognitive role.</li><li>Which specific woodcuts Wang treats as practical realisations — candidates for <code>images</code> rows.</li></ul></article>
+        <p class="provenance-note">Source: <code>docs/design/WANG.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

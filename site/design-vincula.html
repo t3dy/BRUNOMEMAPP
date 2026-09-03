@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VINCULA — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">Artifact: THE VINCULA BOARD</h1>
+<p><strong>Type:</strong> artifact (structural, non-operational by design) · <strong>Primary text:</strong> <em>De vinculis in genere</em> (c. 1590–91) · <strong>Frames:</strong> Couliano (primary), Clucas, Mertens</p>
+<hr>
+<h2 class="doc-h2">1. What it is</h2>
+<p>A graph interface for the <em>vinculum</em> — the bond. Nodes are the parties and faculties Bruno's theory implicates: operator, image, attention, imagination, desire, emotion, <em>spiritus</em>, <em>species</em>, target, action. Edges are the links between them. The board renders the <strong>anatomy of a bond as Bruno theorised it</strong>.</p>
+<p>Unlike every other artifact, this one is deliberately not operable toward its historical purpose. See §3.</p>
+<h2 class="doc-h2">2. Why it earns a place</h2>
+<p><em>De vinculis in genere</em> is the most direct primary-source warrant of any frame in the portal. Where the wheel requires reconstruction and the seals require guesswork, this text is explicitly <em>about</em> the mechanism it describes. Couliano's reading is close to reportage.</p>
+<p>It also supplies something no other artifact does: the <strong>causal vocabulary</strong> — <em>species</em>, <em>spiritus</em>, <em>vinculum</em> — by which Bruno's images were supposed to actually do anything. Without it, "magic" in the memory art has no stated mechanism. The board is where that vocabulary becomes inspectable.</p>
+<h2 class="doc-h2">3. The constraint that defines the build</h2>
+<p>Every other artifact targets the operator. This one, historically, targets someone else — and its success criterion is a change in another person's behaviour.</p>
+<p><strong>A tool that helped a user construct and rehearse binding operations against a real named person would be a manipulation aid with a Renaissance skin.</strong> Scholarly framing would not change what it was.</p>
+<p>So:</p>
+<ul class="doc-list"><li>Nodes take <strong>abstract or historical roles</strong> — "the beloved," "the crowd," "the prince." Never a real named individual.</li><li><strong>No output panel. No effectiveness score. No strategy, messaging, or approach advice.</strong></li><li>If a user tries to instantiate the board against a specific real person, the tool declines and explains why.</li><li>Fixed banner: <strong>COULIANO-INSPIRED EXPERIMENTAL MODEL — this reconstructs a historical theory of binding. It does not tell you how to influence anyone.</strong></li></ul>
+<p>This is core logic, not copy — a later refactor must not be able to drop it.</p>
+<p><strong>And the constraint is intellectually productive, not merely defensive.</strong> Stripping the targeting leaves the structure, and the structure is the interesting object. The board is <em>more</em> legible as a theory of how imagination, desire and attention interlock when it is not also trying to be a procedure.</p>
+<h2 class="doc-h2">4. What is genuinely explorable</h2>
+<ul class="doc-list"><li><strong>Bond anatomy.</strong> Which faculty links to which; what carries influence; where a bond can be broken. All with primary passages attached per edge.</li><li><strong>Reflexive mode — the strongest use.</strong> Turn the mechanism on oneself: what binds <em>my</em> attention, and what does that pattern reveal about what I want? Honest, non-manipulative, and it converges with Clucas's ethical reading and with FRENZIES.md's rebound mechanic. This should be the default entry point.</li><li><strong>Historical case reading.</strong> Take an attested Brunian image and diagram the bonds it was theorised to establish. Pure scholarship, no operation.</li></ul>
+<h2 class="doc-h2">5. Frames</h2>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th>Frame</th><th>Reads the bond as</th></tr></thead><tbody><tr><td><strong>Couliano</strong></td><td>psychological binding via <em>phantasia</em>, desire, attention. <strong>Primary.</strong></td></tr><tr><td><strong>Clucas</strong></td><td>the "magic" third of logic+ethics+magic — efficacy of images and the bonds they establish</td></tr><tr><td><strong>Mertens</strong></td><td>continuous with spirit-regulation; bonds as forces acting on cognition</td></tr><tr><td>Yates / Sturlese / Wang / Barenstein</td><td>○ no strong documented reading of the <em>vincula</em></td></tr></tbody></table></div>
+<p>The Couliano/Clucas overlap here is worth surfacing: both treat image-efficacy as real and non-astral, but Couliano's is erotic-psychological and Clucas's ethical-transformative. Whether these are the same claim in different registers is an open question the seed does not yet model — see COULIANO.md §Disputes.</p>
+<h2 class="doc-h2">6. Data requirements</h2>
+<ul class="doc-list"><li>Bond taxonomy from <em>De vinculis</em>: kinds of bond, parties, faculties. <strong>Currently zero rows.</strong></li><li><code>concept_relations</code> — shared prerequisite.</li><li><code>dictionary_terms</code> has <code>vinculum</code>, <code>spiritus</code>, <code>species</code>; needs their interrelation from source.</li><li>Attested passages per edge.</li></ul>
+<h2 class="doc-h2">7. Build phases</h2>
+<p>Scheduled <strong>last</strong> among artifacts. It is a graph renderer rather than a wheel variant, so it shares no machinery with WHEEL/IMAGELAB/CABALA, and the ethical design work deserves the benefit of the patterns established by everything before it.</p>
+<ol class="doc-list"><li>Bond taxonomy as data — content-blocked on corpus.</li><li>Static anatomy view with passages per edge.</li><li>Reflexive mode (default entry).</li><li>Historical case reader.</li><li>Frame overlays.</li></ol>
+<h2 class="doc-h2">8. Open questions</h2>
+<ul class="doc-list"><li>**Does <em>De vinculis</em> itself set ethical limits on binding?** If Bruno does, quoting him in the banner would be far better than the portal's own disclaimer — his constraint, not ours.</li><li>Is the psyche/world continuity thesis Couliano's, Bruno's, or this project's gloss?</li><li>How does Couliano treat the mnemonic works specifically, as against Renaissance magic generally?</li></ul></article>
+        <p class="provenance-note">Source: <code>docs/design/VINCULA.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

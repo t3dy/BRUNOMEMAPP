@@ -1,0 +1,582 @@
+{
+  "practices": [
+    {
+      "slug": "bruno-atrium",
+      "name": "Bruno's Atria",
+      "tradition": "Bruno",
+      "date_range": "1591",
+      "source_text": "De imaginum, signorum et idearum compositione, Bk I Pt 2 chs 3-6 (Higgins trans.)",
+      "one_line": "A constructed address space of 24 named halls, each with 24 positions — 576 loci, specified by Bruno himself.",
+      "what_you_can_do": "Build the atrium schema, choose one of the 24 halls, populate its 24 positions with the images Bruno assigns, and use it as a real memory address space. The Altar is fully specified down to which item sits at which angle.",
+      "operability": "PARTIALLY_OPERABLE",
+      "operability_note": "The Altar (atrium I) is FULLY operable: ch.6 gives position-to-item in prose. Atria 2-24 have attested inventories but their position mapping is reconstructed from a 2-D plate flattened into a text column, so cell order may not be geometrically faithful. Shown, but marked.",
+      "worldview_preface": "Before anything else: this is not a memory palace in the sense you are expecting. The classical art tells you to use a building you already know — your church, your childhood house — because you have years of familiarity to draw on. Bruno does the opposite. He gives you an abstract geometric schema and tells you to construct it. He wants a uniform, fixed, combinatorially addressable grid, not the accidents of a real building. You are not recalling a place. You are building an instrument.",
+      "structure_source": "data/atria_harvested.json",
+      "sort_order": 10,
+      "source_method": "CORPUS_GROUNDED",
+      "confidence": "HIGH",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Draw the atrium",
+          "instruction": "Draw a quadrangle. Its centre is 'the earth and the eye' — you stand there. Label one corner east and the corner opposite it west; label the two remaining opposed corners north and south. Then label the four spaces at the middle of each side east, west, north and south as well. You now have eight distinct points.",
+          "attestation": "ATTESTED",
+          "source_locator": "Bk I Pt 2 ch 3, 'Form of the Atrium' (line ~1272)"
+        },
+        {
+          "step_number": 2,
+          "title": "Add the collaterals",
+          "instruction": "Each of the eight points determines two secondary positions, its right and its left. East has a right and a left; the east corner has a right and a left; and so on through all eight. Eight points, each with itself plus right plus left, gives twenty-four positions.",
+          "attestation": "ATTESTED",
+          "source_locator": "Bk I Pt 2 ch 3 (line ~1278)"
+        },
+        {
+          "step_number": 3,
+          "title": "Choose your atrium",
+          "instruction": "There are twenty-four atria, 'after the number of the twenty four elements': altar, basilica, prison, house, colt, fountain, sword, horoscope, fire, yoke, lantern, table, nest, sheepfold, food, four-horse chariot, net, mirror, hot springs, carriage, gate, Pythagorean fork, gift, key of jealousy. Begin with the Altar — it is the one Bruno specifies completely.",
+          "attestation": "ATTESTED",
+          "source_locator": "Bk I Pt 2 ch 4, 'On the number and name of the atria' (line ~1288)"
+        },
+        {
+          "step_number": 4,
+          "title": "Set the substantive places",
+          "instruction": "The substantive places are the positions themselves — the angle, the angle's right and left, the middle of each side. These are the fixed architecture. They do not change between atria; only what occupies them does.",
+          "attestation": "ATTESTED",
+          "source_locator": "Bk I Pt 2 ch 5 (line ~1337)"
+        },
+        {
+          "step_number": 5,
+          "title": "Animate with the adjective places",
+          "instruction": "The adjective places are what bring the position to life — whether the occupant is alive or dead, moving or moved. In the Atrium of the Altar: at the eastern angle water flowing down, at its right a plow, at its left a chain; at the western angle a tree, right a ram, left a banquet; at the southern angle a horse, right an anchor, left a chariot; at the northern angle a prison, right a giant, left a goat; on the eastern side an ewer, right a young man, left an amphora; on the western side an oven, right a fork, left a consuming fire; on the southern side a cloud of smoke, right fruit, left a stable; on the northern side a desk, right a skiff, left a throne.",
+          "attestation": "ATTESTED",
+          "source_locator": "Bk I Pt 2 ch 6 (line ~1353)"
+        },
+        {
+          "step_number": 6,
+          "title": "Nest the atria",
+          "instruction": "The names of the twenty-four atria also distribute into each atrium. In the Atrium of the Altar an altar stands at the eastern corner, a colt at the western, an image at the southern, a sheepfold at the fourth. Twenty-four atria each holding twenty-four positions gives five hundred and seventy-six addressable places.",
+          "attestation": "ATTESTED",
+          "source_locator": "Bk I Pt 2 ch 4 (line ~1328)"
+        },
+        {
+          "step_number": 7,
+          "title": "Place and walk",
+          "instruction": "Assign your material to positions by address — atrium, point, collateral. Recall by going to the address rather than by searching. The grid is uniform, so an address in the Prison works exactly as an address in the Altar does.",
+          "attestation": "RECONSTRUCTED",
+          "source_locator": "Implied by the addressing scheme; Bruno does not give a worked recall example here."
+        }
+      ],
+      "frictions": [
+        {
+          "step_number": 1,
+          "kind": "INTERFACE",
+          "difficulty": "I am being asked to draw a diagram before I can remember anything.",
+          "explanation": "Yes. The classical art gets its structure free from a building you already know; Bruno's gets it from construction, so there is real setup cost before any payoff. Expect to build the schema once and reuse it for years. That trade — high setup, uniform addressing — is the whole design."
+        },
+        {
+          "step_number": 1,
+          "kind": "WORLDVIEW",
+          "difficulty": "Why is the centre described as 'the earth and the eye'? Those are two different things.",
+          "explanation": "For Bruno they are the same point. The memory space is a small cosmos, and you stand at its centre exactly as the earth stands at the centre of the sensible world. The observer's position and the world's centre coincide. This is a microcosm claim, not a figure of speech — and it is why the schema is oriented by compass directions rather than by 'left wall, back wall'."
+        },
+        {
+          "step_number": 2,
+          "kind": "WORLDVIEW",
+          "difficulty": "Right and left of what? Right from where I stand, or from the position's point of view?",
+          "explanation": "From the centre, looking out — you are always the reference point. The text takes this as too obvious to state, which is itself informative: the practitioner is assumed to be standing inside the figure, not looking at it on a page. If you find yourself reading the atrium as a diagram rather than a room, you have already lost the thing that makes it work."
+        },
+        {
+          "step_number": 3,
+          "kind": "INTERFACE",
+          "difficulty": "A 'Pythagorean fork' and a 'key of jealousy' mean nothing to me.",
+          "explanation": "They meant something specific to a sixteenth-century reader and the referents are now partly lost. The Pythagorean fork is the letter Y as an emblem of the choice between virtue and vice. The key of jealousy is less certain. Where a referent is genuinely obscure this site says so rather than inventing one — an atrium you do not understand is an atrium you cannot use, and that is a real limit on operability, not a gap to paper over."
+        },
+        {
+          "step_number": 3,
+          "kind": "WORLDVIEW",
+          "difficulty": "Why these twenty-four? Altar, colt, Pythagorean fork, key of jealousy — the list looks arbitrary.",
+          "explanation": "It is keyed to 'the number of the twenty four elements' — the letters of the alphabet as Bruno counts them. The atria are not chosen for meaning but for count: he needs exactly as many halls as there are letters, so that place and letter can be mapped onto each other. The oddness of the individual items is a side effect of needing twenty-four memorable and mutually unconfusable things."
+        },
+        {
+          "step_number": 4,
+          "kind": "WORLDVIEW",
+          "difficulty": "Why split places into 'substantive' and 'adjective' ones? That is grammar, not architecture.",
+          "explanation": "It is grammar, deliberately. Bruno takes the noun/adjective distinction and applies it to space: the position is the noun, what animates it is the adjective. That is a real claim — that memory space is structured like language, so places can be inflected the way words are. It is also what makes the system combinatorial: fix the nouns, vary the adjectives, and one architecture yields many images."
+        },
+        {
+          "step_number": 5,
+          "kind": "INTERFACE",
+          "difficulty": "Bruno gives me his images. But the art of memory usually insists the images must be your own.",
+          "explanation": "A genuine tension, and Bruno does not resolve it. Borrowed images are weaker because they carry none of your associations; but a fixed shared inventory is what makes the system communicable and combinatorial. Treat his list as the attested default and substitute your own where a position refuses to stick — but keep the position, since the address is what the system is for."
+        },
+        {
+          "step_number": 5,
+          "kind": "WORLDVIEW",
+          "difficulty": "Why does it matter whether the thing is alive or dead, moving or being moved?",
+          "explanation": "Because a static image does not hold attention, and attention is what memory follows. The adjective places exist 'so that it brings an image or form to life and makes it prosper' — animation is a technical requirement of the system, not ornament. This is the same principle behind the violence and strangeness of the classical imagines agentes, but Bruno has made it a formal slot in the architecture rather than a piece of advice."
+        },
+        {
+          "step_number": 6,
+          "kind": "WORLDVIEW",
+          "difficulty": "Five hundred and seventy-six places is far more than anyone needs.",
+          "explanation": "It is more than anyone needs for a speech, which is a clue that speeches are not the point. A system this large is built for exhaustive coverage of a subject — every topic, every combination — which is the ambition of an art of discovery rather than an aid to recall. See the note on Bruno's Statues: much of his memory work is closer to finding what to say than to retaining what was said."
+        },
+        {
+          "step_number": 7,
+          "kind": "INTERFACE",
+          "difficulty": "Bruno never shows me a worked example of actually remembering something.",
+          "explanation": "Correct, and it is the honest limit of this practice. He specifies the architecture in detail and the use in outline. This step is therefore marked RECONSTRUCTED: the addressing scheme plainly implies it, but you are extending Bruno here, not following him. Where you feel the instructions thin out, that is the source thinning out, not the reconstruction failing."
+        }
+      ],
+      "variants": [
+        {
+          "slug": "atrium-1591-vs-tocco",
+          "name": "1591 plate vs Tocco's version",
+          "scholar_slug": null,
+          "what_changes": "The source marks two different transcriptions of the atrium diagram — the 1591 printing and Tocco's later edition. The geometry of the plate differs between them.",
+          "playable_as": "Build the atrium from either plate and compare which positions fall where. A genuine textual variant, playable rather than footnoted.",
+          "testability_tier": "T1",
+          "superseded": 0,
+          "notes": "Flagged at line ~1285 of the Higgins text. The exact difference has not yet been harvested — see HARVEST.md queue."
+        }
+      ]
+    },
+    {
+      "slug": "classical-loci",
+      "name": "The Classical Art: Places and Agent Images",
+      "tradition": "Classical",
+      "date_range": "c. 86 BCE",
+      "source_text": "Rhetorica ad Herennium III.16-24",
+      "one_line": "The foundational technique: a remembered building, an ordered series of places, and violently memorable images set in them.",
+      "what_you_can_do": "Choose a building you know, fix an ordered series of places in it, invent striking images for what you want to remember, place one per locus, and walk the series to recall.",
+      "operability": "FULLY_OPERABLE",
+      "operability_note": "Every step is specified in the source. This is the baseline against which Bruno's departures become legible — learn it first.",
+      "worldview_preface": "This art was invented for people who had to deliver long speeches from memory, in a world with little paper, no index, and no way to look anything up mid-sentence. Memory was not a private convenience; it was a professional instrument and, later, a moral virtue. That is the pressure that makes the rest of it make sense.",
+      "sort_order": 20,
+      "source_method": "LLM_GENERAL_KNOWLEDGE",
+      "confidence": "MEDIUM",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Choose a building you know well",
+          "instruction": "Pick a real place you can walk in imagination without hesitating — a house you lived in, a church, a route you have taken hundreds of times. It must be quiet, well-lit, and not crowded with similar-looking rooms.",
+          "attestation": "ATTESTED",
+          "source_locator": "Ad Herennium III.19 (from general knowledge; text not in corpus)"
+        },
+        {
+          "step_number": 2,
+          "title": "Fix an ordered series of places",
+          "instruction": "Walk a fixed route and select distinct positions along it — a doorway, a corner, a window, a hearth. Keep them moderately spaced and visually unlike one another. The order must never vary.",
+          "attestation": "ATTESTED",
+          "source_locator": "Ad Herennium III.19"
+        },
+        {
+          "step_number": 3,
+          "title": "Mark every fifth place",
+          "instruction": "Put a distinguishing mark at every fifth locus — a golden hand at the fifth, an acquaintance named Decimus at the tenth. This lets you count into the series without walking it from the start.",
+          "attestation": "ATTESTED",
+          "source_locator": "Ad Herennium III.19"
+        },
+        {
+          "step_number": 4,
+          "title": "Make agent images",
+          "instruction": "Invent images that act rather than sit. Make them exceptionally beautiful or exceptionally ugly; give them motion; stain them with blood or mud; smear them with red paint; make them comic or obscene. Ordinary things slip away; the extraordinary stays.",
+          "attestation": "ATTESTED",
+          "source_locator": "Ad Herennium III.22"
+        },
+        {
+          "step_number": 5,
+          "title": "Place one image per locus",
+          "instruction": "Set each image in its place, interacting with the architecture — leaning on the doorframe, spilling into the corner. One image per locus; do not crowd them.",
+          "attestation": "ATTESTED",
+          "source_locator": "Ad Herennium III.20"
+        },
+        {
+          "step_number": 6,
+          "title": "Walk to recall",
+          "instruction": "Recall by walking the route in order and reading off what you find. To recall backwards, walk it in reverse. The places persist; the images are wiped and replaced for the next use.",
+          "attestation": "ATTESTED",
+          "source_locator": "Ad Herennium III.21"
+        }
+      ],
+      "frictions": [
+        {
+          "step_number": 1,
+          "kind": "INTERFACE",
+          "difficulty": "I do not have a building I know that well.",
+          "explanation": "This is the single biggest practical gap between the ancient user and you. The art assumes a life spent in a small number of buildings entered thousands of times. Modern life is high-turnover and increasingly screen-mediated, and many people genuinely lack a deeply known interior. Use the place you have spent the most hours in even if it is dull — a childhood home, a workplace, a supermarket route. Dullness is fine; familiarity is not optional."
+        },
+        {
+          "step_number": 2,
+          "kind": "WORLDVIEW",
+          "difficulty": "Why must the order never vary? I would rather jump straight to item seven.",
+          "explanation": "You cannot. There is no random access here: memory is a path you walk, not an index you query. This is the deepest habit-mismatch in the whole art, because search has trained you to expect direct retrieval. The ordered walk is not a limitation the ancients failed to overcome — it is the data structure. The every-fifth-place marker in the next step is their answer to exactly your complaint."
+        },
+        {
+          "step_number": 3,
+          "kind": "INTERFACE",
+          "difficulty": "Why every fifth place specifically?",
+          "explanation": "Because you count on one hand. The five-marker lets you jump into the middle of a long series without walking it from the beginning — it is the ancient answer to the random-access complaint, and it is calibrated to the body rather than to base ten. The tenth gets a second marker because that is two hands."
+        },
+        {
+          "step_number": 4,
+          "kind": "INTERFACE",
+          "difficulty": "Can I just use images someone else made?",
+          "explanation": "Poorly. Images work through your associations, and a borrowed image carries someone else's. Every serious source insists you make your own, which is also why an app cannot do the interesting part for you. What a tool can do is hold the architecture and the order; the images have to be yours."
+        },
+        {
+          "step_number": 4,
+          "kind": "WORLDVIEW",
+          "difficulty": "Bloodied, obscene, disfigured images feel gratuitous, even nasty.",
+          "explanation": "They are a technical requirement, not a taste. The underlying psychology holds that the mind retains what strikes it and lets the ordinary slide off; so emotional shock is being used as a fixative. The theory long predates any distinction between a memory technique and an affective manipulation — nobody involved thought there was a line to cross. If the images feel excessive to you, that reaction is the historical gap doing its work, and it is worth noticing rather than suppressing."
+        },
+        {
+          "step_number": 5,
+          "kind": "INTERFACE",
+          "difficulty": "Why only one image per place? I have more to remember than I have doorways.",
+          "explanation": "Two images in one locus interfere and you lose both — the failure is reliable enough that every source warns about it. The answer is more places, not denser ones, which is why practitioners invested years in extending their architecture. If you are short of loci you have found the real constraint of the art, and it is the constraint Bruno's 576-address system is built to solve."
+        },
+        {
+          "step_number": 6,
+          "kind": "WORLDVIEW",
+          "difficulty": "Wiping the images to reuse the places seems wasteful — why not keep them?",
+          "explanation": "Because places are expensive and images are cheap. Building a reliable ordered series takes weeks; inventing an image takes seconds. The architecture is the durable asset and the content is disposable, which is precisely the opposite of how a modern user thinks about storage. Bruno's fixed twenty-four atria push this logic to its conclusion."
+        }
+      ],
+      "variants": []
+    },
+    {
+      "slug": "quintilian-sober",
+      "name": "Quintilian's Sober Version",
+      "tradition": "Classical",
+      "date_range": "c. 95 CE",
+      "source_text": "Institutio Oratoria XI.ii",
+      "one_line": "The same architecture, stripped of spectacle: real buildings, plain markers, and open doubt about whether the fancy images help.",
+      "what_you_can_do": "Run the classical method with the image-magic turned off — real places, sober markers, and rote repetition doing the work instead. Then compare against the full version.",
+      "operability": "FULLY_OPERABLE",
+      "operability_note": "Quintilian describes the method and his reservations clearly enough to run. Included as the period's own internal scepticism about the art.",
+      "worldview_preface": "It is worth knowing that the art had doubters from the inside. Quintilian teaches the method because it is standard, but he is unconvinced that elaborate imagery beats plain hard repetition, and he is impatient with the more extravagant claims made for it. Having him here keeps the art from looking uncontested in its own time.",
+      "sort_order": 30,
+      "source_method": "LLM_GENERAL_KNOWLEDGE",
+      "confidence": "MEDIUM",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Use a real building, walked physically",
+          "instruction": "Use an actual house or public building and walk it in the body first. Prefer somewhere you can revisit to check.",
+          "attestation": "ATTESTED",
+          "source_locator": "Institutio XI.ii (from general knowledge; text not in corpus)"
+        },
+        {
+          "step_number": 2,
+          "title": "Mark places with plain signs",
+          "instruction": "Use ordinary, unremarkable tokens — an anchor, a weapon — rather than elaborate dramatic figures.",
+          "attestation": "ATTESTED",
+          "source_locator": "Institutio XI.ii"
+        },
+        {
+          "step_number": 3,
+          "title": "Learn by division and repetition",
+          "instruction": "Break the material into small parts, learn each by repetition, and rely on the order of the argument itself as much as on the places.",
+          "attestation": "ATTESTED",
+          "source_locator": "Institutio XI.ii"
+        },
+        {
+          "step_number": 4,
+          "title": "Test whether the places are earning their keep",
+          "instruction": "Memorise comparable material with and without the places, and see honestly whether the architecture helped.",
+          "attestation": "RECONSTRUCTED",
+          "source_locator": "Quintilian voices the doubt; the controlled comparison is ours."
+        }
+      ],
+      "frictions": [
+        {
+          "step_number": 1,
+          "kind": "INTERFACE",
+          "difficulty": "'Walk it in the body first' — what if the building is gone, or far away?",
+          "explanation": "Then Quintilian's version is partly unavailable to you, and that is worth registering rather than working around. His whole objection to the fancier method is that it substitutes invention for verification; he wants a place you can go back and check. A remembered building you cannot revisit drifts, and drift is exactly what he is trying to eliminate."
+        },
+        {
+          "step_number": 2,
+          "kind": "WORLDVIEW",
+          "difficulty": "If the striking images are the whole point, why does Quintilian dislike them?",
+          "explanation": "Because he is a working teacher with pupils to get through examinations, and he suspects the spectacular version is oversold. His objection is practical rather than moral: elaborate images take time to invent, and that time might be better spent on repetition. The disagreement between him and the Ad Herennium is the oldest live argument in the art of memory, and you can settle it for yourself in step 4."
+        },
+        {
+          "step_number": 3,
+          "kind": "WORLDVIEW",
+          "difficulty": "'Repetition' sounds like rote learning, which I have been taught is the lazy option.",
+          "explanation": "That judgement is recent. For Quintilian repetition is the respectable core of the discipline and the image-work is the suspect embellishment — precisely inverting the modern intuition that mnemonic tricks are clever and drilling is dull. He is also right that repetition works; the open question, which step 4 lets you settle, is whether the places add anything on top."
+        },
+        {
+          "step_number": 4,
+          "kind": "INTERFACE",
+          "difficulty": "This step is marked RECONSTRUCTED — so is it Quintilian or not?",
+          "explanation": "The doubt is his; the controlled test is ours. Quintilian had no way to run a fair comparison and no expectation that he should. Setting one up is a modern move layered onto an ancient scruple, and it is labelled so you can tell which part you are doing."
+        }
+      ],
+      "variants": []
+    },
+    {
+      "slug": "bruno-lampas-statues",
+      "name": "Bruno's Thirty Statues",
+      "tradition": "Bruno",
+      "date_range": "1587",
+      "source_text": "Lampas triginta statuarum (Thirty Statues, trans. as 'a book of the art of memory')",
+      "one_line": "Not images for recalling a list, but conceptual figures for generating what there is to say about anything.",
+      "what_you_can_do": "Take a subject, run it through a statue's numbered notions, and generate the full range of things sayable about it. This is an art of finding, not of retaining.",
+      "operability": "PARTIALLY_OPERABLE",
+      "operability_note": "The statues and their numbered subdivisions are given, and can be run as a topic generator. But Bruno's metaphysical scale is stated far more fully than any procedure for using it, so much of the 'how' is reconstruction.",
+      "worldview_preface": "This is the practice most likely to feel like a bait-and-switch, and it is the most important one to understand. You came for a memory palace and you have been handed the scale of nature. Bruno's Statue of Venus is not a picture of Venus to help you recall something — it is the topic of concordance-according-to-will, subdivided into thirty numbered notions: aptitude, facility, compliance, complacence, delectation, adoption, consensus, and so on. The system organises concepts rather than storing items. In the older vocabulary this is inventio, the art of finding what to say, and it sits closer to logic than to mnemonics. That gap is real history, not a broken interface.",
+      "sort_order": 40,
+      "source_method": "CORPUS_GROUNDED",
+      "confidence": "MEDIUM",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Accept the change of purpose",
+          "instruction": "Stop trying to memorise a list. You are going to take a subject and systematically generate everything that can be said about it.",
+          "attestation": "RECONSTRUCTED",
+          "source_locator": "Our framing of the Prologue's account of investigation."
+        },
+        {
+          "step_number": 2,
+          "title": "Choose a statue",
+          "instruction": "Each statue is a topic — a mode under which things can be considered. Venus is concordance according to will; others cover other modes.",
+          "attestation": "ATTESTED",
+          "source_locator": "Thirty Statues, 'Statue of Venus' (line ~4078)"
+        },
+        {
+          "step_number": 3,
+          "title": "Run the numbered notions",
+          "instruction": "Work through the statue's subdivisions in order, asking what each yields for your subject. Under Venus: aptitude, then facility, then compliance, complacence, delectation, adoption, consensus, excitation, approbation, observation, attention, and onward.",
+          "attestation": "ATTESTED",
+          "source_locator": "Thirty Statues (line ~4100 ff.)"
+        },
+        {
+          "step_number": 4,
+          "title": "Locate on the scale of nature",
+          "instruction": "Place your subject on the thirty-degree ladder that runs from vacuum, shadow, matter and atom at the bottom toward the highest simple things — and read off what its position implies.",
+          "attestation": "ATTESTED",
+          "source_locator": "Thirty Statues, 'The Scale of Nature' (line ~4750)"
+        }
+      ],
+      "frictions": [
+        {
+          "step_number": 1,
+          "kind": "WORLDVIEW",
+          "difficulty": "This is not what 'art of memory' was supposed to mean.",
+          "explanation": "Memory, invention and logic were not separate faculties with separate techniques for Bruno. An ordered store of topics is simultaneously a thing you remember and a thing you think with, so a system that arranges concepts well is doing memory work by definition. The modern split — mnemonics over here, brainstorming over there, logic somewhere else — is the anachronism, not Bruno's fusion."
+        },
+        {
+          "step_number": 2,
+          "kind": "INTERFACE",
+          "difficulty": "I am told to choose a statue, but only Venus is spelled out in any detail.",
+          "explanation": "That is the state of the source as we have it here. Venus is worked through at length; the others are named and sketched. Until the rest are harvested you can genuinely run one topic-generator, not thirty — which is why this practice is graded partially operable. Better to have one that works than thirty invented ones."
+        },
+        {
+          "step_number": 3,
+          "kind": "INTERFACE",
+          "difficulty": "The notions are abstract to the point of being slippery. What is the difference between complacence and delectation?",
+          "explanation": "The distinctions are scholastic and fine-grained, and the translation is working hard. Delectation is given as the limit of complacence — the point at which pleasure in a thing is complete. Expect to spend real time on the vocabulary before the generator produces anything useful, and expect some distinctions to stay blurry. This is why the practice is graded partially operable."
+        },
+        {
+          "step_number": 4,
+          "kind": "WORLDVIEW",
+          "difficulty": "Why would where something sits on a metaphysical ladder tell me anything about it?",
+          "explanation": "Because for Bruno the ladder is not a filing convention but the actual structure of things, descending from unity into multiplicity. Knowing a subject's degree tells you what it participates in and therefore what can truly be said of it. Take the metaphysics away and the procedure becomes an arbitrary sorting exercise — which is exactly what makes this practice hard to run without at least provisionally inhabiting the worldview."
+        }
+      ],
+      "variants": []
+    },
+    {
+      "slug": "ramist-tables",
+      "name": "The Ramist Objection: Tables Instead of Images",
+      "tradition": "Renaissance",
+      "date_range": "c. 1550-1600",
+      "source_text": "Petrus Ramus and the Ramist tradition",
+      "one_line": "The period's own strongest argument against everything else here: throw out the images and let logical division do the remembering.",
+      "what_you_can_do": "Memorise the same material by dichotomous division — split the subject in two, split each half in two, and continue until the parts are small enough to hold. Then compare it honestly against the image methods.",
+      "operability": "FULLY_OPERABLE",
+      "operability_note": "The method is simple and completely specifiable. Included because omitting it would present the art of memory as uncontested in its own time, which it was not.",
+      "worldview_preface": "By the later sixteenth century a serious movement held that the whole apparatus of places and grotesque images was superstitious clutter, and that properly ordered knowledge remembers itself. This is why the image tradition withers in Protestant Europe while Bruno is still elaborating it — and it is a large part of why Bruno looked suspect to his contemporaries. Run it, and you are running the objection to everything else on this list.",
+      "sort_order": 50,
+      "source_method": "LLM_GENERAL_KNOWLEDGE",
+      "confidence": "MEDIUM",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "State the whole subject",
+          "instruction": "Write the subject as a single heading at the left.",
+          "attestation": "ATTESTED",
+          "source_locator": "General knowledge; Ramist texts not in corpus."
+        },
+        {
+          "step_number": 2,
+          "title": "Divide in two",
+          "instruction": "Split it into exactly two parts that between them exhaust it and do not overlap.",
+          "attestation": "ATTESTED",
+          "source_locator": "General knowledge."
+        },
+        {
+          "step_number": 3,
+          "title": "Repeat to the leaves",
+          "instruction": "Divide each part in two again, and continue until each remaining part is small enough to hold in one thought. Draw the result as a bracketed table opening left to right.",
+          "attestation": "ATTESTED",
+          "source_locator": "General knowledge."
+        },
+        {
+          "step_number": 4,
+          "title": "Recall by descending the table",
+          "instruction": "To retrieve anything, walk down the branches. The structure of the subject is the structure of the memory; no images are used at any point.",
+          "attestation": "ATTESTED",
+          "source_locator": "General knowledge."
+        }
+      ],
+      "frictions": [
+        {
+          "step_number": 1,
+          "kind": "WORLDVIEW",
+          "difficulty": "Writing the subject as a single heading assumes it has clean edges.",
+          "explanation": "It does assume that, and the assumption is the method's central bet: that knowledge comes in bounded subjects which can be exhaustively analysed. The image tradition makes no such bet — a memory palace will happily hold unrelated junk in an arbitrary order. Ramism trades that tolerance for structure, and the trade only pays if the world really is that tidy."
+        },
+        {
+          "step_number": 2,
+          "kind": "WORLDVIEW",
+          "difficulty": "Real subjects do not divide neatly in two.",
+          "explanation": "That objection was made at the time and it is a good one. The Ramists held that if a subject resists clean bifurcation you have not yet understood it — the method is a claim about the orderliness of knowledge itself, not merely a note-taking format. Whether the world obliges is precisely what is in dispute, and the strain you feel forcing a division is the argument happening in your hands."
+        },
+        {
+          "step_number": 3,
+          "kind": "INTERFACE",
+          "difficulty": "Why draw it as brackets opening left to right rather than as a list?",
+          "explanation": "Because the shape is the argument: everything at one depth is a genuine division of the thing to its left, and the eye can verify that at a glance in a way a nested list hides. Printed Ramist tables were often single large fold-out sheets for exactly this reason — the whole structure had to be visible at once. Modern outliners collapse branches and lose that property."
+        },
+        {
+          "step_number": 4,
+          "kind": "INTERFACE",
+          "difficulty": "This just feels like an ordinary outline.",
+          "explanation": "It is — that is the point, and its victory is why it feels unremarkable. Bracketed tables, nested bullets and collapsible outlines all descend from this. The reason the classical art now looks exotic and the Ramist table looks like common sense is that one of them won."
+        },
+        {
+          "step_number": 4,
+          "kind": "WORLDVIEW",
+          "difficulty": "Why did anyone think the image method was dangerous rather than just inefficient?",
+          "explanation": "Because vivid interior images of gods, planets and violent figures looked to reforming eyes like idolatry conducted inside the skull, and because the more ambitious claims for the art shaded into magic. The Ramist preference for bare logical structure is partly a technical judgement and partly a religious one. Bruno, who pushed the images further than anyone, was burned in 1600 — not for his mnemonics, but the suspicion was of a piece."
+        }
+      ],
+      "variants": []
+    },
+    {
+      "slug": "bruno-image-alphabet",
+      "name": "Bruno's Image Alphabet",
+      "tradition": "Bruno",
+      "date_range": "1591",
+      "source_text": "De imaginum, signorum et idearum compositione, Bk I Pt 2 chs 12-13 (Higgins trans.)",
+      "one_line": "A letter-to-image encoder: every initial letter and consonant cluster carries a small cast of Latin workers, each defined by what they do.",
+      "what_you_can_do": "Take a word, find its opening letter or cluster, and pick one of that key's operators as your image. Chain the images to encode a whole word, then place the chain in an atrium. This is the piece that makes the 576-locus address space usable for language rather than for objects.",
+      "operability": "PARTIALLY_OPERABLE",
+      "operability_note": "The lookup table is complete and usable: 16 simple keys, 7 cluster rows, 136 operators, 13 cross-references. What is only gestured at is the inflection step - Bruno says each operator 'receives the six differences which are sought in the six double triangles of the minor chambers' without specifying the six here, so step 4 is marked reconstructed.",
+      "worldview_preface": "Notice what Bruno chose for his alphabet. Not objects, not animals, not arbitrary symbols - but agent-nouns: a trumpeter, a gravedigger, a woman in childbirth, a glassmaker, one who is fasting. Every letter is a person caught in the act of doing something. That is not decorative. An image must act in order to hold attention, and a cast of workers gives you an inexhaustible supply of actions to place in your loci. Bruno's alphabet is a labour force.",
+      "structure_source": "data/alphabet_harvested.json",
+      "sort_order": 15,
+      "source_method": "CORPUS_GROUNDED",
+      "confidence": "HIGH",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Find the key",
+          "instruction": "Take the word you want to encode and isolate its opening letter, or its opening consonant cluster if it has one. Bl, Br, Cl, Cr, Fl, Fr, Gl, Gr, Pl, Pr, Sc, St, Str and Tr are treated as single keys, not as two letters.",
+          "attestation": "ATTESTED",
+          "source_locator": "Bk I Pt 2 ch 13, operator catalogue (lines 2311-2340)"
+        },
+        {
+          "step_number": 2,
+          "title": "Look up the operators",
+          "instruction": "Each key carries about five operators - Latin agent-nouns naming someone by their occupation or action. B gives Baptizans (one baptizing), Bellator (warrior), Bibliopola (bookseller), Boarius (cattle-dealer), Buccinator (trumpeter).",
+          "attestation": "ATTESTED",
+          "source_locator": "Bk I Pt 2 ch 13 (lines 2311-2326)"
+        },
+        {
+          "step_number": 3,
+          "title": "Follow any cross-reference",
+          "instruction": "Some cluster cells carry no image of their own but point at another: 'Ble as Ple' means the syllable Ble borrows whatever image Ple has been given. Follow the pointer and use that image.",
+          "attestation": "ATTESTED",
+          "source_locator": "Bk I Pt 2 ch 13, asterisked cells (lines 2333-2340)"
+        },
+        {
+          "step_number": 4,
+          "title": "Inflect the operator",
+          "instruction": "Bruno says each operator 'receives the six differences which are sought in the six double triangles of the minor chambers' - so one worker can be varied six ways, multiplying the alphabet sixfold. He does not enumerate the six in this passage.",
+          "attestation": "RECONSTRUCTED",
+          "source_locator": "Bk I Pt 2 ch 13 closing sentence (line 2341). The six are not specified here."
+        },
+        {
+          "step_number": 5,
+          "title": "Place the image in an atrium",
+          "instruction": "Set the operator at a position in one of the twenty-four atria. The letter is now held at an address you can return to.",
+          "attestation": "RECONSTRUCTED",
+          "source_locator": "Implied by the two systems sharing a book; Bruno does not give a worked example joining them."
+        },
+        {
+          "step_number": 6,
+          "title": "Chain for the whole word",
+          "instruction": "Work through the word key by key, placing each operator at the next position in your walk. Recover the word by walking the positions and reading the operators back into letters.",
+          "attestation": "RECONSTRUCTED",
+          "source_locator": "Extends the stated method; the chaining procedure is ours."
+        }
+      ],
+      "frictions": [
+        {
+          "step_number": 1,
+          "kind": "INTERFACE",
+          "difficulty": "There are only sixteen letter-keys, and no J, K, W, X, Y or Z.",
+          "explanation": "Bruno is working with the Latin alphabet, which has no J, K, W, Y or Z in ordinary use and treats I and V as doing double duty for vowel and consonant. Encoding a modern English word will hit letters the system has no key for. That is a genuine limit of the historical instrument, not a gap in this reconstruction - and it is a good illustration of how tightly the art is bound to the language it grew up in."
+        },
+        {
+          "step_number": 1,
+          "kind": "WORLDVIEW",
+          "difficulty": "Why are clusters like Str treated as one key rather than three letters?",
+          "explanation": "Because the system encodes sound, not spelling. A cluster is one articulation of the mouth, so it gets one image. This is the same instinct that makes the memory wheel a syllable machine rather than a letter machine: what is being stored is speech, for people whose primary use of memory was to deliver it aloud."
+        },
+        {
+          "step_number": 2,
+          "kind": "WORLDVIEW",
+          "difficulty": "Why are all the images occupations? A bookseller is not obviously memorable.",
+          "explanation": "Because an occupation comes with actions, tools and a setting already attached - a trumpeter arrives blowing a trumpet, a gravedigger arrives digging. A noun like 'stone' just sits there. Bruno needs images that do something in a place, and a trade is the most compact way to specify a person plus an activity plus its props. Once you see the alphabet as a workforce rather than a symbol-set, the choices stop looking arbitrary."
+        },
+        {
+          "step_number": 2,
+          "kind": "INTERFACE",
+          "difficulty": "The operators are Latin, and some of them are garbled.",
+          "explanation": "A few cells are damaged or abbreviated in the source and are flagged as suspect here rather than silently repaired - 'Go', 'Licto' and 'Frondes spar.' are almost certainly truncations. Glosses are supplied only where reasonably certain. Where no gloss appears the meaning has not been established, and inventing one would be exactly the fabrication this project forbids."
+        },
+        {
+          "step_number": 3,
+          "kind": "WORLDVIEW",
+          "difficulty": "Why would Bruno make two different syllables share one image? That seems like a defect.",
+          "explanation": "It is an economy, and a revealing one. Ble and Ple are close enough in the mouth that Bruno will spend a single image on both, accepting some ambiguity in exchange for a smaller set to memorise. A system built for perfect reversibility would refuse that trade. This one is built for a practitioner with finite memory who will recover the word from context - which tells you the art expects a competent user, not a machine."
+        },
+        {
+          "step_number": 4,
+          "kind": "INTERFACE",
+          "difficulty": "Step 4 tells me to inflect the image six ways and then does not say what the six are.",
+          "explanation": "Correct, and this is the honest edge of the practice. The 'six double triangles of the minor chambers' belong to an apparatus Bruno develops elsewhere in the book; this passage assumes you already have it. You can run the alphabet perfectly well without step 4, at a sixth of its capacity. Where the instructions thin out, the source is thinning out."
+        },
+        {
+          "step_number": 5,
+          "kind": "WORLDVIEW",
+          "difficulty": "Nothing in the text explicitly tells me to put these operators in the atria.",
+          "explanation": "True, and it is marked reconstructed for that reason. But the two systems sit in the same book and each is incomplete without the other: the atria are an address space with nothing to store, the alphabet is a set of images with nowhere to put them. Joining them is the obvious move and almost certainly the intended one - but 'almost certainly' is not attestation, so the label stays."
+        },
+        {
+          "step_number": 6,
+          "kind": "INTERFACE",
+          "difficulty": "Decoding feels lossy - several operators share a key, so how do I know which letter I meant?",
+          "explanation": "You do not, from the image alone. The key tells you the letter; which of its five operators you chose is your own business and carries no extra information. The redundancy exists so you can pick whichever worker fits the scene you are building, not to encode anything. Reading back is therefore a reconstruction from context, which is how every mnemonic in this tradition actually works."
+        }
+      ],
+      "variants": []
+    }
+  ]
+}

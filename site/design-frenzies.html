@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRENZIES — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">Artifact: THE HEROIC FRENZIES / ACTAEON'S CHAMBER</h1>
+<p><strong>Type:</strong> artifact (narrative) · <strong>Primary text:</strong> <em>De gli eroici furori</em> (1585) · <strong>Frames:</strong> Clucas, Wang, Mertens, Couliano, Yates</p>
+<hr>
+<h2 class="doc-h2">1. The structural insight</h2>
+<p>Actaeon is not an illustration attached to the <em>Furori</em>. He is the argument, in the only form that can carry it.</p>
+<p>The myth's structure is <strong>reflexive</strong>: the hunter becomes the hunted, the seer becomes the seen, and he is destroyed by <em>his own hounds</em> — his own faculties, turned on him by what he chose to look at. Bruno picks it because it states the thesis every technical frame is circling: <strong>a sufficiently potent image does not get looked at, it does something to whoever looks.</strong></p>
+<p>That means the interactive cannot be a gallery of symbolic scenes with commentary. If the user's choices do not rebound on them, the artifact has illustrated Actaeon while contradicting him.</p>
+<h2 class="doc-h2">2. The mechanic: choices rebound</h2>
+<ol class="doc-list"><li>The user moves through the chamber choosing <strong>what to contemplate</strong> — an image, a passage, a concept. Choices are logged.</li><li>Subsequent material is <strong>rendered through those prior choices.</strong> Dwell on Diana and later scenes present themselves in that register; dwell on the hunt and they come differently. The lens is built from the user's own history.</li><li>After enough choices, <strong>the pack is assembled from the user's own contemplation log</strong> and turned back on them. Their prior focus becomes the thing pursuing and reframing them.</li><li>The chamber can then show the user what they attended to, and what that pattern selected for.</li></ol>
+<p>No supernatural claim is made or needed. The transformation is real in the only sense the app can honestly deliver: <strong>what you chose to dwell on determined what you were subsequently able to see.</strong> That is Actaeon's structure, implemented literally, and it is also — not coincidentally — Plotinus on attention as the thing memory follows.</p>
+<h2 class="doc-h2">3. Frames on this artifact</h2>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th>Frame</th><th>Reads the chamber as</th></tr></thead><tbody><tr><td><strong>Clucas</strong></td><td>ethical transformation; the dialogues dramatise what the mnemonic treatises make method. <strong>Primary frame.</strong></td></tr><tr><td><strong>Wang</strong></td><td>iconic practice; contemplation as the operation by which images become knowledge</td></tr><tr><td><strong>Mertens</strong></td><td>the heroic spirit; furor as the transformative condition, tied to deification</td></tr><tr><td><strong>Couliano</strong></td><td>eros, desire and attention — <strong>turned reflexively on the user, not outward.</strong> See COULIANO.md §"What remains genuinely explorable"</td></tr><tr><td><strong>Yates</strong></td><td>the image as cosmic instrument; contemplation as conformity</td></tr></tbody></table></div>
+<p>Couliano on this artifact is the safe and interesting half of that frame: binding studied on oneself. The Vincula board handles the structure; Actaeon's Chamber is where a user can honestly experience being bound by what they attend to.</p>
+<h2 class="doc-h2">4. Why Clucas is the primary frame</h2>
+<p>Clucas's insistence that the <em>Furori</em> and <em>Spaccio</em> cannot be separated from the technical mnemonic works is what makes this artifact structurally necessary rather than a nice extra. If he is right, then <strong>the wheel and this chamber are one project in two registers</strong> — method and drama — and the portal should cross-link them as such: from a wheel session under the Clucas frame, offer the chamber as the same claim narrated; from the chamber, offer the wheel as the same claim operationalised.</p>
+<p>That link is the clearest expression available of the thesis that Bruno's memory art is an ethics.</p>
+<h2 class="doc-h2">5. The sonnet + gloss reader</h2>
+<p>The <em>Furori</em>'s own structure — sonnet plus Bruno's prose commentary — is already a dual-layer reading interface. Extend it rather than replace it:</p>
+<ul class="doc-list"><li>Left: the sonnet. Right: Bruno's own gloss.</li><li>Toggleable third layer: scholarly interpretation, per frame.</li><li>The user can see Bruno interpreting himself, then scholars interpreting that. <strong>Three layers, visibly distinct</strong> — a natural showcase for the four-layer discipline, since the text supplies two of the layers unaided.</li></ul>
+<h2 class="doc-h2">6. Data requirements</h2>
+<ul class="doc-list"><li>The sonnet cycle with Bruno's prose commentary — substantial text, needs the corpus.</li><li>Contemplation-object inventory: currently 2 relevant <code>images</code> rows (<code>actaeon-transformed</code>, <code>diana-bathing</code>). Needs the fuller set of <em>Furori</em> imagery.</li><li><code>concept_relations</code> for the lens mechanic.</li><li>Per-frame interpretive layers for the reader.</li></ul>
+<h2 class="doc-h2">7. Honesty constraints</h2>
+<ul class="doc-list"><li>The rebound mechanic is <strong>the user's own attention history reflected back</strong> — never a claim about transformation of the soul. Present it as what it is; it is interesting enough without inflation.</li><li>T2 discipline: reflections are the user's, handed back unscored.</li><li>Do not let the drama imply the metaphysics is settled. Actaeon is Bruno's image for the claim, not evidence for it.</li></ul>
+<h2 class="doc-h2">8. Build phases</h2>
+<ol class="doc-list"><li>Sonnet + gloss reader (static, high value, needs only text).</li><li>Contemplation logging.</li><li>The lens mechanic — prior choices condition later rendering.</li><li>The pack — user's own log turned back on them.</li><li>Frame layers on the reader.</li><li>Cross-links to WHEEL under Clucas.</li></ol>
+<h2 class="doc-h2">9. Open questions</h2>
+<ul class="doc-list"><li>Does Bruno's own gloss support the reflexive reading, or is the hunter/hunted symmetry a modern emphasis?</li><li>How does Bruno handle Actaeon's <em>destruction</em>? The myth ends badly; a transformation-toward-divine-knowledge reading has to account for the hounds. This is the most interesting unresolved point in the artifact and should be surfaced rather than smoothed.</li><li>Which translation, and are its rights clear?</li></ul></article>
+        <p class="provenance-note">Source: <code>docs/design/FRENZIES.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
