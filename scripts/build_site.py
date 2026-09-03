@@ -351,6 +351,8 @@ def render_engine():
             </div>
         </div>
 
+        {quotes_for('engine')}
+
         <p class="provenance-note">
             <strong>Provenance.</strong> Figure S transcribed from {esc(prov.get('source',''))},
             {esc(prov.get('locator',''))}. The dialectic follows Bonner's report of Llull's worked
@@ -366,6 +368,59 @@ def render_engine():
     """
     return page_shell('The Art Engine', body, active_nav='Engine', depth=0,
                       subtitle="Llull's Figure S, as a working instrument")
+
+
+def _load(name):
+    f = BASE_DIR / 'data' / name
+    return json.loads(f.read_text(encoding='utf-8')) if f.exists() else None
+
+
+def quotes_for(key, depth=0):
+    """Fair-use scholarly quotations attached to a page or figure."""
+    q = _load('quotations.json')
+    if not q:
+        return ''
+    hits = [x for x in q['quotations'] if key in x.get('attaches_to', [])]
+    if not hits:
+        return ''
+    items = ''.join(f"""
+        <figure class="scholium">
+            <blockquote>{esc(x['text'])}</blockquote>
+            <figcaption>
+                <strong>{esc(x['author'])}</strong>, <em>{esc(x['work'])}</em>
+                <span class="scholium-loc">{esc(x['locator'])}</span>
+            </figcaption>
+            <p class="scholium-why">{esc(x['why'])}</p>
+        </figure>""" for x in hits)
+    return f'<div class="scholia"><h3 class="alpha-sub">In the scholarship</h3>{items}</div>'
+
+
+def render_plates(group=None):
+    """Period woodcuts extracted from the corpus. See scripts/extract_plates.py."""
+    d = _load('plates.json')
+    if not d:
+        return ''
+    plates = [p for p in d['plates'] if group is None or p['group'] == group]
+    if not plates:
+        return ''
+    cards = []
+    for pl in plates:
+        link = (f'<a class="fig-link" href="{esc(pl["links"])}">related &rarr;</a>'
+                if pl.get('links') else '')
+        idb = ('<span class="badge att-attested">identified</span>' if pl['identified']
+               else '<span class="badge att-reconstructed">unidentified</span>')
+        cards.append(f"""
+        <figure class="plate" id="plate-{esc(pl['slug'])}">
+            <a href="{esc(pl['file'])}" target="_blank" rel="noopener">
+                <img src="{esc(pl['file'])}" alt="{esc(pl['title'])}" loading="lazy">
+            </a>
+            <figcaption>
+                <div class="plate-head"><h4>{esc(pl['title'])}</h4>{idb}{link}</div>
+                <p>{esc(pl['caption'])}</p>
+                <p class="step-locator">{esc(pl['work'])} &middot; scan from the edition at p.&nbsp;{pl['source_page']}</p>
+            </figcaption>
+        </figure>""")
+    return f'<div class="plate-grid">{"".join(cards)}</div>'
 
 
 DESIGN_GROUPS = [
@@ -482,6 +537,7 @@ def render_gallery():
                         <p>{esc(f['play'])}</p></div>
                     <div class="fig-out" id="out-{esc(f['slug'])}"></div>
                     {caveat}
+                    {quotes_for(f['slug'])}
                     <p class="step-locator">Source: {esc(f['source'])}<br>
                        Original: {esc(f.get('original_at', 'n/a'))}</p>
                 </div>
@@ -506,7 +562,7 @@ def render_gallery():
         These are not photographs of woodcuts &mdash; each one is drawn from the terms and structure
         the sources report, which is precisely what lets you turn, select and interrogate them.
         A scan of a wheel cannot be turned.</p>
-        <div class="layer-strip">{toc}</div>
+        <div class="layer-strip">{toc} · <a href="#plates">The Plates</a></div>
 
         <div class="attribution-banner recon">
             <span class="label">On the images</span>
@@ -515,6 +571,30 @@ def render_gallery():
         </div>
 
         {''.join(blocks)}
+
+        <h2 class="section-title" style="margin-top:2.5rem" id="plates">The Plates</h2>
+        <p class="section-intro">The figures as they were actually printed. These are photographic
+        reproductions of woodcuts from 1585&ndash;1591 &mdash; long out of copyright, and a faithful
+        reproduction of a flat public-domain artwork carries no new authorship. No editorial
+        apparatus is reproduced; the edition each scan comes from is credited. Click any plate to
+        open it full size.</p>
+
+        <h3 class="alpha-sub">Memory architecture</h3>
+        {render_plates('architecture')}
+        {quotes_for('atrium-altar')}
+
+        <h3 class="alpha-sub">The planetary chariots</h3>
+        <p class="fig-structure">Each deity rides in a chariot with his zodiacal houses on the wheels.
+        These are the courts harvested in <a href="images/courts.html">the image-courts</a> &mdash;
+        Saturn drawn by dragons with his scythe, whose retinue in the text is the melancholic
+        afflictions; Jupiter by eagles; the Sun crowned and radiant with Leo on the wheel. Three are
+        identified below by reading the plate; the rest are published by page rather than guessed at
+        from position in the sequence.</p>
+        {render_plates('chariots')}
+        {quotes_for('chariots')}
+
+        <h3 class="alpha-sub">Emblems and geometrical figures</h3>
+        {render_plates('emblems')}
 
         <h2 class="section-title" style="margin-top:2.5rem">Not reconstructed</h2>
         <p class="section-intro">Three figures this project will not draw, and why. Approximating
@@ -598,6 +678,8 @@ def render_fantastica():
                 <div id="fantastica-outcome"></div>
             </div>
         </div>
+
+        {quotes_for('fantastica')}
 
         <p class="provenance-note">
             <strong>Status: <code>{esc(prov.get('status',''))}</code>, confidence
@@ -1041,7 +1123,7 @@ def render_image_courts():
         <div class="entity-nav"><a href="index.html">&larr; Images</a></div>
         <h1 class="section-title">The Planetary Image-Courts</h1>
         <p class="section-intro">{esc(d.get('structure_note',''))}</p>
-        <div class="layer-strip">{toc}</div>
+        <div class="layer-strip">{toc} · <a href="#plates">The Plates</a></div>
         <p class="provenance-note">
             <strong>{counts.get('courts',0)} courts · {counts.get('principal_images',0)} principal images ·
             {counts.get('inline_attendants',0)} attendants.</strong>

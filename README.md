@@ -22,6 +22,8 @@ Built from a corpus of primary translations and scholarship. Every claim carries
 
 **A knowledge portal** — works, images, scholars, disputes, a timeline, a dictionary, and the planetary image-courts extracted from *De imaginum*.
 
+**Fair-use scholarly quotation.** Short attributed quotations from Bonner, Mertens, Blum, Llull and Bruno appear beside the claims they support, each with a locator so it can be checked, and each with a note on *why* it is there. None is quoted from memory; all were read from the corpus while building the site.
+
 **[17 design documents](https://t3dy.github.io/BRUNOMEMAPP/designs.html)** — the working record of what this project decided and why, including where a later reading overturned an earlier one.
 
 ## Three findings worth the visit
@@ -45,9 +47,15 @@ The project's main risk is producing a complete-looking system that is substanti
 
 Corrections made during the build are recorded rather than overwritten. Two examples: all 24 atria are transcribed, not 12 (the plates carry two each, and only the odd ones are headed); and the soul-state engine is **Llull's, not Bruno's** — Bruno took the combinatorics and the *similitudo*-logic, not Figure S.
 
-## On the diagrams
+## On the diagrams and plates
 
-The figures are **drawn from the harvested data, not photographed**. That is a deliberate choice and not a compromise: a scan of a wheel cannot be turned, and a scan of Figure A cannot tell you which compartment you just formed. It also sidesteps a rights problem — the underlying woodcuts are public domain, but the modern editions that reproduce them are not.
+Two layers, kept distinct.
+
+**[The Plates](https://t3dy.github.io/BRUNOMEMAPP/gallery.html#plates)** — 27 period woodcuts extracted from the corpus: Bruno's atrium in both the 1591 printing and Tocco's redrawing (side by side, so the textual variant is visible), the planetary chariots with their zodiacal houses on the wheels, the numeral table mapping Roman numerals to figures, emblems and lettered geometrical diagrams. Nine are captioned from reading the plate; the other eighteen are published with their source page and *not* named, because inferring their identity from position in the sequence would be a guess.
+
+These are photographic reproductions of woodcuts printed 1585&ndash;1591. The underlying works are long out of copyright and a faithful reproduction of a flat public-domain artwork carries no new authorship. No editorial apparatus &mdash; translation, notes, typography, page design &mdash; is reproduced, and the edition each scan comes from is credited.
+
+**The interactive figures** are **drawn from the harvested data, not photographed**. That is a deliberate choice and not a compromise: a scan of a wheel cannot be turned, and a scan of Figure A cannot tell you which compartment you just formed. It also sidesteps a rights problem — the underlying woodcuts are public domain, but the modern editions that reproduce them are not.
 
 Three figures are **not** drawn, and the gallery says why: Llull's Figure T (vertex terms shredded by text extraction), the *De umbris* memory wheel (neither Bruno's text nor Sturlese's edition is in this corpus, and its ring positions are the field's most contested question), and the *Eroici furori* emblems (pictorial, so they must be reproduced photographically rather than rebuilt). Approximating any of them would produce exactly the plausible-looking invention the rest of the project exists to avoid.
 

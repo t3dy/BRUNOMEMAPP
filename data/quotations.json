@@ -1,0 +1,136 @@
+{
+  "_provenance": {
+    "basis": "FAIR_USE_SCHOLARLY_QUOTATION",
+    "note": "Short attributed quotations used for comment and criticism, each tied to the specific claim it supports and each carrying a locator so it can be checked. Every quotation below was read from the corpus in the course of building this site; none is quoted from memory.",
+    "policy": "Quotations are kept brief, are never used in place of engaging with the argument, and always name author, work and location. Where a scholar is characterised without a quotation, the characterisation is marked as general knowledge rather than dressed up as citation."
+  },
+
+  "quotations": [
+    {
+      "id": "bonner-aim-of-art",
+      "text": "to get the user, or rather the S of the user, to remember, understand and love (E) God (A), virtues (blue V), and the truth (Y), while remembering, understanding, and hating (I) the vices (red V) and falsehood (Z)",
+      "author": "Anthony Bonner",
+      "work": "The Art and Logic of Ramon Llull: A User's Guide",
+      "locator": "corpus line 2846",
+      "attaches_to": ["engine", "llull-figure-s"],
+      "why": "The clearest statement anywhere that the Art's output is a change in the operator, not a retrieved fact. It is the sentence the whole soul-state engine rests on."
+    },
+    {
+      "id": "bonner-figure-s-dynamic",
+      "text": "a figure that begins by being dynamic and combinatory",
+      "author": "Anthony Bonner",
+      "work": "The Art and Logic of Ramon Llull: A User's Guide",
+      "locator": "corpus line 1585",
+      "attaches_to": ["llull-figure-s", "engine"],
+      "why": "Figure S is built from the acts of memory, intellect and will rather than from the static faculties — which is precisely what makes it implementable as a state machine."
+    },
+    {
+      "id": "bonner-figure-a-llull",
+      "text": "This First Figure is circular, with A in the center… [It] is made up of sixteen compartments, with transverse lines extending from one compartment to another to indicate that all these compartments are concordant with one another, without any contrariety existing between them.",
+      "author": "Ramon Llull, quoted by Bonner",
+      "work": "Ars demonstrativa (SW I, 320), in Bonner, A User's Guide",
+      "locator": "corpus lines 258-266",
+      "attaches_to": ["llull-figure-a"],
+      "why": "Llull describing Figure A in his own words. 'Transverse lines… from one compartment to another' is the complete graph the interactive figure draws — all 120 chords."
+    },
+    {
+      "id": "bonner-confusion",
+      "text": "R represents a state of intellectual or spiritual confusion, with all positive and negative possibilities open.",
+      "author": "Anthony Bonner",
+      "work": "The Art and Logic of Ramon Llull: A User's Guide",
+      "locator": "corpus line 1676",
+      "attaches_to": ["llull-figure-s", "engine"],
+      "why": "Confusion is a named, defined state in the system rather than a failure of it — which is why the engine treats R as the third stage of four rather than as losing."
+    },
+    {
+      "id": "bonner-bruno-reception",
+      "text": "Giordano Bruno who saw it as a way to explore the connections among his infinity of worlds",
+      "author": "Anthony Bonner",
+      "work": "The Art and Logic of Ramon Llull: A User's Guide",
+      "locator": "corpus line 9650",
+      "attaches_to": ["combinatorial-wheel", "engine"],
+      "why": "Bonner's only substantive mention of Bruno, and it is cosmological rather than mnemonic. It is the evidence that settled the attribution question: the soul-state engine is Llull's, not Bruno's."
+    },
+    {
+      "id": "bonner-varied-use",
+      "text": "Not only were their aims different, but the use they made of Llull's techniques varied from something vaguely similar to something entirely different",
+      "author": "Anthony Bonner",
+      "work": "The Art and Logic of Ramon Llull: A User's Guide",
+      "locator": "corpus line 9652",
+      "attaches_to": ["combinatorial-wheel"],
+      "why": "An explicit warning against assuming that what Llull built is what Bruno used. It is why the combinatorial wheel here is labelled a reconstruction of the mechanism and not of Bruno's own wheel."
+    },
+    {
+      "id": "mertens-similitudo",
+      "text": "In Lullism the principia essendi et cognoscendi were the same, and the ladder of being could be climbed and descended through the similitudines of the creatures with divine perfections.",
+      "author": "Manuel Mertens",
+      "work": "Magic and Memory in Giordano Bruno: The Art of a Heroic Spirit",
+      "locator": "corpus lines 868-871",
+      "attaches_to": ["fantastica", "combinatorial-wheel"],
+      "why": "The doctrine that licenses the composition rules in Logica Fantastica: if the principles of being and of knowing are the same, then an image's likeness carries genuine inferential weight."
+    },
+    {
+      "id": "mertens-fantastic-logic",
+      "text": "The central idea of this logic through similarities returned in Bruno's art of memory or 'fantastic logic'.",
+      "author": "Manuel Mertens",
+      "work": "Magic and Memory in Giordano Bruno: The Art of a Heroic Spirit",
+      "locator": "corpus line 872, citing Rossi",
+      "attaches_to": ["fantastica"],
+      "why": "Names what Bruno actually took from Llull, and names his own version of it. Llull computes with letters; Bruno's logica fantastica computes with images."
+    },
+    {
+      "id": "mertens-not-natural",
+      "text": "the magical allusions in his mnemonic treatises are certainly not of a natural kind. They belong to mathematical or even theurgical magic.",
+      "author": "Manuel Mertens",
+      "work": "Magic and Memory in Giordano Bruno: The Art of a Heroic Spirit",
+      "locator": "corpus lines 291-292",
+      "attaches_to": ["chariots", "images"],
+      "why": "Against reading the memory works as merely technical. Mertens holds the magic in them is real and specific — and not the safe, naturalistic kind."
+    },
+    {
+      "id": "blum-aristotelian",
+      "text": "he was eager to translate also this logic to the language of the Aristotelian scholarly philosophy and, from there, make it comprehensible",
+      "author": "Paul Richard Blum",
+      "work": "Giordano Bruno: An Introduction",
+      "locator": "corpus lines 944-946",
+      "attaches_to": ["combinatorial-wheel", "engine"],
+      "why": "On De compendiosa architectura et complemento artis Lullii. Bruno recast Llull in Aristotelian terms rather than preserving his notation — corroborating that Figure S did not travel."
+    },
+    {
+      "id": "bruno-atrium-centre",
+      "text": "let the atrium be viewed as a quadrangular shape, whose center is the earth and the eye",
+      "author": "Giordano Bruno, trans. Dick Higgins",
+      "work": "On the Composition of Images, Signs and Ideas (De imaginum, 1591), Bk I Pt 2 ch 3",
+      "locator": "corpus line 1272",
+      "attaches_to": ["bruno-atrium-figure", "atrium-altar"],
+      "why": "The centre of the memory space and the centre of the world are one point. The operator stands where the earth stands — a microcosm claim, not a figure of speech."
+    },
+    {
+      "id": "bruno-adjective-places",
+      "text": "so that it brings an image or form to life and makes it prosper",
+      "author": "Giordano Bruno, trans. Dick Higgins",
+      "work": "On the Composition of Images (De imaginum, 1591), Bk I Pt 2 ch 5",
+      "locator": "corpus line 1345",
+      "attaches_to": ["bruno-atrium-figure", "atrium-altar"],
+      "why": "Why the adjective places exist. Animation is a technical requirement of the architecture — a static image does not hold attention, and attention is what memory follows."
+    },
+    {
+      "id": "bruno-image-of-grief",
+      "text": "A shadow I judge to be the image of Grief will pass by, with veiled face, whence tear drops appear to rain down in tight streams upon the ground. Next to her stand Consternation, Sorrow of the Heart, Mourning, Distress, Bitterness, Complaint…",
+      "author": "Giordano Bruno, trans. Dick Higgins",
+      "work": "On the Composition of Images (De imaginum, 1591)",
+      "locator": "corpus lines 3663-3666",
+      "attaches_to": ["chariots", "saturnus", "images"],
+      "why": "How a Brunian image is actually built: a central personified figure, a named retinue, and enough affective charge to seize the attention. Grief belongs to Saturn's court."
+    },
+    {
+      "id": "bruno-twenty-four-elements",
+      "text": "Let the atria be constituted after the number of the twenty four elements",
+      "author": "Giordano Bruno, trans. Dick Higgins",
+      "work": "On the Composition of Images (De imaginum, 1591), Bk I Pt 2 ch 4",
+      "locator": "corpus line 1288",
+      "attaches_to": ["bruno-atrium-figure", "atrium-altar"],
+      "why": "The atria are counted to match the letters of the alphabet, not chosen for their meanings. That is why the list runs from altar and basilica to the Pythagorean fork and the key of jealousy."
+    }
+  ]
+}
