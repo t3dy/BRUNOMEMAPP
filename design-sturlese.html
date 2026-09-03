@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STURLESE — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">Frame: STURLESE (with Torchia)</h1>
+<p><strong>Type:</strong> interpretive frame · <strong>Attributed to:</strong> Rita Sturlese (crit. ed. 1991), extended by Francesco Torchia (1997) · <strong>Artifacts:</strong> Wheel</p>
+<blockquote class="doc-quote"><strong>Provenance warning.</strong> <code>LLM_GENERAL_KNOWLEDGE</code>. The mechanism spec below is the single most important thing in this project to verify against the actual critical edition, because five other frames inherit it. See ARCHITECTURE.md §4.</blockquote>
+<hr>
+<h2 class="doc-h2">Stance in one line</h2>
+<p>Once the planetary images are correctly placed, the wheel is a combinatorial engine: consonant–vowel combination generates syllables, syllables attach to memorable images, and the practitioner builds recallable sequences from them.</p>
+<h2 class="doc-h2">The triple</h2>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Mechanism</strong></td><td>Corrected ring positions. Consonant + vowel → syllable → attached image → combined into sequences.</td></tr><tr><td><strong>Output</strong></td><td>A syllable-image encoding of arbitrary target material.</td></tr><tr><td><strong>Success criterion</strong></td><td>Accurate recall of the encoded material.</td></tr><tr><td><strong>Testability</strong></td><td><strong>T1 — measurable.</strong></td></tr></tbody></table></div>
+<h2 class="doc-h2">Why this frame anchors the whole build</h2>
+<p><strong>It is the only frame whose success criterion the software can actually check.</strong> Everything in ARCHITECTURE.md §3 rests on that. If the corrected wheel is a working encoding machine, a browser can demonstrate it: encode real material, wait, test recall, compare against a control. No appeal to authority required.</p>
+<p>That makes Sturlese the correct first implementation regardless of where one's sympathies lie interpretively. It is the frame that gives the portal a floor of hard results to stand on before it starts handling claims that cannot be scored.</p>
+<h2 class="doc-h2">The mechanism is shared, the reading is not</h2>
+<p>Five frames — Barenstein, Clucas, Wang, Mertens and by extension most post-1991 work — operate this same mechanism. They diverge only on what the operation is <em>for</em>. The frame switcher must make this visible: switching from Sturlese to Clucas does not move a single ring.</p>
+<p>This is also the corrective to the common misreading that Sturlese "de-magicked" Bruno. The correction establishes what the wheel <em>does mechanically</em>. It is silent on what the doing is for, and Clucas and Mertens fill that silence very differently from Barenstein.</p>
+<h2 class="doc-h2">Interactive behaviour under this frame</h2>
+<ul class="doc-list"><li>Corrected ring geometry (the default for the portal).</li><li>The wheel is <strong>operable end to end</strong>: pick target material, rotate rings, generate syllable-image pairs, commit the encoding.</li><li><strong>Full T1 output panel</strong>: encoding time, immediate recall, delayed recall at spaced intervals, comparison against an unencoded control list.</li><li>Results are the user's own data, stored locally, and comparable across sessions and across frames.</li></ul>
+<h2 class="doc-h2">The recall harness (spec sketch)</h2>
+<ol class="doc-list"><li>User supplies or picks target material (a word list, a sequence, a set of terms).</li><li>Wheel generates syllable-image encodings for each item.</li><li>User commits the pairings.</li><li>Immediate free-recall test → score.</li><li>Delayed tests at intervals (1h / 1d / 1w) → retention curve.</li><li>Control condition: equivalent material memorised without the wheel.</li><li>Report: raw scores, retention curves, wheel-vs-control delta.</li></ol>
+<p><strong>Honesty constraints.</strong> Report n. Never extrapolate from a single session. Never claim the result generalises beyond this user. State plainly that this tests <em>the reconstructed mechanism's mnemonic efficacy</em>, which is a narrower question than "was Bruno right."</p>
+<h2 class="doc-h2">Primary texts</h2>
+<ul class="doc-list"><li><em>De umbris idearum</em> (1582), in Sturlese's critical edition (1991) — canonical</li><li><em>De compendiosa architectura</em> (1582) — the Lullian rotating-wheel ancestry that makes the combinatorial reading historically natural</li></ul>
+<h2 class="doc-h2">Disputes</h2>
+<ul class="doc-list"><li><code>yates-vs-sturlese-torchia-planetary-placement</code> — philological, <strong>settled in favour</strong></li><li><code>esoteric-vs-nonesoteric-interpretation</code> — this frame is often <em>conscripted</em> onto Barenstein's side, which may misrepresent Sturlese. Flag as an open question below.</li></ul>
+<h2 class="doc-h2">Build notes</h2>
+<ul class="doc-list"><li><code>mechanism_spec</code> here is the parent record; Barenstein / Clucas / Wang / Mertens frames should reference it rather than duplicate it, so a correction propagates.</li><li>Build the recall harness generic enough that Wang's drop-the-scaffold variant (see WANG.md) is a parameter, not a rewrite.</li></ul>
+<h2 class="doc-h2">To verify in corpus</h2>
+<ul class="doc-list"><li><strong>The actual corrected ring positions</strong>, precisely enough to render. Highest-priority verification target in the project.</li><li>Does Sturlese herself use anything like "combinatorial-phonetic," or is that a downstream gloss this portal would be putting in her mouth?</li><li>Does Sturlese take an interpretive position on magical function at all, or strictly a philological one? If the latter, the "Sturlese frame" is arguably a construct and should be renamed to something like <code>CORRECTED-WHEEL (Sturlese/Torchia)</code> to avoid attributing a reading she did not make.</li></ul></article>
+        <p class="provenance-note">Source: <code>docs/design/STURLESE.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

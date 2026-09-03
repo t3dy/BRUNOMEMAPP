@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHITECTURE — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">BRUNOMEMAPP Design Architecture</h1>
+<p><strong>The master document for the <code>docs/design/</code> set.</strong> Every frame doc (YATES, CLUCAS, STURLESE, MERTENS, WANG, BARENSTEIN, COULIANO) and every artifact doc (WHEEL, IMAGELAB, SEALS, CABALA, FRENZIES, VINCULA) inherits the vocabulary defined here.</p>
+<p>Status: proposal. Nothing below is implemented yet except where noted.</p>
+<hr>
+<h2 class="doc-h2">1. The problem this architecture solves</h2>
+<p>The original brief asks for modes where the user can "operate Clucas's Bruno," then "operate Yates's Bruno," then "compare the results." The current <code>bruno_seed.json</code> cannot support that. It has <code>scholars.view_memory</code>, <code>scholars.view_magic</code>, etc. — flat prose fields. Those produce a <em>card that says what Yates thought</em>. They do not produce a <em>system that behaves differently under Yates</em>.</p>
+<p>The gap is that a scholar is a person and a frame is a machine configuration. Conflating them is why "scholar mode" has stayed vague.</p>
+<hr>
+<h2 class="doc-h2">2. A frame is a triple</h2>
+<p><strong>FRAME = (MECHANISM, OUTPUT, SUCCESS-CRITERION)</strong></p>
+<ul class="doc-list"><li><strong>MECHANISM</strong> — what the artifact actually does when operated. Ring positions, combination rules, sequence of steps.</li><li><strong>OUTPUT</strong> — what the operation produces. A syllable-image pair, a talismanic composite, a bond, an iconic schema.</li><li><strong>SUCCESS-CRITERION</strong> — how you know it worked. This is the field that does the real work.</li></ul>
+<p>Two frames can share a mechanism entirely and still be different frames, because they disagree about what counts as the operation having succeeded.</p>
+<h3 class="doc-h3">The wheel under seven frames</h3>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th>Frame</th><th>Mechanism</th><th>Output</th><th>Success criterion</th><th>Tier</th></tr></thead><tbody><tr><td><strong>Yates</strong></td><td>rings incl. planetary ring at Yates positions; internalize the composite</td><td>talismanic inner image</td><td>conformity of the soul to celestial order</td><td>T3</td></tr><tr><td><strong>Sturlese/Torchia</strong></td><td>corrected ring positions; consonant + vowel → syllable → image</td><td>syllable-image encoding</td><td>accurate recall of encoded material</td><td><strong>T1</strong></td></tr><tr><td><strong>Barenstein</strong></td><td>as Sturlese</td><td>encoding + regulation schedule</td><td>recall accuracy; reduced interference</td><td><strong>T1</strong></td></tr><tr><td><strong>Clucas</strong></td><td>as Sturlese</td><td>encoding + a relational path from image toward unity</td><td>reordering of the operator's attention and appetite</td><td>T2</td></tr><tr><td><strong>Wang</strong></td><td>as Sturlese</td><td>an iconic form / mental schema</td><td>operator can hold the relation <em>after the image is removed</em></td><td><strong>T1 (partial)</strong></td></tr><tr><td><strong>Mertens</strong></td><td>as Sturlese, plus protective framing</td><td>spirit-regulated cognition</td><td>resistance to cognitive interference</td><td>T1 (partial)</td></tr><tr><td><strong>Couliano</strong></td><td>image → attention → desire</td><td>a <em>vinculum</em> (bond)</td><td>change in the bound party's behaviour</td><td>T3 (deliberately unbuilt)</td></tr></tbody></table></div>
+<p><strong>Read the mechanism column.</strong> Only Yates differs. Everyone post-1991 shares one mechanism and disagrees almost entirely in the success column.</p>
+<p>This is the single most useful thing the software can show, and it is a real scholarly point rather than a UI gimmick: <em>Sturlese's correction settled the mechanism question and left every success-criterion question exactly where it was.</em> That is why "Yates was refuted" is a bad summary of the field. The matrix makes the bad summary impossible to state.</p>
+<h3 class="doc-h3">Schema consequence</h3>
+<p>Add a table distinct from <code>scholars</code>:</p>
+<pre class="doc-pre"><code>CREATE TABLE interpretive_frames (
+    slug, name,
+    scholar_slug,              -- soft FK; a frame is ATTRIBUTED to a scholar, not identical to one
+    artifact_slug,             -- which artifact this frame configures
+    mechanism_spec,            -- JSON: concrete operational parameters
+    output_type,
+    success_criterion,
+    testability_tier,          -- T1 | T2 | T3
+    shares_mechanism_with,     -- JSON array of frame slugs
+    divergence_note            -- what exactly separates this from the frames it shares mechanism with
+);</code></pre>
+<p><code>shares_mechanism_with</code> is what lets the UI say: <em>you just switched from Sturlese to Clucas; the wheel did not change; what changed is what you are now being asked to notice.</em></p>
+<hr>
+<h2 class="doc-h2">3. Three tiers of testability</h2>
+<p>The most interesting property of this project: <strong>one of the contested claims is empirically decidable in a browser, and the rest are not.</strong> That asymmetry should be the spine of the design, not something to paper over.</p>
+<ul class="doc-list"><li><strong>T1 — MEASURABLE IN-APP.</strong> Recall accuracy, retention over intervals, encoding time, scaffold-independence, interference resistance. These are real numbers the app can collect honestly.</li><li><strong>T2 — SELF-REPORT ONLY.</strong> Attention quality, felt reordering of desire, sense of ascent. The app can record what the user says; it cannot score it.</li><li><strong>T3 — NOT TESTABLE HERE.</strong> Astral influence, real binding of another person, deification. Describable, operable <em>as a historical reconstruction</em>, never scored.</li></ul>
+<h3 class="doc-h3">The design rule that follows</h3>
+<p><strong>T1, T2 and T3 results must never share a visual register.</strong></p>
+<ul class="doc-list"><li>T1 gets numbers, charts, comparisons across frames.</li><li>T2 gets the user's own words handed back to them, undigested.</li><li>T3 gets narrated as reconstruction, with no output panel at all.</li></ul>
+<p>Violating this is how a scholarly sandbox turns into an occult-simulator that lies about what it knows. The register separation <em>is</em> the epistemology, rendered.</p>
+<h3 class="doc-h3">Why this is the strongest available move</h3>
+<p>If Sturlese and Barenstein are right that the wheel is a combinatorial encoding machine, <strong>then it should work as one, and that is checkable.</strong> A user can encode real material through the reconstructed wheel and the app can measure retention against a control. Nobody has to be taken at their word.</p>
+<p>And the silence elsewhere is pedagogically active: the user discovers by using the thing that the mnemonic dispute touches ground truth while the metaphysical dispute does not. That is a better lesson than any essay on the magic/science binary.</p>
+<p><strong>Wang's frame yields the most elegant experiment.</strong> His claim is that the image becomes a schema the operator eventually thinks <em>with</em> rather than <em>about</em> — and the brief's own Plotinian endpoint is "you no longer need the image." That is a drop-the-scaffold test: after N successful trials, remove the image, re-test the relation. Persistence is measurable. This turns the most abstract-sounding frame into the most concretely testable one, which is a genuinely surprising result and worth surfacing to the user as such.</p>
+<hr>
+<h2 class="doc-h2">4. The provenance ladder</h2>
+<p><strong>Verified problem:</strong> all 78 content rows currently carry <code>source_method = 'SEED_DATA'</code>. There is no mechanical difference between a claim grounded in a page of Clucas and a claim the model produced from general knowledge. Several <code>confidence: HIGH</code> rows are general knowledge.</p>
+<p>Replace the flat value with a ladder:</p>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th>Value</th><th>Meaning</th><th>Max confidence</th></tr></thead><tbody><tr><td><code>LLM_GENERAL_KNOWLEDGE</code></td><td>Model background knowledge. No locator. <strong>Current state of everything.</strong></td><td>MEDIUM</td></tr><tr><td><code>CORPUS_GROUNDED</code></td><td>Grep'd from <code>corpus/sources/*.md</code> with a locator</td><td>HIGH</td></tr><tr><td><code>SOURCE_VERIFIED</code></td><td>Checked against the actual edition/page</td><td>HIGH</td></tr><tr><td><code>USER_AUTHORED</code></td><td>Ted wrote it</td><td>HIGH</td></tr></tbody></table></div>
+<h3 class="doc-h3">Enforce it in the build, not in good intentions</h3>
+<p><code>build_site.py</code> should refuse to emit — or loudly badge — any row with <code>confidence = HIGH</code> and <code>source_method = LLM_GENERAL_KNOWLEDGE</code>. A lint script (<code>scripts/validate_seed.py</code>) should exit non-zero on violations so it can gate a commit.</p>
+<p>This is a mechanical guard rather than a promise to be careful, which is the only kind that survives a long session. It also directly serves the anti-fabrication rule in the workspace <code>CLAUDE.md</code>: the failure mode being defended against is exactly <em>quietly laundering a plausible guess into a cited fact</em>.</p>
+<p><strong>Immediate action when adopted:</strong> bulk-set every existing row to <code>LLM_GENERAL_KNOWLEDGE</code>, and demote the current <code>HIGH</code> rows to <code>MEDIUM</code>. The portal should visibly get less confident the moment this lands. That is correct — it was never that confident; it just wasn't saying so.</p>
+<hr>
+<h2 class="doc-h2">5. Disputes decompose by layer</h2>
+<p><code>disputes.resolution</code> is currently flat, which lets "Yates vs. Sturlese" read as one settled argument. It is two arguments and only one is settled.</p>
+<p>Add <code>dispute_layer</code>:</p>
+<ul class="doc-list"><li><strong>PHILOLOGICAL</strong> — about what the text says or the diagram shows. <em>Can</em> be settled. (Ring placement: settled against Yates.)</li><li><strong>INTERPRETIVE</strong> — about what it means or does. Usually open. (Whether the wheel is talismanic in function: open.)</li><li><strong>HISTORIOGRAPHICAL</strong> — about whether the question is well-posed at all. (Ostojić on the magic/science binary.)</li></ul>
+<p>Splitting <code>yates-vs-sturlese-torchia-planetary-placement</code> into its philological half (SETTLED) and its interpretive half (ONGOING) is the highest-value single edit available to the current seed. It is the difference between the portal teaching the field's actual shape and teaching a schoolbook simplification.</p>
+<hr>
+<h2 class="doc-h2">6. Two axes: artifacts × frames</h2>
+<p><strong>Artifacts</strong> are what you operate. <strong>Frames</strong> are how the operation is read.</p>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th></th><th>Yates</th><th>Sturlese</th><th>Clucas</th><th>Mertens</th><th>Wang</th><th>Barenstein</th><th>Couliano</th></tr></thead><tbody><tr><td><strong>Wheel</strong></td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>○</td></tr><tr><td><strong>Image Lab</strong></td><td>●</td><td>○</td><td>●</td><td>●</td><td>●</td><td>○</td><td>●</td></tr><tr><td><strong>Seals</strong></td><td>●</td><td>○</td><td>●</td><td>●</td><td>○</td><td>○</td><td>●</td></tr><tr><td><strong>Vincula</strong></td><td>○</td><td>○</td><td>●</td><td>●</td><td>○</td><td>○</td><td>●</td></tr><tr><td><strong>Frenzies</strong></td><td>●</td><td>○</td><td>●</td><td>●</td><td>●</td><td>○</td><td>●</td></tr><tr><td><strong>Cabala</strong></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>
+<p>● = frame has a documented reading · ○ = no strong documented reading · — = out of scope (see CABALA.md)</p>
+<p><strong>The empty cells are content.</strong> "No scholar in this corpus has a developed reading of the Thirty Seals under Wang's iconic-practice frame" is a research finding, and the UI should say so rather than silently omitting the option. Empty cells are also the natural backlog for corpus work.</p>
+<hr>
+<h2 class="doc-h2">7. Build order</h2>
+<ol class="doc-list"><li><strong><code>scripts/validate_seed.py</code></strong> + provenance ladder migration. Cheapest, highest integrity payoff, and it makes everything after it trustworthy. Do this first.</li><li><strong>Split the Yates/Sturlese dispute</strong> by layer. One seed edit, large conceptual gain.</li><li><strong><code>interpretive_frames</code> table</strong> + the wheel's seven frame rows. This is the crux; nothing else in the brief works without it.</li><li><strong>WHEEL artifact, Sturlese frame only, with the T1 recall harness.</strong> One frame, real measurement. Proves the empirical spine before multiplying frames.</li><li><strong>Add Wang's drop-the-scaffold test</strong> to the same harness. Second frame, near-zero extra machinery, and the most interesting result.</li><li><strong>Frame switcher</strong> across the wheel, with the "mechanism unchanged / criterion changed" message.</li><li>Then artifacts outward: IMAGELAB → FRENZIES → CABALA → SEALS → VINCULA.</li></ol>
+<p>Rationale for the order: steps 1–2 are integrity, step 3 is the conceptual keystone, steps 4–5 prove the one thing that makes this project more than a card catalogue. Breadth comes after that spine exists.</p>
+<hr>
+<h2 class="doc-h2">8. Standing constraints</h2>
+<ul class="doc-list"><li>Never collapse the four layers: PRIMARY SOURCE → SCHOLARLY INTERPRETATION → RECONSTRUCTION → EXPERIMENT → USER CREATION.</li><li>Never present T2 or T3 output in T1's visual register.</li><li>Never let <code>confidence: HIGH</code> sit on top of <code>LLM_GENERAL_KNOWLEDGE</code>.</li><li>Never silently merge two frames' mechanisms. If they diverge, they render separately.</li><li>Empty matrix cells are shown, not hidden.</li><li>The game layer must not obscure the scholarship layer.</li></ul>
+<hr>
+<h2 class="doc-h2">9. Open questions for corpus verification</h2>
+<p>Every frame doc ends with a list like this. Consolidated:</p>
+<ul class="doc-list"><li>Does Sturlese herself characterise the corrected wheel as "combinatorial-phonetic," or is that a downstream gloss? (Affects STURLESE.md's mechanism spec.)</li><li>Does Clucas anywhere give an operational criterion for "ordering the operations of the soul," or only a descriptive one? (Determines whether Clucas is genuinely T2 or unfalsifiable.)</li><li>Does Wang commit to the strong claim that the image becomes dispensable, or only that it mediates? (The drop-the-scaffold test depends on the strong reading.)</li><li>Does Mertens's "protection from demonic corruption" have a technical mechanism attached, or is it framing?</li><li>Is the Warburg position on Yates's talisman reading published, and where?</li></ul></article>
+        <p class="provenance-note">Source: <code>docs/design/ARCHITECTURE.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

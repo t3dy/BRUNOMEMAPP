@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YATES — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">Frame: YATES</h1>
+<p><strong>Type:</strong> interpretive frame · <strong>Attributed to:</strong> Frances A. Yates (1899–1981) · <strong>Artifacts:</strong> Wheel, Image Lab, Seals, Frenzies</p>
+<blockquote class="doc-quote"><strong>Provenance warning.</strong> Every scholarly characterisation in this document is <code>LLM_GENERAL_KNOWLEDGE</code> — written from model background knowledge, not from a page-cited reading of Yates. It must be checked against the corpus before any of it reaches the site at <code>confidence: HIGH</code>. See ARCHITECTURE.md §4.</blockquote>
+<hr>
+<h2 class="doc-h2">Stance in one line</h2>
+<p>Bruno's mnemonic images are Hermetic-magical instruments; the memory wheel, once internalised, functions as an inner talisman that conforms the operator's soul to celestial order.</p>
+<h2 class="doc-h2">The triple</h2>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Mechanism</strong></td><td>Concentric rings including a planetary ring at the positions Yates reconstructed. The operator combines and internalises the composite figure.</td></tr><tr><td><strong>Output</strong></td><td>A talismanic inner image — a cosmic structure held in the imagination.</td></tr><tr><td><strong>Success criterion</strong></td><td>The operator's soul is brought into conformity with celestial order and receives astral influence.</td></tr><tr><td><strong>Testability</strong></td><td><strong>T3.</strong> Not measurable in-app, by design.</td></tr></tbody></table></div>
+<h2 class="doc-h2">Why this frame is indispensable even though its central claim failed</h2>
+<p>Yates is the reason Bruno's mnemonic writings are a scholarly subject at all. Her general insight — that the art of memory had become something far more ambitious than a technique for remembering speeches — survives the collapse of her specific reconstruction and is presupposed by every frame that followed. A portal that treats Yates as merely refuted would be reproducing the caricature it exists to prevent.</p>
+<h2 class="doc-h2">The known vulnerability</h2>
+<p>Her reconstruction placed the planetary images incorrectly (per Sturlese 1991, extended by Torchia 1997). Because the talismanic reading depended on <em>those</em> positions producing <em>that</em> cosmic conformity, the specific mechanism does not survive. See STURLESE.md and <code>disputes/yates-vs-sturlese-torchia-planetary-placement</code>.</p>
+<p><strong>The distinction that must stay visible:</strong> the philological claim (where the planets go) is settled against Yates. The interpretive claim (whether Bruno's images do magical work) is not settled by that correction, and Clucas, Mertens and Couliano all continue to answer it affirmatively on other grounds. Yates lost a reconstruction, not the argument that Bruno's memory art is more than mnemonics.</p>
+<h2 class="doc-h2">Interactive behaviour under this frame</h2>
+<ul class="doc-list"><li>The wheel renders with the <strong>Yates planetary ring positions</strong>, visibly distinct from the corrected ring used by every other frame. This is the <em>only</em> frame where the artifact's geometry actually differs — the switcher should say so explicitly.</li><li>A persistent banner: <em>"This reconstruction is superseded on philological grounds. You are operating it as a historical counterfactual."</em></li><li><strong>No output panel.</strong> The operation is narrated as reconstruction and produces no score, no measurement, no simulated result. T3 discipline. The refusal to produce a number is itself the honest statement of what is and isn't known.</li><li>Offer a one-click <strong>"see the corrected wheel"</strong> toggle so the user can watch the planetary ring move and understand exactly what Sturlese changed.</li></ul>
+<h2 class="doc-h2">Why keep it operable at all</h2>
+<p>Because it is genuinely fun, historically enormously consequential, and — as the brief puts it — a counterfactual magical practice worth playing with. The design does not need to pretend it is current scholarship in order to let the user run it. It needs to <em>label</em> it and refuse to fake its outputs. Those two moves make playing with a superseded reconstruction intellectually respectable rather than misleading.</p>
+<h2 class="doc-h2">Primary texts leaned on</h2>
+<ul class="doc-list"><li><em>De umbris idearum</em> (1582) — the wheel</li><li><em>Cantus Circaeus</em> (1582) — the explicitly magical framing that most supports this reading</li><li>Yates, <em>Giordano Bruno and the Hermetic Tradition</em> (1964); <em>The Art of Memory</em> (1966)</li></ul>
+<p><code>Cantus Circaeus</code> is the strongest primary card in Yates's hand and the text any de-esotericising frame has to explain. Give it prominence under this frame.</p>
+<h2 class="doc-h2">Disputes this frame is party to</h2>
+<ul class="doc-list"><li><code>yates-vs-sturlese-torchia-planetary-placement</code> — philological layer, <strong>settled against</strong></li><li><code>esoteric-vs-nonesoteric-interpretation</code> — interpretive layer, <strong>open</strong>, Yates as the strong-esoteric pole</li></ul>
+<h2 class="doc-h2">Build notes</h2>
+<ul class="doc-list"><li>Frame row: <code>mechanism_spec</code> must carry the Yates ring positions as actual data, not prose, so the wheel can render them.</li><li>This is the only frame with <code>shares_mechanism_with = []</code>.</li><li>Ship the side-by-side ring comparison early; it is the clearest single teaching moment in the whole portal.</li></ul>
+<h2 class="doc-h2">To verify in corpus</h2>
+<ul class="doc-list"><li>Yates's actual ring assignments, precisely enough to render.</li><li>Whether Yates ever qualifies the talismanic claim herself.</li><li>The Warburg Institute's current published position, and where it is stated.</li></ul></article>
+        <p class="provenance-note">Source: <code>docs/design/YATES.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

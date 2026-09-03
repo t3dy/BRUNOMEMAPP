@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art Engine — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Llull's Figure S, as a working instrument</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html" class="active">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <h1 class="section-title">The Art Engine</h1>
+        <p class="section-intro">Figure S: the state of the practitioner&#x27;s rational soul. Not the static powers of memory, intellect and will, but their ACTS and combinations of acts -- Bonner: &#x27;a figure that begins by being dynamic and combinatory.&#x27; Four species (E I N R), each a triple of one act per power.</p>
+
+        <div class="attribution-banner">
+            <span class="label">Whose art is this?</span>
+            <p><strong>Llull&#x27;s Art, quaternary phase</strong> — not Bruno's.
+            Bonner mentions Bruno only twice, for the cosmological use of the combinatorics. Blum reports that Bruno&#x27;s De compendiosa architectura recasts Lullian logic in Aristotelian terms; Mertens reports that what returns in Bruno is the similitudo-logic, not the letter notation. No evidence in this corpus that Bruno adopted Figure S. See docs/design/ENGINE.md section 1a.</p>
+            <p class="attrib-bruno"><strong>Bruno's version:</strong>
+            Bruno&#x27;s adaptation is a logica fantastica -- a logic whose operands are images held in the spiritus phantasticus, rather than Llull&#x27;s letter-variables. That is why he must first build an image vocabulary (the atria and the image alphabet).</p>
+        </div>
+
+        <div class="engine-aim">
+            <span class="label">The aim of the Art</span>
+            <p>Bonner, on the first two compartments: the aim of the Art is to get the user -- &#x27;or rather the S of the user&#x27; -- to remember, understand and love (E) God, the virtues and the truth, while remembering, understanding and hating (I) the vices and falsehood. The remaining states are unreliable belief (N) or confusion (R). The machine&#x27;s output is a change in the operator.</p>
+        </div>
+
+        <div class="engine-layout">
+            <div class="engine-figure">
+                <h3>Figura S</h3>
+                <div id="state-readout" class="state-readout"></div>
+                <div id="figure-s-mount"></div>
+                <p class="caveat-line">The readout reports the state of the <em>figure</em>,
+                never of the reader. Reaching E in the model is a fact about the model.</p>
+            </div>
+            <div class="engine-work">
+                <h3>Predestinatio et liberum arbitrium
+                    <span class="stage-en">Predestination and free will</span></h3>
+                <p class="stage-prompt">God&#x27;s wisdom is perfect, and perfect wisdom foreknows all things. But if all is foreknown, what becomes of free will? Work the contradiction through the four figures.</p>
+                <div id="stage-mount"></div>
+                <div id="outcome-mount"></div>
+            </div>
+        </div>
+
+        <p class="provenance-note">
+            <strong>Provenance.</strong> Figure S transcribed from Anthony Bonner, The Art and Logic of Ramon Llull: A User&#x27;s Guide,
+            lines 1579-1680 of the corpus plain text; Bonner&#x27;s chart of Figure S, quaternary phase. The dialectic follows Bonner's report of Llull's worked
+            example (ACIV, MOG I, vii, 9–10: 441–2). Both are
+            <code>HAND_TRANSCRIBED</code> — the chart is a grid mangled into an ASCII
+            column by text extraction and could not be parsed reliably. Verify against the printed
+            chart before treating as authoritative.
+        </p>
+
+        <script type="application/json" id="figure-s-data">{
+  "_provenance": {
+    "source": "Anthony Bonner, The Art and Logic of Ramon Llull: A User's Guide",
+    "locator": "lines 1579-1680 of the corpus plain text; Bonner's chart of Figure S, quaternary phase",
+    "llull_sources_cited_by_bonner": "ACIV (MOG I, vii, 2: 434); AD (SW I, 322-3); Ars universalis (MOG I, viii, 3: 485)",
+    "method": "HAND_TRANSCRIBED",
+    "method_note": "The chart is a 4x3 grid flattened into a mangled ASCII column in the extracted text and cannot be parsed reliably. Transcribed by hand from the located slice rather than machine-extracted. Verify against Bonner's printed chart before treating as authoritative.",
+    "confidence": "MEDIUM"
+  },
+
+  "what_this_is": "Figure S: the state of the practitioner's rational soul. Not the static powers of memory, intellect and will, but their ACTS and combinations of acts -- Bonner: 'a figure that begins by being dynamic and combinatory.' Four species (E I N R), each a triple of one act per power.",
+
+  "aim_of_the_art": "Bonner, on the first two compartments: the aim of the Art is to get the user -- 'or rather the S of the user' -- to remember, understand and love (E) God, the virtues and the truth, while remembering, understanding and hating (I) the vices and falsehood. The remaining states are unreliable belief (N) or confusion (R). The machine's output is a change in the operator.",
+
+  "powers": [
+    {"power": "memory",    "latin": "memoria"},
+    {"power": "intellect", "latin": "intellectus"},
+    {"power": "will",      "latin": "voluntas"}
+  ],
+
+  "individuals": [
+    {"letter": "B", "power": "memory",    "act": "remembering",        "species": "E"},
+    {"letter": "C", "power": "intellect", "act": "understanding",      "species": "E"},
+    {"letter": "D", "power": "will",      "act": "loving",             "species": "E"},
+
+    {"letter": "F", "power": "memory",    "act": "remembering",        "species": "I"},
+    {"letter": "G", "power": "intellect", "act": "understanding",      "species": "I"},
+    {"letter": "H", "power": "will",      "act": "hating",             "species": "I"},
+
+    {"letter": "K", "power": "memory",    "act": "forgetting",         "species": "N"},
+    {"letter": "L", "power": "intellect", "act": "not knowing",        "species": "N"},
+    {"letter": "M", "power": "will",      "act": "loving or hating",   "species": "N",
+     "note": "Bonner flags M's double meaning as one of three surprising features of the figure. In N the will has no preconception, so M is indeterminate rather than absent."},
+
+    {"letter": "O", "power": "memory",    "act": "remembering or forgetting", "species": "R", "composite_of": ["B", "F", "K"]},
+    {"letter": "P", "power": "intellect", "act": "understanding or not knowing", "species": "R", "composite_of": ["C", "G", "L"]},
+    {"letter": "Q", "power": "will",      "act": "loving or hating",   "species": "R", "composite_of": ["D", "H", "M"]}
+  ],
+
+  "species": [
+    {
+      "letter": "E", "individuals": ["B", "C", "D"],
+      "label": "informed acceptance",
+      "gloss": "remembering, understanding and loving the object",
+      "role": "With I, the vehicle for questions, arguments, solutions and necessary propositions.",
+      "is_goal_state": true,
+      "note": "Bonner: 'E always and continuously apprehends objects by means of B C D.'"
+    },
+    {
+      "letter": "I", "individuals": ["F", "G", "H"],
+      "label": "informed rejection",
+      "gloss": "remembering, understanding and hating the object",
+      "role": "With E, the vehicle for questions, arguments, solutions and necessary propositions.",
+      "is_goal_state": true,
+      "note": "Correct toward vice and falsehood. Rejection with full knowledge is a success state, not a failure."
+    },
+    {
+      "letter": "N", "individuals": ["K", "L", "M"],
+      "label": "supposition / belief / credulity",
+      "gloss": "not remembering, not knowing, with the will undecided",
+      "role": "The vehicle for suppositions, faith and belief.",
+      "is_goal_state": false,
+      "note": "Bonner: Llull's Latin is closer to 'credulity'; it applies equally to Muslims or Jews. Belief held without knowledge -- not a fault, but not knowledge."
+    },
+    {
+      "letter": "R", "individuals": ["O", "P", "Q"],
+      "label": "confusion",
+      "gloss": "all positive and negative possibilities open at once",
+      "role": "The vehicle for doubts.",
+      "is_stuck_state": true,
+      "note": "Bonner: 'a state of intellectual or spiritual confusion.' In the worked example, when the argument jams, 'all of S is perverted into R.' Reachable, and the four-stage dialectic exists to get out of it."
+    }
+  ],
+
+  "dialectic": {
+    "note": "From Bonner's worked example: Llull resolving the contradiction between predestination and free will as four successive 'figures of X'. Named in the Ars Universalis as affirmation, denial, doubt, and resolution (determinativa).",
+    "locator": "corpus lines 1866-1935; ACIV MOG I, vii, 9-10: 441-2",
+    "stages": [
+      {"stage": 1, "name": "affirmation",  "soul_state": "E",
+       "what_happens": "S enters a compartment of the dignities and affirms one horn of the contradiction. Here: perfect wisdom entails perfect predestination."},
+      {"stage": 2, "name": "denial",       "soul_state": "I",
+       "what_happens": "The mirror image. Substituting justice for wisdom, and free will for predestination, the argument turns against what it just affirmed."},
+      {"stage": 3, "name": "doubt",        "soul_state": "R",
+       "what_happens": "Holding both, the intellect cannot affirm or deny either. 'All of S is perverted into R.' This is the stuck state, and it is supposed to happen."},
+      {"stage": 4, "name": "resolution",   "soul_state": "E",
+       "what_happens": "S re-enters the dignities under further compartments (perfect power, perfect will) and affirms both horns at a higher level, dissolving the contradiction rather than choosing a side."}
+    ]
+  },
+
+  "design_note": "This is a complete, formally specified state machine taken from the source, not a reconstruction. Four states, twelve tracked individuals, a goal pair (E/I), an uninformed state (N), a stuck state (R), and an attested four-stage procedure for escaping it."
+}
+</script>
+        <script type="application/json" id="engine-data">{
+  "_provenance": {
+    "source": "Anthony Bonner, The Art and Logic of Ramon Llull: A User's Guide",
+    "locator": "corpus lines 1866-1935; Llull ACIV (MOG I, vii, 9-10: 441-2)",
+    "method": "HAND_TRANSCRIBED from the located slice",
+    "note": "The moves below follow Bonner's report of Llull's worked example. Where the wording is compressed for play it is marked paraphrase; where Bonner quotes Llull it is marked quote.",
+    "confidence": "MEDIUM"
+  },
+
+  "attribution": {
+    "engine_is": "Llull's Art, quaternary phase",
+    "why_labelled_this_way": "Bonner mentions Bruno only twice, for the cosmological use of the combinatorics. Blum reports that Bruno's De compendiosa architectura recasts Lullian logic in Aristotelian terms; Mertens reports that what returns in Bruno is the similitudo-logic, not the letter notation. No evidence in this corpus that Bruno adopted Figure S. See docs/design/ENGINE.md section 1a.",
+    "brunos_version": "Bruno's adaptation is a logica fantastica -- a logic whose operands are images held in the spiritus phantasticus, rather than Llull's letter-variables. That is why he must first build an image vocabulary (the atria and the image alphabet)."
+  },
+
+  "questions": [
+    {
+      "slug": "predestination-free-will",
+      "title": "Predestinatio et liberum arbitrium",
+      "title_en": "Predestination and free will",
+      "prompt": "God's wisdom is perfect, and perfect wisdom foreknows all things. But if all is foreknown, what becomes of free will? Work the contradiction through the four figures.",
+      "horns": [
+        {"key": "predestination", "latin": "praedestinatio", "en": "predestination"},
+        {"key": "free_will", "latin": "liberum arbitrium", "en": "free will"}
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "name": "Figura prima",
+          "name_en": "The First Figure of X - affirmation",
+          "target_species": "E",
+          "situation": "S enters the compartment of perfect wisdom in Figure A, in order to form the compartment of perfect predestination.",
+          "quote": "when E contemplates A, the compartment of perfect predestination is formed by necessary reasons, because if E remembered and understood predestination not to exist, it could not remember or understand perfect wisdom in A.",
+          "quote_kind": "quote",
+          "moves": [
+            {
+              "label": "Enter perfect wisdom, and affirm predestination",
+              "latin": "sapientia perfecta",
+              "to_species": "E",
+              "correct": true,
+              "result": "Predestination follows necessarily from God's perfect wisdom. S is in E: remembering, understanding and loving what it affirms. But this causes a problem - N loves free will, which it now forgets and does not know.",
+              "teaches": "E is the state of informed acceptance. You remember, understand and love the thing affirmed."
+            },
+            {
+              "label": "Refuse the compartment; deny predestination",
+              "to_species": "N",
+              "correct": false,
+              "result": "You cannot deny it from here without knowledge. Denying what you have not first understood drops S into N - supposition, credulity, belief without grounds.",
+              "teaches": "N is not a fault, but it is not knowledge. Llull calls it credulity: the will inclines without the memory or intellect having anything to work on."
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Figura secunda",
+          "name_en": "The Second Figure of X - denial",
+          "target_species": "I",
+          "situation": "The contrary of the first in S. Substitute justice for wisdom in Figure A, and free will for predestination in Figure X.",
+          "quote": "The second figure of X is the contrary of the first in S, since as soon as E enters A by means of perfect justice, B remembers and C understands free will...",
+          "quote_kind": "quote",
+          "moves": [
+            {
+              "label": "Enter perfect justice, and affirm free will",
+              "latin": "iustitia perfecta",
+              "to_species": "I",
+              "correct": true,
+              "result": "The mirror image. What began all for free will now turns against predestination for want of considering it. S is in I - still remembering and understanding, but now hating what it formerly affirmed.",
+              "teaches": "I is not failure. Informed rejection is as much a goal state as informed acceptance: to remember, understand and hate what is false is exactly the aim of the Art."
+            },
+            {
+              "label": "Stay in perfect wisdom and hold predestination",
+              "to_species": "E",
+              "correct": false,
+              "result": "Nothing moves. Refusing to state the opposing case leaves you affirming one horn without ever having tested it, which the Art treats as an argument not yet made.",
+              "teaches": "The dialectic requires you to argue the contrary against yourself. An affirmation never subjected to its denial has not been demonstrated."
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Figura tertia",
+          "name_en": "The Third Figure of X - doubt",
+          "target_species": "R",
+          "situation": "S finds itself confused in the First and Second Figures, with R joined to each of E I N. It therefore forms this third figure, the figure of doubt.",
+          "quote": "the wisdom of A strongly signifies predestination and the justice of A signifies free will equally strongly. But C G cannot at one and the same time understand perfect predestination or perfect free will, and thus C G are in doubt... and all of S is perverted into R.",
+          "quote_kind": "quote",
+          "moves": [
+            {
+              "label": "Hold both at once, and let S be perverted into R",
+              "latin": "confusio",
+              "to_species": "R",
+              "correct": true,
+              "result": "All positive and negative possibilities stand open at once. When R remembers, understands and loves free will, it forgets, misunderstands and hates predestination - and the reverse. You are stuck, and you are meant to be.",
+              "teaches": "R is confusion, and it is stage three of four, not a defeat. The Art requires the argument to jam before it can resolve. A dialectic that never reaches doubt has not tested anything."
+            },
+            {
+              "label": "Pick the stronger horn and move on",
+              "to_species": "E",
+              "correct": false,
+              "result": "You have chosen rather than demonstrated. The Art does not adjudicate between the horns; a resolution reached by preferring one is the same argument you already made at stage one.",
+              "teaches": "Choosing a side is precisely what the fourth figure exists to avoid."
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "Figura quarta",
+          "name_en": "The Fourth Figure of X - resolution",
+          "target_species": "E",
+          "situation": "Place S, under the heading of E, in A, in the compartments of perfect power and perfect will, and the other compartments of A.",
+          "quote": "Now when C affirms these two compartments in A, it then affirms the compartment of predestination and free will.",
+          "quote_kind": "quote",
+          "moves": [
+            {
+              "label": "Re-enter A under perfect power and perfect will; affirm both horns",
+              "latin": "potestas et voluntas perfecta",
+              "to_species": "E",
+              "correct": true,
+              "result": "The contradiction dissolves rather than being decided. Affirmed under power and will rather than under wisdom alone, predestination and free will are both compartments of the same perfect A. S returns to E - now holding what it could not hold at stage one.",
+              "teaches": "Resolution is not victory for one horn. It is finding the compartment at which both can be affirmed together. This is why the Art is a demonstration and not a debate."
+            },
+            {
+              "label": "Re-enter under perfect wisdom alone",
+              "to_species": "R",
+              "correct": false,
+              "result": "Wisdom is the compartment that generated the problem. Entering by it again reproduces stage one, and S falls back into R.",
+              "teaches": "Escaping confusion means changing which dignity you enter by, not trying harder with the same one."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+        <script src="engine.js"></script>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

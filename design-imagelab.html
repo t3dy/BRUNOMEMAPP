@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGELAB — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">Artifact: THE IMAGE LAB</h1>
+<p><strong>Type:</strong> artifact · <strong>Primary texts:</strong> <em>De imaginum, signorum et idearum compositione</em> (1591), <em>De umbris idearum</em> (1582) · <strong>Frames:</strong> Yates, Clucas, Wang, Mertens, Couliano</p>
+<hr>
+<h2 class="doc-h2">1. The shift this artifact has to embody</h2>
+<p>The most important change in recent Bruno scholarship is from <em>what does the image represent?</em> to <strong>what operation is the image designed to perform?</strong> An Image Lab organised around iconography would be building the superseded question into the interface.</p>
+<p>So the primary field is not "what this depicts." It is <code>what_it_does</code> — already correctly present in the schema, currently populated on 5 rows.</p>
+<h2 class="doc-h2">2. Composite construction</h2>
+<p>Bruno's images are composites. The lab needs a <strong>component vocabulary</strong>, not a gallery of finished images:</p>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th>Layer</th><th>Examples</th></tr></thead><tbody><tr><td>person</td><td>mythological figure, type, profession</td></tr><tr><td>animal</td><td>horse, ass, stag</td></tr><tr><td>object</td><td>instrument, attribute</td></tr><tr><td>action</td><td>the verb the figure is caught mid-performing</td></tr><tr><td>location</td><td>locus, architectural position</td></tr><tr><td>planet</td><td>the seven</td></tr><tr><td>attribute</td><td>quality, virtue, vice</td></tr><tr><td>emotion</td><td>the affective charge</td></tr><tr><td>colour / number / letter / syllable</td><td>the combinatorial hooks</td></tr><tr><td>concept</td><td>what the composite is <em>for</em></td></tr></tbody></table></div>
+<p>The user assembles across layers; the result is a <strong>serialisable data structure</strong>, inspectable as such. Bruno's images are supposed to be intersections of multiplicities — the data structure is not a technical convenience, it is the thing the images actually are.</p>
+<p><strong>This vocabulary is shared with the Cabala engine</strong> (<code>bruno_attested</code>), which is why CABALA.md defers to this doc. Build it once.</p>
+<h2 class="doc-h2">3. Why the images are strange — build for that</h2>
+<p>Bruno's figures are grotesque, erotic, violent, comic, emotionally overloaded. If memorisation were the goal, plain pictures would serve. The strangeness is functional: it seizes attention (Plotinus: memory follows attention), and it lets one image carry many relations at once — a word, a syllable, a myth, a planet, a moral quality, a position in a hierarchy.</p>
+<p>Design consequences:</p>
+<ul class="doc-list"><li>The lab must <strong>let composites be strange.</strong> A tasteful component palette would defeat the purpose.</li><li>Every composite should display its <strong>relational load</strong> — how many distinct relations it carries — because that, not prettiness, is the Brunian quality metric.</li><li>Do not render images as pictures only. Render the structure alongside.</li></ul>
+<h2 class="doc-h2">4. Frames on this artifact</h2>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th>Frame</th><th>The image is</th></tr></thead><tbody><tr><td><strong>Yates</strong></td><td>a talismanic instrument; planetary components foregrounded (T3, no output)</td></tr><tr><td><strong>Clucas</strong></td><td>an instrument for ordering the soul; the relational ladder matters most</td></tr><tr><td><strong>Wang</strong></td><td>an iconic form becoming a schema; supports the drop-the-scaffold test</td></tr><tr><td><strong>Mertens</strong></td><td>a <em>simulacrum</em> regulating cognitive spirits</td></tr><tr><td><strong>Couliano</strong></td><td>a bond-former; <strong>reflexive use only</strong> — see COULIANO.md</td></tr><tr><td>Sturlese / Barenstein</td><td>○ no strong documented reading of image <em>composition</em> specifically</td></tr></tbody></table></div>
+<p>Two empty cells. Per ARCHITECTURE.md §6, show them: the deflationary frames have much to say about the wheel's mechanism and comparatively little about why the images look the way they do. That asymmetry is itself informative about the shape of the field.</p>
+<h2 class="doc-h2">5. Data requirements</h2>
+<ul class="doc-list"><li><strong>Component vocabulary</strong> across all layers, attested. Currently 5 whole-image rows and no components at all. This is the largest single content gap in the project.</li><li><code>concept_relations</code> — shared prerequisite with CLUCAS/WHEEL/FRENZIES.</li><li>Attested composites from <em>De imaginum</em> to seed the palette and serve as worked examples.</li><li>Which woodcuts survive, and their rights status, if images are ever displayed rather than described.</li></ul>
+<h2 class="doc-h2">6. Honesty constraints</h2>
+<ul class="doc-list"><li>Distinguish <strong>attested components</strong> (Bruno used this) from <strong>plausible components</strong> (fits the system) from <strong>user inventions</strong>. The <code>reconstruction_level</code> field already exists; use all four values here rather than the two currently in play.</li><li>A user-built composite is <code>USER_AUTHORED</code> and must never render as though it were attested.</li><li>Where Bruno does not specify how a component contributes, say so — Wang's point that the mediation is never fully theorised applies directly.</li></ul>
+<h2 class="doc-h2">7. Build phases</h2>
+<ol class="doc-list"><li>Component vocabulary as data.</li><li>Assembly UI; serialise composites.</li><li>Structure view — relational load, component provenance.</li><li>Frame overlays (what this image <em>does</em>, per frame).</li><li>Feed composites into the wheel as encoding images.</li><li>Feed the vocabulary into the Cabala engine.</li></ol>
+<h2 class="doc-h2">8. Open questions</h2>
+<ul class="doc-list"><li>What is the actual attested component inventory? Needs <em>De imaginum</em> from the corpus.</li><li>Does Bruno give composition <em>rules</em>, or only examples? Determines whether the lab can validate a composite or merely record it.</li><li>Are the woodcuts reproducible, and under what terms?</li></ul></article>
+        <p class="provenance-note">Source: <code>docs/design/IMAGELAB.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

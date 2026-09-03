@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARENSTEIN — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">Frame: BARENSTEIN</h1>
+<p><strong>Type:</strong> interpretive frame · <strong>Attributed to:</strong> Julián Barenstein ("Memoria regulata," 2022) · <strong>Artifacts:</strong> Wheel</p>
+<blockquote class="doc-quote"><strong>Provenance warning.</strong> <code>LLM_GENERAL_KNOWLEDGE</code>. See ARCHITECTURE.md §4.</blockquote>
+<hr>
+<h2 class="doc-h2">Stance in one line</h2>
+<p>Hermeticism and Renaissance natural magic are not determinative for reading <em>De umbris idearum</em>; the work's cognitive function and its regulation of memory deserve reconstruction on their own terms.</p>
+<h2 class="doc-h2">The triple</h2>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Mechanism</strong></td><td>Inherits Sturlese's corrected wheel unchanged.</td></tr><tr><td><strong>Output</strong></td><td>An encoding, plus a <em>regulation schedule</em> — memory disciplined and ordered, not merely loaded.</td></tr><tr><td><strong>Success criterion</strong></td><td>Recall accuracy and reduced interference between encoded items.</td></tr><tr><td><strong>Testability</strong></td><td><strong>T1 — measurable.</strong></td></tr></tbody></table></div>
+<h2 class="doc-h2">Why this frame earns its place</h2>
+<p>Without Barenstein the portal would present a false consensus. The post-Sturlese field did <strong>not</strong> settle on "actually Bruno really was magical after all." There remains a serious position holding that the magical interpretation has been overextended and that the mechanics have been obscured by it.</p>
+<p>Including this frame is what makes the <code>esoteric-vs-nonesoteric-interpretation</code> dispute a real dispute rather than a strawman with Clucas on both sides. It is the deflationary pole, argued rather than dismissed.</p>
+<h2 class="doc-h2">The distinctive contribution: <em>regulata</em></h2>
+<p>The word doing the work is <strong>regulated</strong>. This is not "the wheel is just a mnemonic" — it is a claim that Bruno is building a <em>disciplined</em> memory, one where items are ordered so as not to interfere with each other. That yields a measurable prediction distinct from raw recall:</p>
+<ul class="doc-list"><li><strong>Interference between similar items</strong> should be lower under systematic wheel-encoding than under ad-hoc memorisation.</li><li>Test with deliberately confusable material (similar words, overlapping sequences) and measure intrusion errors, not just hit rate.</li></ul>
+<p>This is a genuinely different measurement from Sturlese's (accuracy) and Mertens's (resistance to external distraction). Three frames, three distinguishable T1 predictions, one harness. That is the payoff of the architecture.</p>
+<h2 class="doc-h2">Interactive behaviour</h2>
+<ul class="doc-list"><li>Corrected wheel; mechanism identical to Sturlese, Clucas, Wang, Mertens.</li><li><strong>Esoteric apparatus suppressed by default.</strong> Planetary and mythological framing is available but collapsed, with a note that this frame regards it as non-determinative. Under Yates the same material is foregrounded. Same data, opposite emphasis — a clean demonstration that a frame is partly a matter of what gets shown.</li><li>Interference/intrusion-error harness with confusable material.</li><li>No T2 prompts. This frame makes no claims about appetite or transformation, and should not be made to.</li></ul>
+<h2 class="doc-h2">The tension to preserve</h2>
+<p>Barenstein and Clucas can both be right about different things: the mechanics may be reconstructible without esoteric commitments <em>and</em> Bruno may have intended the ethical-magical dimension. The portal should not resolve this. Ostojić's historiographical point applies — the ars memoriae tends to get classified according to whichever Bruno the interpreter already believes in, and a portal that quietly picked a side would be an instance of the problem.</p>
+<h2 class="doc-h2">Primary texts</h2>
+<ul class="doc-list"><li><em>De umbris idearum</em> (1582) — the sole focus</li><li><em>Ars reminiscendi</em> (1583) — the most procedural, least esoteric of the mnemonic works, and the strongest primary support for this frame</li><li>Barenstein (2022)</li></ul>
+<p><em>Ars reminiscendi</em> is to Barenstein what <em>Cantus Circaeus</em> is to Yates: the text that most favours the reading. The portal should surface that symmetry explicitly — two frames, two different primary texts foregrounded, both legitimately Bruno's.</p>
+<h2 class="doc-h2">Disputes</h2>
+<ul class="doc-list"><li><code>esoteric-vs-nonesoteric-interpretation</code> — the deflationary pole, against Clucas</li><li>Related: whether Sturlese should be conscripted onto this side at all (see STURLESE.md open questions)</li></ul>
+<h2 class="doc-h2">Build notes</h2>
+<ul class="doc-list"><li>References Sturlese's <code>mechanism_spec</code>.</li><li>Needs a <code>display_policy</code> field on frames — which apparatus is foregrounded vs. collapsed. This is how Barenstein and Yates differ visually while sharing most underlying data.</li></ul>
+<h2 class="doc-h2">To verify in corpus</h2>
+<ul class="doc-list"><li>Barenstein's positive account of what "regulation" consists in — needed to build the schedule rather than invent one.</li><li>Whether Barenstein addresses <em>Cantus Circaeus</em>, the hardest text for this reading.</li><li>Whether the article is available in Spanish only; affects how it can be cited and grepped.</li></ul></article>
+        <p class="provenance-note">Source: <code>docs/design/BARENSTEIN.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

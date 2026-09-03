@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERTENS — BRUNOMEMAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>BRUNOMEMAPP</h1>
+            <div class="subtitle">Design record</div>
+            <div class="attribution">Primary source → scholarly interpretation → reconstruction → experiment. The layers are never collapsed.</div>
+            <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="engine.html">Engine</a>
+            <a href="fantastica.html">Fantastica</a>
+            <a href="practices/index.html">Practices</a>
+            <a href="designs.html" class="active">Designs</a>
+            <a href="works/index.html">Works</a>
+            <a href="images/index.html">Images</a>
+            <a href="scholars/index.html">Scholars</a>
+            <a href="disputes/index.html">Disputes</a>
+            <a href="timeline/index.html">Timeline</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="ideas/index.html">App Ideas</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="research-questions.html">Open Questions</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-content">
+
+        <div class="entity-nav"><a href="designs.html">&larr; All design documents</a></div>
+        <article class="doc-body"><h1 class="doc-h1">Frame: MERTENS</h1>
+<p><strong>Type:</strong> interpretive frame · <strong>Attributed to:</strong> Manuel Mertens (<em>Magic and Memory in Giordano Bruno: The Art of a Heroic Spirit</em>, 2018) · <strong>Artifacts:</strong> Wheel, Image Lab, Seals, Vincula, Frenzies</p>
+<blockquote class="doc-quote"><strong>Provenance warning.</strong> <code>LLM_GENERAL_KNOWLEDGE</code>. See ARCHITECTURE.md §4.</blockquote>
+<hr>
+<h2 class="doc-h2">Stance in one line</h2>
+<p>Memory and magic are not two Bruno projects but one, sharing philosophical foundations: mnemonic technique regulates the spirits involved in cognition — and can protect cognition from demonic corruption.</p>
+<h2 class="doc-h2">The triple</h2>
+<div class="table-scroll"><table class="doc-table"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Mechanism</strong></td><td>Inherits Sturlese's corrected wheel, plus an explicit protective/regulatory framing of the operation.</td></tr><tr><td><strong>Output</strong></td><td>Spirit-regulated cognition — a mind ordered against interference.</td></tr><tr><td><strong>Success criterion</strong></td><td>Resistance to cognitive interference and distraction.</td></tr><tr><td><strong>Testability</strong></td><td><strong>T1 (partial), with a hard T3 residue.</strong></td></tr></tbody></table></div>
+<h2 class="doc-h2">What this frame changes about the word "magic"</h2>
+<p>Mertens shifts the operative question from <em>can this image attract planetary power?</em> to <em>how does an image regulate the forces involved in cognition?</em> That relocation is what makes magic and memory one subject rather than two, and it is a different route to that conclusion than Clucas takes — Clucas gets there through ethics and Plotinus, Mertens through spirit-theory and the heroic transformation of the operator.</p>
+<p>The consequence for the portal: the <em>simulacrum</em> stops being an occult decal and becomes an instrument with a job. That is a better basis for an Image Lab than either the Yatesian talisman or the bare mnemonic hook.</p>
+<h2 class="doc-h2">The interference test (partial T1)</h2>
+<p>"Protection of cognition" has one honest measurable shadow: <strong>encoding and recall performance under deliberate interference.</strong></p>
+<ol class="doc-list"><li>Baseline recall via the wheel, quiet conditions.</li><li>Repeat under imposed interference — competing task, distractor stream, time pressure.</li><li>Measure the degradation delta, and whether the wheel-encoded material degrades less than control material.</li></ol>
+<p>If Mertens's regulatory reading has any cognitive purchase, structured Brunian encoding should degrade more gracefully than unstructured memorisation. That is checkable.</p>
+<p><strong>What this explicitly does not test:</strong> demonic corruption. The app measures interference resistance and says so in those words. It must never let a distractor-task result be read as evidence about demons — that would be the T1/T3 register collapse the architecture forbids. The demonic frame is presented as historical reconstruction, unscored.</p>
+<h2 class="doc-h2">Interactive behaviour</h2>
+<ul class="doc-list"><li>Corrected wheel; switcher notes shared mechanism.</li><li>A <strong>protective-framing overlay</strong>: the historical account of what the operation was understood to guard against, presented as reconstruction with primary citations, no output panel.</li><li>The interference harness, reported strictly as interference resistance.</li><li>Cross-link to the <em>heroic spirit</em> material in FRENZIES.md — Mertens is the frame that makes the <em>Eroici furori</em> and the technical treatises legible as one project alongside Clucas.</li></ul>
+<h2 class="doc-h2">Primary texts</h2>
+<ul class="doc-list"><li><em>De magia</em> (c. 1590) — the taxonomy and the <em>spiritus</em> / <em>species</em> causal vocabulary</li><li><em>Theses de magia</em>, <em>De rerum principiis</em> — the posthumous magical notebooks</li><li><em>Sigillus sigillorum</em> — internal-senses control, the closest thing to a regulatory technique</li><li><em>De gli eroici furori</em> — the heroic spirit</li><li>Mertens (2018)</li></ul>
+<p>Without the posthumous magical works, the "magic" in Bruno's memory art has no stated mechanism attached; this frame is the main consumer of those texts in the portal.</p>
+<h2 class="doc-h2">Disputes</h2>
+<ul class="doc-list"><li><code>esoteric-vs-nonesoteric-interpretation</code> — synthetic tendency, against Barenstein's deflation</li><li>Introduces a live question the seed does not yet model: <strong>is Mertens's route to memory-magic unity compatible with Clucas's, or a rival to it?</strong> Both reject the binary; they do not obviously agree on why. Worth a new dispute row.</li></ul>
+<h2 class="doc-h2">Build notes</h2>
+<ul class="doc-list"><li>References Sturlese's <code>mechanism_spec</code> with an additive framing layer.</li><li>Interference harness is another parameterisation of the Sturlese recall harness. Third frame, still no new measurement machinery — further argument for building that harness well once.</li></ul>
+<h2 class="doc-h2">To verify in corpus</h2>
+<ul class="doc-list"><li><strong>Does "protection from demonic corruption" carry a technical mechanism</strong>, or is it framing language? Determines whether the regulatory reading has operational content at all.</li><li>Mertens's account of the relation between memory technique and deification.</li><li>Whether Mertens engages Clucas directly — needed before asserting agreement or rivalry on the site.</li></ul></article>
+        <p class="provenance-note">Source: <code>docs/design/MERTENS.md</code> in the
+        repository. Design documents are working records and may be superseded by later ones.</p>
+    
+    </main>
+    <footer>
+        <p>BRUNOMEMAPP &middot; scholarly and educational use &middot; a research sandbox, not a settled account of Giordano Bruno&rsquo;s work.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
