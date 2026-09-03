@@ -760,3 +760,33 @@ footer p em { color: var(--accent-light); font-style: normal; }
 .missing-card { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-blood); border-radius: 3px; padding: 1.1rem 1.3rem; }
 .missing-card h4 { color: var(--accent-light); font-weight: 400; margin-bottom: 0.4rem; }
 .missing-card p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem !important; }
+
+/* ===== Plates (period woodcuts) ===== */
+.plate-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 1.25rem; margin-bottom: 1.5rem; }
+.plate { background: var(--bg-card); border: 1px solid var(--border); border-radius: 3px; overflow: hidden; margin: 0; }
+.plate img {
+    display: block; width: 100%; height: auto; background: #efe9dd;
+    border-bottom: 1px solid var(--border); transition: filter .15s;
+}
+.plate a:hover img { filter: brightness(1.08); }
+.plate figcaption { padding: 0.9rem 1.05rem; }
+.plate-head { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.4rem; }
+.plate-head h4 { color: var(--accent-light); font-weight: 400; font-size: 1rem; margin: 0; }
+.plate figcaption p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.4rem !important; }
+
+/* ===== Scholia (fair-use scholarly quotation) ===== */
+.scholia { margin-top: 1rem; }
+.scholium {
+    margin: 0 0 0.9rem; padding: 0.9rem 1.1rem;
+    background: var(--bg-elev); border-left: 3px solid var(--accent-deep); border-radius: 0 3px 3px 0;
+}
+.scholium blockquote {
+    margin: 0 0 0.5rem; font-size: 0.9rem; font-style: italic; color: var(--text);
+    border: none; padding: 0;
+}
+.scholium blockquote::before { content: '\201C'; color: var(--accent); margin-right: 0.1em; }
+.scholium blockquote::after { content: '\201D'; color: var(--accent); margin-left: 0.05em; }
+.scholium figcaption { font-family: var(--font-sans); font-size: 0.75rem; color: var(--text-muted); }
+.scholium figcaption strong { color: var(--accent); }
+.scholium-loc { display: block; font-size: 0.68rem; color: var(--text-muted); margin-top: 0.15rem; }
+.scholium-why { font-size: 0.82rem; color: var(--text-muted); margin: 0.5rem 0 0 !important; padding-top: 0.5rem; border-top: 1px solid var(--border); }
