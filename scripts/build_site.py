@@ -38,6 +38,7 @@ NAV_ITEMS = [
     ('Home',        'index.html'),
     ('Engine',      'engine.html'),
     ('Fantastica',  'fantastica.html'),
+    ('Figures',     'gallery.html'),
     ('Practices',   'practices/index.html'),
     ('Designs',     'designs.html'),
     ('Works',       'works/index.html'),
@@ -240,6 +241,13 @@ def render_home(cur):
                 planetary courts; the triple you build decides where your soul-state lands.
                 A labelled reconstruction.</p>
             </div>
+            <div class="home-card featured">
+                <h2><a href="gallery.html">The Figures</a></h2>
+                <p>Llull&rsquo;s and Bruno&rsquo;s diagrams rebuilt as working instruments &mdash; the
+                sixteen dignities as a complete graph, the virtues and vices as two graphs that never
+                touch, the soul as four inscribed squares, Bruno&rsquo;s atrium with all 576 loci, and
+                a combinatorial wheel you can turn. Drawn from the data, not photographed.</p>
+            </div>
             <div class="home-card">
                 <h2><a href="designs.html">Design Documents</a></h2>
                 <p>The working record: 17 documents arguing what this project should be, including
@@ -437,6 +445,97 @@ def render_design_doc(path):
     """
     return page_shell(path.stem, body, active_nav='Designs', depth=0,
                       subtitle='Design record')
+
+
+def render_gallery():
+    """Interactive SVG reconstructions of the Llull/Bruno figures."""
+    paths = {
+        'diagrams-data': BASE_DIR / 'data' / 'diagrams.json',
+        'figure-s-data': BASE_DIR / 'data' / 'figure_s.json',
+        'atria-data':    BASE_DIR / 'data' / 'atria_harvested.json',
+        'alphabet-data': BASE_DIR / 'data' / 'alphabet_harvested.json',
+    }
+    if not all(x.exists() for x in paths.values()):
+        return None
+    raw = {k: v.read_text(encoding='utf-8') for k, v in paths.items()}
+    dia = json.loads(raw['diagrams-data'])
+    prov = dia.get('_provenance', {})
+
+    blocks = []
+    for f in dia['figures']:
+        badge = attestation_badge(f.get('attestation'))
+        link = (f'<a class="fig-link" href="{esc(f["links_to"])}">related &rarr;</a>'
+                if f.get('links_to') else '')
+        caveat = (f'<p class="caveat-line"><strong>Caveat.</strong> {esc(f["caveat"])}</p>'
+                  if f.get('caveat') else '')
+        blocks.append(f"""
+        <section class="figure-block" id="{esc(f['slug'])}">
+            <div class="figure-head">
+                <h2>{esc(f['name'])} <span class="fig-en">{esc(f['name_en'])}</span></h2>
+                <div>{badge}<span class="badge badge-cat">{esc(f['author'])}</span>{link}</div>
+            </div>
+            <p class="fig-structure">{esc(f['structure'])}</p>
+            <div class="fig-stage">
+                <div class="fig-mount" id="fig-{esc(f['slug'])}"></div>
+                <div class="fig-side">
+                    <div class="fig-play"><span class="label">How to play with it</span>
+                        <p>{esc(f['play'])}</p></div>
+                    <div class="fig-out" id="out-{esc(f['slug'])}"></div>
+                    {caveat}
+                    <p class="step-locator">Source: {esc(f['source'])}<br>
+                       Original: {esc(f.get('original_at', 'n/a'))}</p>
+                </div>
+            </div>
+        </section>""")
+
+    missing = ''.join(
+        f'<div class="missing-card"><h4>{esc(m["name"])}</h4>'
+        f'<p>{esc(m["why"])}</p>'
+        f'<p class="step-locator">Would need: {esc(m["would_need"])}</p></div>'
+        for m in dia.get('not_reconstructed', []))
+
+    toc = ' · '.join(f'<a href="#{esc(f["slug"])}">{esc(f["name"])}</a>'
+                     for f in dia['figures'])
+
+    scripts = ''.join(f'<script type="application/json" id="{k}">{v}</script>'
+                      for k, v in raw.items())
+
+    body = f"""
+        <h1 class="section-title">The Figures</h1>
+        <p class="section-intro">Llull's and Bruno's diagrams, rebuilt as working instruments.
+        These are not photographs of woodcuts &mdash; each one is drawn from the terms and structure
+        the sources report, which is precisely what lets you turn, select and interrogate them.
+        A scan of a wheel cannot be turned.</p>
+        <div class="layer-strip">{toc}</div>
+
+        <div class="attribution-banner recon">
+            <span class="label">On the images</span>
+            <p>{esc(prov.get('note',''))}</p>
+            <p class="attrib-bruno">{esc(prov.get('originals_note',''))}</p>
+        </div>
+
+        {''.join(blocks)}
+
+        <h2 class="section-title" style="margin-top:2.5rem">Not reconstructed</h2>
+        <p class="section-intro">Three figures this project will not draw, and why. Approximating
+        them would produce plausible-looking diagrams that are substantially invented &mdash; the
+        exact failure the rest of the site is built to avoid.</p>
+        <div class="missing-grid">{missing}</div>
+
+        <p class="provenance-note">
+            <strong>Sourcing the pictorial originals.</strong> The <em>Eroici furori</em> emblems and
+            Bruno&rsquo;s printed wheels are pictorial and cannot be rebuilt from structural data.
+            The 1585 and 1591 editions are long out of copyright, and scans are held by the
+            Internet Archive, Wikimedia Commons and the Warburg Institute; those are the places to
+            source them from. This site does not rehost scans taken from modern scholarly editions,
+            whose typography and apparatus are in copyright even where the underlying woodcut is not.
+        </p>
+
+        {scripts}
+        <script src="diagrams.js"></script>
+    """
+    return page_shell('The Figures', body, active_nav='Figures', depth=0,
+                      subtitle='Llull and Bruno rebuilt as working instruments')
 
 
 def render_fantastica():
@@ -1499,6 +1598,12 @@ def build_search_index(cur):
         index.append({'type': 'design', 'title': f'{f.stem}.md',
                       'summary': 'Design document',
                       'href': f'{_design_slug(f.stem)}.html'})
+    gp = BASE_DIR / 'data' / 'diagrams.json'
+    if gp.exists():
+        for f in json.loads(gp.read_text(encoding='utf-8'))['figures']:
+            index.append({'type': 'figure', 'title': f"{f['name']} — {f['name_en']}",
+                          'summary': f['structure'][:150],
+                          'href': f"gallery.html#{f['slug']}"})
     index.append({'type': 'engine', 'title': 'Logica Fantastica',
                   'summary': "The Art run on images -- Bruno's version",
                   'href': 'fantastica.html'})
@@ -1643,6 +1748,9 @@ def main():
         write(SITE_DIR / 'designs.html', di)
         for f in _design_docs():
             write(SITE_DIR / f'{_design_slug(f.stem)}.html', render_design_doc(f))
+    g_page = render_gallery()
+    if g_page:
+        write(SITE_DIR / 'gallery.html', g_page)
     fa_page = render_fantastica()
     if fa_page:
         write(SITE_DIR / 'fantastica.html', fa_page)

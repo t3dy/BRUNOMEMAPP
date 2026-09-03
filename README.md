@@ -10,12 +10,13 @@ Built from a corpus of primary translations and scholarship. Every claim carries
 
 ## What's in it
 
-**Two working instruments**
+**Three working instruments**
 
 | | |
 |---|---|
 | **[The Art Engine](https://t3dy.github.io/BRUNOMEMAPP/engine.html)** | Llull's Figure S as a live state machine. Take the contradiction between predestination and free will through all four figures — affirmation, denial, doubt, resolution — and watch the soul-state move `E → I → R → E`. Confusion is a real, reachable state; escaping it is the point. |
 | **[Logica Fantastica](https://t3dy.github.io/BRUNOMEMAPP/fantastica.html)** | The same dialectic run on **images** rather than letters, which is what Bruno's version requires. Compose an image — memory from the alphabet, intellect from the atria, will from the planetary courts — and the triple decides where your soul-state lands. |
+| **[The Figures](https://t3dy.github.io/BRUNOMEMAPP/gallery.html)** | Llull's and Bruno's diagrams rebuilt as manipulable SVG: the sixteen dignities as a complete graph (all 120 compartments), virtues and vices as two graphs that never touch, the soul as four inscribed squares, Bruno's atrium with every one of its 576 loci, and a combinatorial wheel you can turn. |
 
 **Six operable practices**, each step-by-step with per-step notes on where the Renaissance worldview and the practical interface diverge from a modern reader's expectations: Bruno's Atria (576 addressable loci), Bruno's Image Alphabet, the Thirty Statues, the classical art of places and agent images, Quintilian's sceptical version, and the Ramist objection to the whole enterprise.
 
@@ -43,6 +44,12 @@ The project's main risk is producing a complete-looking system that is substanti
 - **Every practice step carries at least one friction note** — enforced by a check in the seed loader.
 
 Corrections made during the build are recorded rather than overwritten. Two examples: all 24 atria are transcribed, not 12 (the plates carry two each, and only the odd ones are headed); and the soul-state engine is **Llull's, not Bruno's** — Bruno took the combinatorics and the *similitudo*-logic, not Figure S.
+
+## On the diagrams
+
+The figures are **drawn from the harvested data, not photographed**. That is a deliberate choice and not a compromise: a scan of a wheel cannot be turned, and a scan of Figure A cannot tell you which compartment you just formed. It also sidesteps a rights problem — the underlying woodcuts are public domain, but the modern editions that reproduce them are not.
+
+Three figures are **not** drawn, and the gallery says why: Llull's Figure T (vertex terms shredded by text extraction), the *De umbris* memory wheel (neither Bruno's text nor Sturlese's edition is in this corpus, and its ring positions are the field's most contested question), and the *Eroici furori* emblems (pictorial, so they must be reproduced photographically rather than rebuilt). Approximating any of them would produce exactly the plausible-looking invention the rest of the project exists to avoid.
 
 ## Rights
 

@@ -72,7 +72,8 @@ Superseded readings stay playable. Yates's talismanic wheel is fun *because* it 
 
 ## Current state (2026-09-02)
 
-- Site builds: **80 pages, 0 broken links.** `site/index.html`, or serve `site/`.
+- Site builds: **99 pages, 0 broken links.** `site/index.html`, or serve `site/`.
+- **The Figures gallery is live** — `site/gallery.html` + `site/diagrams.js`, driven by `data/diagrams.json`. Six interactive SVG figures built from harvested data: Llull A (K16, 120 chords), V (D2/7), X (opposed pairs), S (four inscribed squares), Bruno's atrium (24 atria x 24 positions, switchable), and a combinatorial wheel. Three figures deliberately NOT drawn, with reasons stated on the page.
 - **Logica Fantastica is live and playable** — `site/fantastica.html` + `site/fantastica.js`, driven by `data/fantastica.json` plus all three harvested systems. Bruno's side: compose an image (operator→memory, atrium→intellect, court→will) and the triple decides the species. Full dialectic verified E→I→R→E. **`SCHOLARLY_RECONSTRUCTION`, confidence LOW** — components attested, wiring ours.
 - **The Art Engine is live and playable** — `site/engine.html` + `site/engine.js`, driven by `data/figure_s.json` and `data/engine_questions.json`. Llull's Figure S as a working state machine; the predestination/free-will dialectic plays end to end, E → I → R → E. **Attribution: Llull's, not Bruno's** (settled, HARVEST H-08).
 - **Planetary image-courts live** — `scripts/harvest_images.py` → `data/images_harvested.json` → `site/images/courts.html`. 9 courts, 10 principal images, 239 attendants, extracted from *De imaginum*. Luna's retinue is split by phase.

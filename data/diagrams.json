@@ -1,0 +1,134 @@
+{
+  "_provenance": {
+    "method": "RECONSTRUCTED_FROM_HARVESTED_DATA",
+    "note": "These are not scans. Each figure is drawn programmatically from the terms and structure reported in the sources, which is what makes them manipulable. Where a figure's structure could not be recovered reliably it is listed under not_reconstructed rather than approximated.",
+    "originals_note": "Photographic originals exist in the local corpus but are not republished here: the underlying woodcuts are public domain, the modern editions are not. Page references are given so they can be consulted directly.",
+    "confidence": "MEDIUM"
+  },
+
+  "figures": [
+    {
+      "slug": "llull-figure-a",
+      "name": "Figura A",
+      "name_en": "Figure A — the Dignities",
+      "author": "Ramon Llull",
+      "kind": "complete_graph",
+      "source": "Bonner, A User's Guide, corpus lines 237-300; Llull SW I, 320",
+      "original_at": "Bonner, colour plates between pp. 92-93",
+      "structure": "A circle of sixteen compartments with transverse lines running from each to every other — what we would now call a complete graph, K16. Llull: all these compartments are concordant with one another, without any contrariety existing between them.",
+      "graph": "K16",
+      "centre": "A",
+      "terms": ["goodness", "greatness", "eternity", "power", "wisdom", "will or love",
+                "virtue", "truth", "glory", "perfection", "justice", "generosity",
+                "simplicity", "nobility", "mercy", "dominion"],
+      "play": "Click any two dignities to form a compartment — the binary unit Llull's arguments are built from. Every pair is concordant, which is the point of the figure.",
+      "attestation": "ATTESTED"
+    },
+    {
+      "slug": "llull-figure-v",
+      "name": "Figura V",
+      "name_en": "Figure V — Virtues and Vices",
+      "author": "Ramon Llull",
+      "kind": "disconnected_graph",
+      "source": "Bonner, corpus lines 613-636",
+      "original_at": "Bonner, colour plates between pp. 92-93",
+      "structure": "Seven virtues and seven vices. Blue lines connect all the virtues to each other, red lines all the vices — two complete subgraphs of seven vertices with nothing crossing between them. Bonner notates it D2/7.",
+      "graph": "D2/7",
+      "pairs": [
+        {"virtue": "faith", "vice": "gluttony"},
+        {"virtue": "hope", "vice": "lust"},
+        {"virtue": "charity", "vice": "avarice"},
+        {"virtue": "justice", "vice": "pride"},
+        {"virtue": "prudence", "vice": "accidie"},
+        {"virtue": "fortitude", "vice": "envy"},
+        {"virtue": "temperance", "vice": "ire"}
+      ],
+      "play": "Toggle the two subgraphs. Nothing connects blue to red — the separation is the figure's whole claim, and it is why blue V and red V work as shorthand throughout the Art.",
+      "attestation": "ATTESTED"
+    },
+    {
+      "slug": "llull-figure-x",
+      "name": "Figura X",
+      "name_en": "Figure X — Opposed Pairs",
+      "author": "Ramon Llull",
+      "kind": "opposition_circle",
+      "source": "Bonner, corpus lines 680-706",
+      "original_at": "Bonner, colour plates between pp. 92-93",
+      "structure": "Sixteen concepts which Llull habitually uses as eight opposed pairs, each concept facing its contrary across the circle.",
+      "pairs": [
+        {"a": "predestination", "b": "free will"},
+        {"a": "being", "b": "privation"},
+        {"a": "perfection", "b": "defect"},
+        {"a": "merit", "b": "blame"},
+        {"a": "supposition", "b": "demonstration"}
+      ],
+      "incomplete": true,
+      "incomplete_note": "Llull's figure carries eight pairs. Five are recoverable from this extraction; the remaining three are lost to page-break noise in the text and are NOT supplied here rather than guessed at.",
+      "play": "Click a pair to see the contradiction it poses. The first — predestination against free will — is the one worked through in the Art Engine.",
+      "attestation": "ATTESTED",
+      "links_to": "engine.html"
+    },
+    {
+      "slug": "llull-figure-s",
+      "name": "Figura S",
+      "name_en": "Figure S — the Soul",
+      "author": "Ramon Llull",
+      "kind": "inscribed_squares",
+      "source": "Bonner, corpus lines 1579-1680",
+      "original_at": "Bonner, colour plates between pp. 92-93",
+      "structure": "Bonner: a circle with four inscribed squares, notated D4/4. Each square is one species of the soul — E, I, N, R — and each carries one act of memory, one of intellect, one of will.",
+      "graph": "D4/4",
+      "play": "Click a square to see its triple. E and I are goal states; R is confusion, and it is reachable. This is the figure the Art Engine runs on.",
+      "attestation": "ATTESTED",
+      "data_source": "figure_s.json",
+      "links_to": "engine.html"
+    },
+    {
+      "slug": "bruno-atrium-figure",
+      "name": "Atrium",
+      "name_en": "Bruno's Atrium",
+      "author": "Giordano Bruno",
+      "kind": "atrium",
+      "source": "De imaginum, Bk I Pt 2 chs 3-6 (Higgins trans.), corpus lines 1257-1400",
+      "original_at": "Higgins trans., diagram plates from p. 24 (37 images in that edition)",
+      "structure": "A quadrangle whose centre is the earth and the eye. Four corners and four mid-sides give eight points; each point carries a right and a left collateral, giving twenty-four positions. Twenty-four such atria give 576 addressable loci.",
+      "play": "Click any position to see what Bruno assigns there, and switch between all 24 atria. The Altar's position mapping is attested in prose; the rest are reconstructed from plate order and marked as such.",
+      "attestation": "ATTESTED",
+      "data_source": "atria_harvested.json",
+      "links_to": "practices/bruno-atrium.html"
+    },
+    {
+      "slug": "combinatorial-wheel",
+      "name": "Rota",
+      "name_en": "The Combinatorial Wheel",
+      "author": "after Llull and Bruno",
+      "kind": "concentric_wheel",
+      "source": "Driven by the harvested image alphabet (De imaginum chs 12-13)",
+      "original_at": "Bruno's own wheel diagrams are in De umbris idearum, which is NOT in this corpus",
+      "structure": "Concentric rotating rings — the mechanism Llull's Ars Magna bequeathed to Bruno. The outer ring carries letter-keys; the inner ring carries the operators each key commands. Rotating aligns a key with an operator.",
+      "play": "Step or drag the rings to align a letter-key with an operator. This is the general mechanism, populated with Bruno's attested alphabet.",
+      "attestation": "SCHOLARLY_RECONSTRUCTION",
+      "caveat": "This is NOT a reconstruction of Bruno's own wheel. His specific ring assignments live in De umbris idearum, which is not in this corpus — and their correct arrangement is the single most contested question in the scholarship, the thing Yates reconstructed and Sturlese corrected in 1991. What is shown is the general mechanism driven by attested alphabet data.",
+      "data_source": "alphabet_harvested.json",
+      "links_to": "disputes/index.html"
+    }
+  ],
+
+  "not_reconstructed": [
+    {
+      "name": "Figura T",
+      "why": "Five interlocking triangles (Bonner: D5/3). The vertex terms are shredded by column-flattening in the text extraction — legible fragments include object, reason, medium, demonstration, privation and blame, but not reliably enough to place them. Approximating would produce a plausible-looking figure that is substantially invented.",
+      "would_need": "Bonner's printed colour plate, or a clean edition of the figure."
+    },
+    {
+      "name": "The De umbris memory wheel",
+      "why": "Bruno's concentric wheel and its planetary ring positions are the most contested object in the scholarship — what Yates reconstructed and Sturlese corrected in 1991. Neither De umbris nor Sturlese's edition is in this corpus, so there is no basis for drawing either version.",
+      "would_need": "Sturlese's 1991 critical edition; Yates's The Art of Memory for the superseded reconstruction."
+    },
+    {
+      "name": "The Eroici furori emblems",
+      "why": "Pictorial rather than geometric — figures, landscapes, Actaeon and the hounds. These cannot be rebuilt from structural data the way a graph can; they have to be reproduced photographically.",
+      "would_need": "Public-domain scans of the 1585 edition. See the sourcing note on the gallery page."
+    }
+  ]
+}
